@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html style="background-color: #f0f0f0">
-	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
-		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Atma" rel="stylesheet" />
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-		<title>Apara's Website</title>
-	<head>
-	<body>
-		<h1 class="title fade-in one">Hello! Welcome to my homepage!</h1>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.css"><!-- Links to bootstrap css -->
 
-		<div class="intro">
-		<p class="fade-in two">I am Apara (pronounced "up-raw")</p>
-		<p class="fade-in two">I am studying Computer Science at University of Colorado, Boulder</p>
-		<table>
-			<col width="700">
-			<col width="700">
-			<tr class="fade-in three">
-				<th>IN PROGRAMMING</th>
-				<th>OUT OF PROGRAMMING</th>
-			</tr>
-			<tr class="fade-in four">
-				<td>Data Science</td>
-				<td>Playing my guitar</td>
-			</tr>
-			<tr class="fade-in five">
-				<td>Machine Learning</td>
-				<td>Listening to Music</td>
-			</tr>
-			<tr class="fade-in six">
-				<td>Computational Neuroscience</td>
-				<td>Reading fantasy and science fiction</td>
-			</tr>
-			<tr class="fade-in seven">
-				<td>Computer Vision</td>
-				<td>A very little bit of Dota 2...</td>
-			</tr>
-		</table>
-		</div>
+    <title>Apara's Website</title>
 
-		<span class="fade-in eight">
-			<a href="https://github.com/traxex33"><i class="fa fa-github-square fa-5x" style="color: grey"></i></a>
-			<a href="mailto:ssapar@gmail.com"><i class="fa fa-envelope fa-5x" style="color: grey" aria-hidden="true"></i></a>
-		<span>
+  </head>
+  <body>
 
-	</body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <!-- Collapsed Navbar-->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#main_navbar"
+            arial-expanded="false">Open Navbar</button>
+        </div>
+
+        <!-- Uncollapsed Navbar -->
+        <div
+          class="collapse navbar-collapse"
+          id="main_navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="tasks.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
 
 
+    <!-- Content -->
+    <div class="container">
+      <h1>Home</h1>
 
+      <!-- Breadcrumb Trails -->
+      <!-- <ol class="breadcrumb">
+        <li class="active">Home</li>
+      </ol> -->
+
+			<div class="container">
+
+				<p> Hello! I am Apara. Welcome to my website. </p>
+				<p>I am a computer science undergrad at University of Colorado, Boulder.</p>
+				<p>On this website, you can find more information about me, the projects I work on, my hobbies and my contact information.</p>
+				<p>Feel free to look around and shoot me an email if any of my works interest you.</p>
+			</div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script> <!-- jquery libraries -->
+    <script src="js/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+
+  </body>
 </html>
