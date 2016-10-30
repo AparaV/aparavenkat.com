@@ -28,3 +28,14 @@
 .description {
   text-align: justify;
 }
+
+.navbar-collapse.collapse {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  margin: 0;
+}
