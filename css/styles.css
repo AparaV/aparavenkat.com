@@ -6,6 +6,10 @@
 
 }
 
-#about {
-  
+.description {
+  max-width: 1000px;
+}
+
+.hs-projects ul {
+  list-style-type: none;
 }
