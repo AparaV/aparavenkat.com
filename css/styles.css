@@ -6,10 +6,21 @@
 
 }
 
+.btn-menu {
+  background-color: #000;
+  color: #ffffff
+}
+
 .description {
   max-width: 1000px;
 }
 
 .hs-projects ul {
   list-style-type: none;
+}
+
+@media screen and (min-width: 768px){
+  #menu {
+    display: none !important;
+  }
 }
