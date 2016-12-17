@@ -9,6 +9,7 @@
 
 .description {
   max-width: 1000px;
+  text-align: justify;
 }
 
 .hs-projects ul {
