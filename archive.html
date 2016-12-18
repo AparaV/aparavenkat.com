@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body ng-app="">
 
   <div id="wrapper">
 
@@ -64,7 +64,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-8">
-            <h1>Archive</h1>
+            <div ng-include="'articles/2016/dec/7-heroes.html'">
+            </div>
           </div>
           <div class="col-lg-4">
             <h1>Archive</h1>
@@ -73,14 +74,17 @@
                 <div class="card-header list-group-item" role="tab" id="year-2016">
                   <h5 class="mb-0">
                     <a data-toggle="collapse" data-parent="#accordion" href="#posts-2016" aria-expanded="false" aria-controls="collapseOne">
-                      <span class="tag tag-default tag-pill float-xs-right">0</span>
+                      <span class="tag tag-default tag-pill float-xs-right">1</span>
                       2016
                     </a>
                   </h5>
                 </div>
                 <div id="posts-2016" class="collapse" role="tabpanel" aria-labelledby="year-2016">
                   <div class="card-block">
-                    No posts for this time period
+                    <strong>December</strong>
+                    <ul>
+                      <li>7 superheroes I'd like to be</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -96,6 +100,9 @@
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
+
+  <!-- AngularJS -->
+  <script src="js/angular.min.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
