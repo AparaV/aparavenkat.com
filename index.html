@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body ng-app="">
 
   <div id="wrapper">
 
@@ -63,11 +63,12 @@
       </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12">
-            <h1>Home</h1>
-            <p>
-              No new activity to show <br> Check again later
-            </p>
+          <div class="col-lg-8">
+            <div ng-include="'articles/2016/dec/7-heroes.html'">
+            </div>
+          </div>
+          <div class="col-lg-4">
+
           </div>
         </div>
       </div>
@@ -79,6 +80,9 @@
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
+
+  <!-- AngularJS -->
+  <script src="js/angular.min.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
