@@ -27,7 +27,7 @@
 
 </head>
 
-<body ng-app="">
+<body ng-app="blogArchive">
 
   <div id="wrapper">
 
@@ -64,8 +64,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-8">
-            <div ng-include="'articles/2016/dec/7-heroes.html'">
-            </div>
+            <div ng-view></div>
           </div>
           <div class="col-lg-4">
             <h1>Archive</h1>
@@ -83,7 +82,7 @@
                   <div class="card-block">
                     <strong>December</strong>
                     <ul>
-                      <li>7 superheroes I'd like to be</li>
+                      <li><a href="#/dec-7-heroes">7 superheroes I'd like to be</a></li>
                     </ul>
                   </div>
                 </div>
@@ -103,6 +102,8 @@
 
   <!-- AngularJS -->
   <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/blogArchive.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
