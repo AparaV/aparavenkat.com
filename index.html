@@ -38,45 +38,37 @@
           Apara Venkateswaran
         </li>
         <li>
-          <a href="#" style="font-weight: bold">< Home ></a>
+          <a ui-sref="home">Home</a>
         </li>
         <li>
-          <a href="archive.html">Archive</a>
+          <a ui-sref="archive">Archive</a>
         </li>
         <li>
-          <a href="projects.html">Projects</a>
+          <a ui-sref="projects">Projects</a>
         </li>
         <li>
-          <a href="about.html">About</a>
+          <a ui-sref="about">About</a>
         </li>
         <li>
-          <a href="contact.html">Contact</a>
+          <a ui-sref="contact">Contact</a>
         </li>
       </ul>
     </div>
     <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
+    <!-- Main Page -->
     <div id="page-content-wrapper">
       <div class="container-fluid" id="menu">
         <a href="#menu-toggle" class="btn btn-menu" id="menu-toggle">Open Sidebar</a>
       </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-8">
-            <ui-view></ui-view>
-          </div>
-          <div class="col-lg-4">
-            <a class="twitter-timeline"  data-tweet-limit="2" href="https://twitter.com/apara_v">Tweets by apara_v</a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
-      </div>
+      <!-- Content -->
+      <ui-view><ui-view>
     </div>
-    <!-- /#page-content-wrapper -->
+    <!-- /#main-page-wrapper -->
 
   </div>
   <!-- /#wrapper -->
+
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
