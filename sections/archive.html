@@ -7,11 +7,12 @@
     <!-- /#article -->
     <div class="col-lg-4">
       <h1>Archive</h1>
+      <!-- Add a ui-sref="state" for all href's that use bootstrap for dropdown menus -->
       <div role="tablist" aria-multiselectable="true">
         <div class="card">
           <div class="card-header list-group-item" role="tab" id="year-2016">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" href="#posts-2016" aria-expanded="false" aria-controls="collapseOne">
+              <a data-toggle="collapse" data-parent="#accordion" ui-sref="state" href="#posts-2016" aria-expanded="false" aria-controls="collapseOne">
                 <span class="tag tag-default tag-pill float-xs-right">1</span>
                 2016
               </a>
@@ -21,7 +22,7 @@
             <div class="card-block">
               <strong>December</strong>
               <ul>
-                <li><a ui-sref="archive.dec16-7-heroes" ui-sref-active="active">7 superheroes I'd like to be</a></li>
+                <li><a ui-sref="archive.dec16-7-heroes">7 superheroes I'd like to be</a></li>
               </ul>
             </div>
           </div>

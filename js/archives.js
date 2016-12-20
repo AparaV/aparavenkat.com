@@ -5,11 +5,14 @@ var app = angular.module('archives', ['ui.router']);
 var currentPost = '../articles/2016/dec/7-heroes.html';
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider
+    //.when("/home", "/default")
+    .otherwise("/");
   $stateProvider
     .state('home', {
-      url: "/home",
-      templateUrl: "../sections/home.html"
+      url: "/",
+      templateUrl: "../sections/home.html",
+      //controller: 'homeCtrl'
     })
     .state('archive', {
       url: "/archive",
@@ -27,11 +30,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/contact",
       templateUrl: "../sections/contact.html"
     })
-    .state('default', {
-      url: "/default",
+    .state('archive.default', {
+      url: '',
       templateUrl: currentPost
     })
-    .state('home.post', {
+    .state('home.default', {
       url: '',
       templateUrl: currentPost
     })
@@ -40,3 +43,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "../articles/2016/dec/7-heroes.html"
     });
 });
+
+// app.controller('homeCtrl', ['$state',
+//   function($state) {
+//     $state.go('home.default');
+// }]);
