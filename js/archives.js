@@ -10,11 +10,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .otherwise("/");
   $stateProvider
     .state('home', {
+      abstract: true,
       url: "/",
       templateUrl: "../sections/home.html",
       //controller: 'homeCtrl'
     })
     .state('archive', {
+      abstract: true,
       url: "/archive",
       templateUrl: "../sections/archive.html"
     })
@@ -30,11 +32,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/contact",
       templateUrl: "../sections/contact.html"
     })
-    .state('archive.default', {
+    .state('home.default', {
       url: '',
       templateUrl: currentPost
     })
-    .state('home.default', {
+    .state('archive.default', {
       url: '',
       templateUrl: currentPost
     })
