@@ -27,7 +27,7 @@
 
 </head>
 
-<body ng-app="blogArchive">
+<body ng-app="archives">
 
   <div id="wrapper">
 
@@ -63,9 +63,11 @@
       </div>
       <div class="container-fluid">
         <div class="row">
+          <!-- Article -->
           <div class="col-lg-8">
-            <div ng-view></div>
+            <ui-view></ui-view>
           </div>
+          <!-- /#article -->
           <div class="col-lg-4">
             <h1>Archive</h1>
             <div role="tablist" aria-multiselectable="true">
@@ -82,7 +84,7 @@
                   <div class="card-block">
                     <strong>December</strong>
                     <ul>
-                      <li><a href="#/dec-7-heroes">7 superheroes I'd like to be</a></li>
+                      <li><a ui-sref="dec/7-heroes" ui-sref-active="active">7 superheroes I'd like to be</a></li>
                     </ul>
                   </div>
                 </div>
@@ -101,9 +103,9 @@
   <script src="js/jquery.js"></script>
 
   <!-- AngularJS -->
-  <script src="js/angular.min.js"></script>
-  <script src="js/angular-route.min.js"></script>
-  <script src="js/blogArchive.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-ui-router.js"></script>
+  <script src="js/archives.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
