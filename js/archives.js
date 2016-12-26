@@ -2,7 +2,7 @@
 
 var app = angular.module('archives', ['ui.router']);
 
-var currentPost = '../articles/2016/dec/7-heroes.html';
+var currentPost = '../articles/2016/dec/building-twitter-app.html';
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
@@ -32,17 +32,25 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/contact",
       templateUrl: "../sections/contact.html"
     })
+    /*Home childern*/
     .state('home.default', {
       url: '',
       templateUrl: currentPost
     })
+    /*Parent Children*/
     .state('archive.default', {
       url: '',
       templateUrl: currentPost
     })
+    //7 heroes
     .state('archive.dec16-7-heroes', {
       url: "/2016/dec/7-heroes",
       templateUrl: "../articles/2016/dec/7-heroes.html"
+    })
+    //building twitter app
+    .state('archive.dec16-building-twitter-app', {
+      url: "/2016/dec/building-twitter-app",
+      templateUrl: "../articles/2016/dec/building-twitter-app.html"
     });
 });
 
