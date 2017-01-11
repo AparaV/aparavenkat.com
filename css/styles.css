@@ -12,6 +12,10 @@
   text-align: justify;
 }
 
+.hs-projects {
+  display: block;
+}
+
 .hs-projects ul {
   list-style-type: none;
 }
