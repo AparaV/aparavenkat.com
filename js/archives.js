@@ -2,7 +2,7 @@
 
 var app = angular.module('archives', ['ui.router']);
 
-var currentPost = '../articles/2016/dec/building-twitter-app.html';
+var currentPost = '../articles/2017/jan/2017-goals.html';
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
@@ -42,6 +42,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '',
       templateUrl: currentPost
     })
+    /*2016*/
     //7 heroes
     .state('archive.dec16-7-heroes', {
       url: "/2016/dec/7-heroes",
@@ -51,6 +52,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('archive.dec16-building-twitter-app', {
       url: "/2016/dec/building-twitter-app",
       templateUrl: "../articles/2016/dec/building-twitter-app.html"
+    })
+    /*2017*/
+    //2017 goals
+    .state('archive.jan17-2017-goals', {
+      url: "2017/jan/2017-goals",
+      templateUrl: "../articles/2017/jan/2017-goals.html"
     });
 });
 
