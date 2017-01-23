@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            Apara Venkateswaran
 tagline:          'Personal website'
-description:      'Personal website and blog hosted by Apara Venkateswaran.'
+description:      ''
 url:              http://traxex33.github.io
 baseurl:          /
 
@@ -17,7 +17,7 @@ author:
   name:           'Apara Venkateswaran'
   url:            https://twitter.com/apara
 
-paginate:         5
+paginate:         1
 
 #Plugins
 whitelist:        []
