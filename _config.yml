@@ -1,0 +1,30 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+#relative_permalinks: true
+
+# Setup
+title:            Apara Venkateswaran
+tagline:          'Personal website'
+description:      ''
+url:              http://traxex33.github.io
+baseurl:          /
+
+author:
+  name:           'Apara Venkateswaran'
+  url:            https://twitter.com/apara
+
+paginate:         1
+
+#Plugins
+whitelist:        []
+gems:             [jekyll-paginate]
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/traxex33/traxex33.github.io
