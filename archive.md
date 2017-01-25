@@ -13,7 +13,7 @@ title: Archive
            <ul>
            {% assign myDate = currentDate %}
        {% endif %}
-       <li><span>{{ post.date | date: "%B %-d, %Y" }} - <a href="{{ post.url }}"></span>{{ post.title }}</a></li>
+       <li><span>{{ post.date | date: "%B %-d, %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a></span></li>
        {% if forloop.last %}</ul>{% endif %}
    {% endfor %}
 
