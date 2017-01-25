@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How I built an app from scratch
+comments: true
 ---
 *Also posted at [medium.com](https://medium.com/@apara/how-i-built-an-app-from-scratch-cf71c9f7d23f#.t25o3b56f)*
 

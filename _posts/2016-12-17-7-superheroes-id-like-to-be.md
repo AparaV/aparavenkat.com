@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 7 superheroes I'd like to be
+comments: true
 ---
 *Originally posted at [medium.com](https://medium.com/@apara/7-superheroes-id-like-to-be-cab912e30b3a#.ap7ld9z3k)*
 
