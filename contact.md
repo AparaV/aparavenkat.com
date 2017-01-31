@@ -5,7 +5,7 @@ title: Contact
 
 If you find my works interesting, want to connect with me, or just want to chat about anything from CS to Tolkien:
 
-* ssapar (at) gmail (dot) com
+* [apara.venkateswaran@gmail.com](mailto:apara.venkateswaran@gmail.com)
 * [github.com/traxex33](http://github.com/traxex33)
 * [twitter.com/apara_v](http://twitter.com/apara_v)
 * [medium.com/@apara](https://medium.com/@apara)
