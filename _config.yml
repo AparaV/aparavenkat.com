@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Apara Venkateswaran
 tagline:          'Personal website'
 description:      ''
-url:              http://traxex33.github.io
+url:              http://aparav.github.io
 baseurl:          /
 
 author:
@@ -27,4 +27,4 @@ gems:             [jekyll-paginate]
 version:          2.1.0
 
 github:
-  repo:           https://github.com/traxex33/traxex33.github.io
+  repo:           https://github.com/AparaV/aparav.github.io

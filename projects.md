@@ -14,7 +14,7 @@ This is why I decided to teach the computer the same process.
 Now, all you need to do is enter the courses you wish to take and the pre-requisites for each of them and let the computer take care of the rest for you.
 
 See it in action at [Course Planner](http://plancourses.herokuapp.com/) <br>
-Source code: [Course Planner](https://github.com/traxex33/course-planner)
+Source code: [Course Planner](https://github.com/AparaV/course-planner)
 
 ## Popularity on Twitter
 *Nov 2016 - Dec 2016* <br>
@@ -27,7 +27,7 @@ This program can also analyze a user profile to see what they most commonly twee
 For more details, read my [blog post]({% post_url 2016-12-26-how-i-built-an-app-from-scratch %}).
 
 See it in action at [Popularity on Twitter](https://popularity-on-twitter.herokuapp.com/) <br>
-Source code: [Popularity on Twitter](https://github.com/traxex33/Twitter-Analysis)
+Source code: [Popularity on Twitter](https://github.com/AparaV/Twitter-Analysis)
 
 ## Ruins Escapade
 *Oct 2016* <br>
@@ -36,15 +36,15 @@ Ruins Escapade is a straightforward game where the player controls the hero who 
 I made this game in less than a week and it currently has only one level.
 I am hoping to add more levels when I get the time.
 
-Source code: [Ruins Escapade](https://github.com/traxex33/Ruins-Escapade)
+Source code: [Ruins Escapade](https://github.com/AparaV/Ruins-Escapade)
 
 ## Project Euler
 *Sept 2016 - Present* <br>
-I recently came across this amazing site with lots of computing problems: [Project Euler](https://www.projecteuler.net/). <br>
+I recently came across this amazing site with lots of computing problems: [Project Euler](http://www.projecteuler.net/). <br>
 Since I've always been a fan of math, I began solving these mathematics problems that not only require high computing power but efficient strategies. <br>
 I primarily code my solutions in C++ because it is a powerful and versatile language. But you might find a bit of Python in there.
 
-My solutions: [Project Euler - Solutions](https://github.com/traxex33/project-euler)
+My solutions: [Project Euler - Solutions](https://github.com/AparaV/project-euler)
 
 ## Robotics
 *Nov 2015 - June 2016* <br>

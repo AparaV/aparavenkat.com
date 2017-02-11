@@ -27,7 +27,7 @@ Then I realized that this method failed when streaming low volume tweets.
 After scouring stackoverflow to no avail, I came up with a novel idea.
 I used the original implementation, but ran it on a separate thread.
 I used a timer in the main thread and disconnected the stream, from the main thread, upon completion of the timer.
-Check out the [gist](https://gist.github.com/traxex33/6facd7db460b905933cf908c8b919b89).
+Check out the [gist](https://gist.github.com/AparaV/6facd7db460b905933cf908c8b919b89).
 
 Then there is the calculation itself.
 As you might know, my formula isn’t necessarily perfect.
