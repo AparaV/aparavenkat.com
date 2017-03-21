@@ -59,19 +59,19 @@ However I had to refine it and improve the implementation to hit a decent runtim
 
 Here is my final implementation of it:
 ```
-    bool* prime = new bool[size + 1];    // no vectors
-		memset(prime, true, size + 1);       // no for loop for initialization
-		prime[0] = false;
-		prime[1] = false;
+  bool* prime = new bool[size + 1];
+	memset(prime, true, size + 1);
+	prime[0] = false;
+	prime[1] = false;
 
-		for (int64_t p = 2; p*p <= size; p++) {
-			if (prime[p] == true) {
-				for (int64_t i = p * 2; i <= size; i += p) {
-					prime[i] = false;
-				}
+	for (int64_t p = 2; p*p <= size; p++) {
+		if (prime[p] == true) {
+			for (int64_t i = p * 2; i <= size; i += p) {
+				prime[i] = false;
 			}
 		}
-		return prime;
+	}
+	return prime;
 ```
 
 There are a couple of things that I'd like to draw to attention here.
