@@ -21,15 +21,15 @@ And it is still very effective. In fact, it is the only method guaranteed to giv
 It's true that there are other probabilistic and heuristic tests, but none of them are proved even though they work for numbers larger as \\(10^{10}\\) .
 
 ```
-  isPrime = true;
-  upper = sqrt(n);
-  for (int i = 2; i < upper; ++i) {
-    if (n % i == 0){
-      isPrime = false;
-      break;
-    }
+isPrime = true;
+upper = sqrt(n);
+for (int i = 2; i < upper; ++i) {
+  if (n % i == 0){
+    isPrime = false;
+    break;
   }
-  return isPrime;
+}
+return isPrime;
 ```
 
 This is what I've implemented in my library. But, we can clearly do better than this brute force.
@@ -38,11 +38,11 @@ This works for most cases. And in base \\(2\\), for numbers up till \\(2.5 * 10^
 So once can easily store these values in a hash table and if the test passes, searching for this number will reveal whether it is a prime or not.
 
 ```
-  probablePrime = false;
-  if (pow(2, n - 1) % n == 1){
-    probablePrime = true;
-  }
-  return probablePrime;
+probablePrime = false;
+if (pow(2, n - 1) % n == 1){
+  probablePrime = true;
+}
+return probablePrime;
 ```
 
 ## Storing primes
@@ -59,19 +59,19 @@ However I had to refine it and improve the implementation to hit a decent runtim
 
 Here is my final implementation of it:
 ```
-  bool* prime = new bool[size + 1];
-	memset(prime, true, size + 1);
-	prime[0] = false;
-	prime[1] = false;
+bool* prime = new bool[size + 1];
+memset(prime, true, size + 1);
+prime[0] = false;
+prime[1] = false;
 
-	for (int64_t p = 2; p*p <= size; p++) {
-		if (prime[p] == true) {
-			for (int64_t i = p * 2; i <= size; i += p) {
-				prime[i] = false;
-			}
-		}
-	}
-	return prime;
+for (int64_t p = 2; p*p <= size; p++) {
+  if (prime[p] == true) {
+    for (int64_t i = p * 2; i <= size; i += p) {
+      prime[i] = false;
+    }
+  }
+}
+return prime;
 ```
 
 There are a couple of things that I'd like to draw to attention here.
