@@ -11,3 +11,5 @@ If you find my works interesting, want to connect with me, or just want to chat 
 * [medium.com/@apara](https://medium.com/@apara)
 * [linkedin.com/in/apara-venkateswaran](http://www.linkedin.com/in/apara-venkateswaran)
 * [facebook.com/aparavenkateswaran](http://www.facebook.com/aparavenkateswaran)
+
+Here's my <a href="/resume/AparajithanVenkateswaran.pdf" target="_blank">resume</a> if that's what you're looking for.
