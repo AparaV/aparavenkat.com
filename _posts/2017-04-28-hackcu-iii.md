@@ -7,7 +7,7 @@ comments: true
 
 Last week, the third edition of Colorado's largest student hackathon, [HackCU III](https://hackcu.org/), took place at Boulder. With nearly 400 hackers from all over US, this 24 hour hackathon is the largest one yet. And being a part of the [organizing team](https://hackcu.org/#team) this year was an amazing experience.
 
-Along with meeting new people, the learning, and having fun, the best thing about a hackathon is simply being in an atmosphere filled with passionate students skipping school, sleep, and what-not, who travelled a long way just to do what they love - creating something cool. Even if you're not a tech person, if you've ever been to a place that is so full of energy and enthusiasm you'd definitely agree that there's no other place you'd rather be!
+Along with meeting new people, the learning, and having fun, the best thing about a hackathon is simply being in an atmosphere filled with passionate students skipping school, sleep, and what-not, to travel a long way just to do what they love - creating something cool. Even if you're not a tech person, if you've ever been to a place that is so full of energy and enthusiasm you'd definitely agree that there's no other place you'd rather be!
 
 ## My role
 
