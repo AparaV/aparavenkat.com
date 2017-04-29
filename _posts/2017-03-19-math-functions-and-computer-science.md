@@ -20,7 +20,7 @@ Perhaps the most simple way to check whether a number is a prime is the trial di
 And it is still very effective. In fact, it is the only method guaranteed to give correct result (a consequence of the definition of prime numbers.
 It's true that there are other probabilistic and heuristic tests, but none of them are proved even though they work for numbers larger as \\(10^{10}\\) .
 
-```
+{% highlight c++ %}
 isPrime = true;
 upper = sqrt(n);
 for (int i = 2; i < upper; ++i) {
@@ -30,20 +30,20 @@ for (int i = 2; i < upper; ++i) {
   }
 }
 return isPrime;
-```
+{% endhighlight %}
 
 This is what I've implemented in my library. But, we can clearly do better than this brute force.
 So I will also bring to light a probabilistic method to solve this. This [test](https://en.wikipedia.org/wiki/Fermat_primality_test) was proposed by Fermat.
 This works for most cases. And in base \\(2\\), for numbers up till \\(2.5 * 10^{10}\\), only \\(21853\\) numbers fail.
 So once can easily store these values in a hash table and if the test passes, searching for this number will reveal whether it is a prime or not.
 
-```
+{% highlight c++ %}
 probablePrime = false;
 if (pow(2, n - 1) % n == 1){
   probablePrime = true;
 }
 return probablePrime;
-```
+{% endhighlight %}
 
 ## Storing primes
 Other common problems were finding the n<sup>th</sup> prime and creating the sieve.
@@ -58,7 +58,7 @@ Now, moving onto the sieve, the problems I came across were relatively of smalle
 However I had to refine it and improve the implementation to hit a decent runtime.
 
 Here is my final implementation of it:
-```
+{% highlight c++ %}
 bool* prime = new bool[size + 1];
 memset(prime, true, size + 1);
 prime[0] = false;
@@ -72,7 +72,7 @@ for (int64_t p = 2; p*p <= size; p++) {
   }
 }
 return prime;
-```
+{% endhighlight %}
 
 There are a couple of things that I'd like to draw to attention here.
 The first thing to notice is that I abandoned the use of `vector`.
