@@ -26,7 +26,7 @@ Here are a few things to note:
 
 Other things we observed:
 
-* Initially, the app showed 0 mentors available even though a lot of people had logged in. We restarted the `meteor server` to fix this.
+* Initially, the app showed 0 mentors available even though a lot of people had logged in. We restarted the meteor server to fix this.
 * Many hackers didn't submit reviews to the mentors who helped them. 6 hours into the event, we realized this and had to remind the hackers to give ratings to their mentors.
 
 Now that we know what went wrong with our version of [HelpQ](https://github.com/ehzhang/HELPq), this will help us make it better for the next hackathon. Hopefully you also learnt something from this that could help you from preventing the same mistakes.
