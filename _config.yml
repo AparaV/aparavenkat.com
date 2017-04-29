@@ -28,3 +28,8 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/AparaV/aparav.github.io
+
+# Collections
+collections:
+    docs:
+        output: true
