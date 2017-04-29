@@ -15,7 +15,7 @@ I was mostly involved in the web team and helped build the website. The website 
 
 ## Other cool things we used
 
-We had a [SMS notification system](https://github.com/HackCU/mercurysms) through which we could send text messages reminding hackers about upcoming tech talks, workshops, deadlines, etc. This was a really sweet software we had. However, we never tested the software on a large set of phone numbers. So, unfortunately, during the first run, the server timed out and killed the program. This was because Twilio took a long time to validate a single request and running it on an entire list timed out the process. And during the event, we didn't have enough time to probe the issue and find a legit solution (like a separate worker/thread). So, the impromptu hack (*it is a hackathon*) was overwriting the worker timeout.
+We had a [SMS notification system](https://github.com/HackCU/mercurysms) through which we could send text messages reminding hackers about upcoming tech talks, workshops, deadlines, etc. This was a really sweet software we had. However, we never tested the software on a large set of phone numbers. So, unfortunately, during the first run, the server timed out and killed the program. This was because Twilio took a long time to validate a single request and running it on an entire list timed out the process. And during the event, we didn't have enough time to find a legit solution (like a separate worker/thread). So, the impromptu hack (*it is a hackathon*) was overwriting the worker timeout.
 
 This year, we also used [HelpQ](https://github.com/ehzhang/HELPq) created by the HackMIT team for mentoring hackers. Earlier, Slack was used. But with 400 hackers, Slack is very inefficient and requests for help can get buried in messages. So we [adapted HelpQ](https://mentors.hackcu.org/). It is a very effective tool that uses tickets hackers create to tell mentors what issues they have with their code. The mentors, on the other side, can view all of these tickets and choose the one they want to help with. Despite my initial skepticism, a lot of hackers and mentors used this and I think we will definitely use this moving forward (unless we find a better alternative).
 
@@ -33,7 +33,12 @@ After the closing ceremonies, and after all the hackers had bid farewells, came 
 
 ## Final remarks and takeaways
 
-As a hacker (or any sensible human being) you must really take the following seriously when you travel to hackathons (or any other event):
+The venue we had (Wolf Law Building) was not best suited for a hackathon. Firstly, there was no classroom that could house all the hackers for opening and closing ceremonies. There is a court room, but that was out of bounds and it couldn't serve as an auditorium. This brings us to the next issue - for the ceremonies, we rented a classroom that was 15 minutes away from the hacking space. This piece of information was quite disheartening and confusing to hackers. Finally, as mentioned earlier, the officials wanted the building to be spotless after the event (can't blame them) and the entire place was carpeted. This made cleaning [vacuuming] a tedious job. And, spills are inevitable and spills on carpets are always harder to clean.
+
+**If there were so many issues with this venue, why did you people rent it in the first place?**<br>
+This was the only building on campus that could house 400 hackers and allowed overnight events. Other event spaces were either too expensive or did not allow overnight events (which meant hackers couldn't sleep at the venue). So we had to make the best out of what we had.
+
+With that said, here are some takeaways. As a hacker (or any sensible human being) you must really take the following seriously when you travel to hackathons (or any other event):
 
 1. Always clean up after your mess. If you spilt coffee on the table, go get a paper towel and wipe it clean. It is much easier to clean a coffee spill when the coffee still hasn't dried up.
 2. If it is a mess you can't clean up on your own (such as a radioactive leak), inform one of the admins or other staff.
