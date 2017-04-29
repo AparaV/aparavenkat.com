@@ -21,7 +21,7 @@ This year, we also used [HelpQ](https://github.com/ehzhang/HELPq) created by the
 
 ## During the hackathon
 
-The event was 24 hours and I was there during the entire event. I took a 90 minute (power?) nap at 1:30 AM. You'd have probably met me at check-in at MATH 100 or at the MLH Hardware Lab helping you guys check out the right hardware. Or you might have seen me moving tables around or caught me taking out the trash or refilling RedBull (they ran out fast!).
+The event was 24 hours and I was there during the entire event. I took a 90 minute (power?) nap at 1:30 AM. At other times, you'd have probably met me at check-in at MATH 100 or at the MLH Hardware Lab helping you guys check out the right hardware. Or you might have seen me moving tables around or caught me taking out the trash or refilling RedBull (they ran out fast!).
 
 I haven't been to a lot of hackathons. But I felt that HackCU proceeded smoothly overall except for two small hiccups. At the beginning, the lunch order was messed up by the vendor (which we corrected soon to get more food!). And towards the end, there was a lot of confusion and panic among hackers about when they had to submit their projects to Devpost. This was due to the clock on out-of-state hackers' computers not set to MST (Mountain Standard Time). So the countdown on the live page and the Devpost both told the hackers to submit their hacks an hour earlier! Luckily we found what was going wrong soon and notified all hackers.
 
