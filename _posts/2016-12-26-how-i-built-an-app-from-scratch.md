@@ -1,9 +1,9 @@
 ---
 layout: post
 title: How I built an app from scratch
+subtitle: Also posted at <a href="https://medium.com/@apara/how-i-built-an-app-from-scratch-cf71c9f7d23f#.t25o3b56f">medium.com</a>
 comments: true
 ---
-*Also posted at [medium.com](https://medium.com/@apara/how-i-built-an-app-from-scratch-cf71c9f7d23f#.t25o3b56f)*
 
 [Popularity on Twitter](https://popularity-on-twitter.herokuapp.com/) was never intended to be what it is right now (an app hosted on [Heroku](http://heroku.com/)).
 It started out as a weekend project to help me learn Python and APIs.

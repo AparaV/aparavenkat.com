@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 7 superheroes I'd like to be
+subtitle: Originally posted at <a href="https://medium.com/@apara/7-superheroes-id-like-to-be-cab912e30b3a#.ap7ld9z3k">medium.com</a>
 comments: true
 ---
-*Originally posted at [medium.com](https://medium.com/@apara/7-superheroes-id-like-to-be-cab912e30b3a#.ap7ld9z3k)*
 
 Why 7 heroes and not a solid number like 5 or 10?
 Well, 7 is a magical number possessing the power of wibbly-wobbly, timey-wimey…
