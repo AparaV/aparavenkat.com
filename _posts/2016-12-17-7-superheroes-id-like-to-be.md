@@ -10,6 +10,7 @@ Well, 7 is a magical number possessing the power of wibbly-wobbly, timey-wimeyâ€
 Itâ€™s 7 because I had 7 perfect heroes in mind.
 I neither wanted to cut it short by removing some nor extend it by adding unnecessary people.
 That said, here you go:
+<!--excerpt_ends-->
 
 7. **Doctor Strange** <br>
 A stupefying costume, a red cloak that makes you fly, access to the mystic forces, proficiency in martial arts, and not to mention a skilled neurosurgeon.

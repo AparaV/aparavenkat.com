@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Math-Functions and Computer Science
+subtitle:
 comments: true
 ---
 
@@ -8,6 +9,7 @@ Over the past few weeks, I've been [compiling](https://github.com/AparaV/math-fu
 While solving these math problems, I needed to find the most efficient method to get the solution.
 The underlying idea to solve most these are the same and it is pretty simple.
 But as you proceed, the simple method you had used earlier will take a really long time to produce an answer.
+<!--excerpt_ends-->
 So you need to improve upon these methods to make them run faster.
 Sometimes, you'll have pushed the simple idea to the extreme and it still won't work.
 In that case, you need to come up with a better algorithm or implementation.

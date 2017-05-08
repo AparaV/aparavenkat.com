@@ -9,6 +9,7 @@ comments: true
 It started out as a weekend project to help me learn Python and APIs.
 I previously had little knowledge of Python and knew nothing about APIs.
 Over Thanksgiving break, I decided to learn them using the Twitter API.
+<!--excerpt_ends-->
 
 The results of the simple `get_status` function seemed magical.
 And I decided to take it a bit further.

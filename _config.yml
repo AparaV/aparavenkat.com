@@ -17,7 +17,9 @@ author:
   name:           'Apara Venkateswaran'
   url:            https://twitter.com/apara
 
-paginate:         1
+# Site Settings
+paginate:         5
+excerpt_separator: <!--excerpt_ends-->
 
 #Plugins
 whitelist:        []
