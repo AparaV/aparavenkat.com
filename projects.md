@@ -5,7 +5,6 @@ title: Projects
 Here is a curated list of projects I am/have been a part of:
 
 ## Course Planner
-*Jan 2017* <br>
 An application that helps you choose courses in a correct sequence to avoid missing pre-requisite courses.
 This project is written in JavaScript using React.js and Node.js. <br>
 Planning future semesters can be daunting when you have a lot of options.
@@ -17,7 +16,6 @@ See it in action at [Course Planner](http://plancourses.herokuapp.com/) <br>
 Source code: [Course Planner](https://github.com/AparaV/course-planner)
 
 ## Popularity on Twitter
-*Dec 2016* <br>
 A program written in Python that calculates how popular a phrase is on Twitter.<br>
 It collects all tweets containing the track word for 5 minutes and calculates a score based on who tweeted them and how many times it has been liked. <br>
 The formula for the popularity score is a bit wibbly wobbly and still needs some work. So, it will not give you an absolutely deterministic score. <br>
@@ -29,7 +27,6 @@ See it in action at [Popularity on Twitter](https://popularity-on-twitter.heroku
 Source code: [Popularity on Twitter](https://github.com/AparaV/Twitter-Analysis)
 
 ## Ruins Escapade
-*Oct 2016* <br>
 This is a simple dungeon crawler game that I made for my Intro to Computing project. This game is written in C++ using SDL Libraries. <Br>
 Ruins Escapade is a straightforward game where the player controls the hero who is trying to find his way back home through a labyrinth. <br>
 I made this game in less than a week and it currently has only one level.
@@ -39,7 +36,6 @@ Watch a demo of the game: [Ruins Escapade - Demo](https://www.youtube.com/watch?
 Source code: [Ruins Escapade](https://github.com/AparaV/Ruins-Escapade)
 
 ## Project Euler
-*Sept 2016 - Present* <br>
 I recently came across this amazing site with lots of computing problems: [Project Euler](http://www.projecteuler.net/). <br>
 Since I've always been a fan of math, I began solving these mathematics problems that not only require high computing power but efficient strategies. <br>
 I primarily code my solutions in C++ because it is a powerful and versatile language. But you might find a bit of Python in there.
