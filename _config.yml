@@ -35,3 +35,5 @@ github:
 collections:
     docs:
         output: true
+    projects:
+        output: false
