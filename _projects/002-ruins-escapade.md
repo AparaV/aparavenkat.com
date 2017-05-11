@@ -6,7 +6,7 @@ preview: https://www.youtube.com/watch?v=56loejYyuwU
 ---
 
 <br>
-<img class="project-screenshot" src="{{ site.url }}/assets/projects-screenshots/ruins-escapade.png" alt="screenshot" />
+<img class="project-screenshot" src="{{ site.url }}/assets/projects-screenshots/ruins-escapade.PNG" alt="screenshot" />
 
 This is a simple dungeon crawler game that I made for my Intro to Computing project. This game is written in C++ using SDL Libraries. <Br>
 Ruins Escapade is a straightforward game where the player controls the hero who is trying to find his way back home through a labyrinth. <br>
