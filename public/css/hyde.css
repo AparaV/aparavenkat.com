@@ -45,6 +45,12 @@ html {
   }
 }
 
+/* Images */
+.project-screenshot {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /*
  * Sidebar

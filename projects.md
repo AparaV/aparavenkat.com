@@ -13,5 +13,12 @@ Here is a curated list of projects I am/have been a part of:
         {{ project.title }}
     </h2>
     {{ project.content }}
+    {% if project.preview %}
+      <a href="{{ project.preview }}" target="_blank"><!--_-->Demo</a> <br />
+    {% endif %}
+    {% if project.source %}
+      <a href="{{ project.source }}" target="_blank"><!--_-->Source Code</a> <br />
+    {% endif %}
+    <br />
   {% endfor %}
 </div>
