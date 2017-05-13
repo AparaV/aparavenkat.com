@@ -90,6 +90,16 @@ html {
   font-weight: normal;
 }
 
+a.sidebar-icon {
+    color: rgba(255,255,255,.5);
+}
+
+a.sidebar-icon:hover,
+a.sidebar-icon:focus {
+    color: #fff;
+}
+
+
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
