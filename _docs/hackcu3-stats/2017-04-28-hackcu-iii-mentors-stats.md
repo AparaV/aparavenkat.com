@@ -7,7 +7,7 @@ comments: false
 
 [*Original post*]({% post_url 2017-04-28-hackcu-iii %})
 
-Here are the stats we collected from our [mentors app](https://mentors.hackcu.org/).
+Here are the stats we collected from our [mentors app](https://github.com/HackCU/mentors).
 
 We originally didn't want students to also be mentors. So we defaulted a new user to student only. Later on, we decided that students who want to help others shouldn't be stopped from helping because of this limitation. Thus, we created a new URL that will turn a user into a mentor if they are not already a mentor.
 

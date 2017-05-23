@@ -6,7 +6,7 @@ published: true
 comments: true
 ---
 
-Last week, the third edition of Colorado's largest student hackathon, [HackCU III](https://hackcu.org/), took place at Boulder. With nearly 400 hackers from all over US, this 24 hour hackathon is the largest one yet. And being a part of the [organizing team](https://hackcu.org/#team) this year was an amazing experience.
+Last week, the third edition of Colorado's largest student hackathon, [HackCU III](https://hackcu.org/), took place at Boulder. With nearly 400 hackers from all over US, this 24 hour hackathon is the largest one yet. And being a part of the [organizing team](https://2017.hackcu.org/#team) this year was an amazing experience.
 <!--excerpt_ends-->
 
 Along with meeting new people, the learning, and having fun, the best thing about a hackathon is simply being in an atmosphere filled with passionate students skipping school, sleep, and what-not to travel a long way just to do what they love - creating something cool. Even if you're not a tech person, if you've ever been to a place that is so full of energy and enthusiasm you'd definitely agree that there's no other place you'd rather be!
@@ -18,8 +18,9 @@ I was mostly involved in the web team and helped build the website. The website 
 ## Other cool things we used
 
 We had a [SMS notification system](https://github.com/HackCU/mercurysms) through which we could send text messages reminding hackers about upcoming tech talks, workshops, deadlines, etc. This was a really sweet software we had. However, we never tested the software on a large set of phone numbers. So, unfortunately, during the first run, the server timed out and killed the program. This was because Twilio took a long time to validate a single request and running it on an entire list timed out the process. And during the event, we didn't have enough time to find a legit solution (like a separate worker/thread). So, the impromptu hack (*it is a hackathon*) was overwriting the worker timeout.
+**UPDATE 05/23/2017**: I was able to fix it by moving the process to a background worker and making AJAX calls to check for completion. View this [Pull request](https://github.com/HackCU/mercurysms/pull/6)
 
-This year, we also used [HelpQ](https://github.com/ehzhang/HELPq) created by the HackMIT team for mentoring hackers. Earlier, Slack was used. But with 400 hackers, Slack is very inefficient and requests for help can get buried in messages. So we [adapted HelpQ](https://mentors.hackcu.org/). It is a very effective tool that uses tickets hackers create to tell mentors what issues they have with their code. The mentors, on the other side, can view all of these tickets and choose the one they want to help with. Despite my initial skepticism, quite a few hackers and mentors used this and I think we will definitely use this moving forward (unless we find a better alternative). You can find some stats we collected from that app [here]({{ site.url }}//docs/hackcu3-stats/2017-04-28-hackcu-iii-mentors-stats/).
+This year, we also used [HelpQ](https://github.com/ehzhang/HELPq) created by the HackMIT team for mentoring hackers. Earlier, Slack was used. But with 400 hackers, Slack is very inefficient and requests for help can get buried in messages. So we [adapted HelpQ](https://github.com/HackCU/mentors). It is a very effective tool that uses tickets hackers create to tell mentors what issues they have with their code. The mentors, on the other side, can view all of these tickets and choose the one they want to help with. Despite my initial skepticism, quite a few hackers and mentors used this and I think we will definitely use this moving forward (unless we find a better alternative). You can find some stats we collected from that app [here]({{ site.url }}//docs/hackcu3-stats/2017-04-28-hackcu-iii-mentors-stats/).
 
 ## During the hackathon
 
