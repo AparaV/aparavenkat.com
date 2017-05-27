@@ -7,15 +7,15 @@ permalink:        pretty
 #relative_permalinks: true
 
 # Setup
-title:            Apara Venkateswaran
+title:            Aparajithan Venkateswaran
 tagline:          'Personal website'
 description:      ''
 url:              http://aparav.github.io
 baseurl:          /
 
 author:
-  name:           'Apara Venkateswaran'
-  url:            https://twitter.com/apara
+  name:           'Aparajithan Venkateswaran'
+  url:            https://github.com/AparaV
 
 # Site Settings
 paginate:         5
