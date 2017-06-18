@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HackCU III - Mentors Stats
+description: HackCU III - Mentors Stats
 published: true
 comments: false
 ---
