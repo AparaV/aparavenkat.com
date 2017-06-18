@@ -2,6 +2,7 @@
 layout: post
 title: HackCU III
 subtitle:
+description: My experience organizing the third edition of Colorado's largest student hackathon, HackCU III
 published: true
 comments: true
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: Math-Functions and Computer Science
 subtitle:
+description: An insight into how and why I decided to write a math library in C++ for solving Project Euler. 
 comments: true
 ---
 

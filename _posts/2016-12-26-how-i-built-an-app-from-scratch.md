@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How I built an app from scratch
+description: My first web app and how I crafted it using Python
 subtitle: Also posted at <a href="https://medium.com/@apara/how-i-built-an-app-from-scratch-cf71c9f7d23f#.t25o3b56f">medium.com</a>
 comments: true
 ---
