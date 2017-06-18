@@ -2,7 +2,7 @@
 layout: post
 title: Ethics in Machine Learning
 description: >
-    'How will this sentience affect our lives?' is a question that crosses our minds often. One of the less commonly asked questions about AI and Machine Learning is 'Was this built and founded with the right virtues?'
+    How will this sentience affect our lives? This is a question that crosses our minds often. One of the less commonly asked questions about AI and Machine Learning is, was this built and founded with the right virtues?
 subtitle:
 published: true
 comments: true
