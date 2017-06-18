@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Ethics in Machine Learning
+description: >
+    "How will this sentience affect our lives?" is a question that crosses our minds often. One of the less commonly asked questions about AI and Machine Learning is "Was this built and founded with the right virtues?"
 subtitle:
-description: "How will this sentience affect our lives?" is a question that crosses our minds often. One of the less commonly asked questions about AI and Machine Learning is "Was this built and founded with the right virtues?"
-published: false
+published: true
 comments: true
 ---
 
@@ -14,7 +15,7 @@ The ethics of how a Machine Learning (ML) or an Artificially Intelligent (AI) sy
 ## Background
 
 If you have no experience or no knowledge about what a ML system is, think of it as a black box. A black box which when posed with a question outputs an answer that has a high probability of being correct. In order to get this high probability, we need to setup the black box first.<br><br>
-In practice, we try to create a set of many black boxes and choose the one with the highest accuracy. To build these we need lots of data and an algorithm. Think of the data as a long list of questions with correct answers. The algorithm *learns* from this data. Each black box in a set has a slightly different version of the same algorithm. Finally, we pick the version of the algorithm that is most accurate (technically called *tuning the hyperparameters*).
+In practice, we try to create a set of many black boxes and choose the one with the highest accuracy. To build these we need lots of data and an algorithm. Think of the data as a long list of questions with correct answers. The algorithm *learns* from this data. Each black box in a set has a slightly different version of the same algorithm. Finally, we pick the version that is most accurate (technically called *tuning the hyperparameters*).
 
 ## The Problems
 
@@ -31,12 +32,12 @@ The answer becomes more ambiguous when we talk about tracking people anonymously
 ### 2. The Algorithm
 
 It's a good thing that many of the important and useful algorithms are open sourced. This means that everybody has access to it and some even allow us to modify it and make profit. This is great! Now, once again, imagine the same scenario with the data. If a group of people own a patented algorithm, the laws make it illegal to use the same algorithm. But what if that algorithm, in the right hands can help millions? Can one's own sense of right and wrong be used to reverse engineer the algorithm to benefit others? This deals with theft of intellectual property, but is nonetheless a concern of ML.<br><br>
-A problem with developing a new algorithm is closely tied with the datasets. If you don't have a complete dataset (i.e., you have a dataset that doesn't accurately consolidate a good number of all possible cases), it might just happen that your resulting ML system becomes biased and it could start discriminating. For example, an AI that helps a bank determine whether to invest in a particular business could deny loans to everybody with a poor credit history even though their business has great potential (something a human would have noticed). This is a bad example of automating human tasks that could take place unnoticed.
+A problem with developing a new algorithm is closely tied with the datasets. If you don't have a complete dataset (i.e., you have a dataset that doesn't accurately consolidate a good number of all possible cases), it might just happen that your resulting ML system becomes biased and it could start discriminating. For example, an AI that helps a bank determine whether to invest in a particular business could deny loans to everybody with a poor credit history even though their business has great potential (something a human would have noticed and made an exception for). This is a bad example of automating human tasks that could take place unnoticed.
 
 ### 3. The Results
 
-The first two problems are concerned with the larger picture. This one is more isolated to ML. In ML, to report the accuracy of a model, we compare the results the model produced to the actual answers. The more close they are, the higher the accuracy. There are different ways to report this score. One of the more popular ones is called F1 score.<br><br>
-The most common way people cheat here, is they train their model on a dataset and report the error they get on the same dataset. This is a common mistake beginners make because they don't understand that it is wrong. And a mistake that is sometimes made intentionally to be able to report a greater accuracy.<br><br>
+The first two problems are concerned with the larger picture. This one is more isolated to ML. In ML, to report the accuracy of a model, we compare the results the model produced to the actual answers. The more close they are, the higher the accuracy. There are different ways to report this score.<br><br>
+The most common way people cheat here, is they train their model on a dataset and report the error they get on the same dataset. This is a common mistake beginners make because they don't understand that it is wrong. And it's also a mistake that is sometimes made intentionally to be able to report a greater accuracy.<br><br>
 Why is this wrong? Imagine you are preparing for an exam and you are given a list of questions and answers to prepare for it. If you get the same questions in the exam, is your score on the exam a good measure of how much you learnt? Or is it a measure of how much you were able to memorize? The same is true for a computer. If you test the model on the same dataset you trained, your model will yield a high accuracy because, your model has now *memorized* the dataset and knows all the correct answers. But if I ask it a new question, there is a good chance that the answer is way off. This problem is called *overfitting the dataset*. Thankfully, the fix to this problem is very simple, but is out of the scope of this article.<br><br>
 Another way to cheat is creating a synthetic dataset on which the model performs extremely well and using that to report the accuracy.<br><br>
 If you're wondering if people even do this, take a look at the leaderboards of some Kaggle competitions. In the public dataset (the training dataset), there are many people with high accuracies. But, when looking at the leaderboards in the private dataset (an invisible test dataset), only few who had high scores in the earlier leaderboard got similar results. The others had models that heavily overfit the data. Such a model, if put into practice, is only detrimental to the society.<br><br>
