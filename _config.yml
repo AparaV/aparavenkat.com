@@ -33,7 +33,7 @@ github:
 
 # Collections
 collections:
-    docs:
+    supplements:
         output: true
     projects:
         output: false
