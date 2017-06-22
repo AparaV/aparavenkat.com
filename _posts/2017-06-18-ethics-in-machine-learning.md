@@ -3,7 +3,7 @@ layout: post
 title: Ethics in Machine Learning
 description: >
     How will this sentience affect our lives? This is a question that crosses our minds often. One of the less commonly asked questions about AI and Machine Learning is, was this built and founded with the right virtues?
-subtitle:
+subtitle: Also posted at <a href="https://medium.com/@apara/ethics-in-machine-learning-9fa5b1aadc12" target="_blank">medium.com</a>
 published: true
 comments: true
 ---
