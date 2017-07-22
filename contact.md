@@ -12,4 +12,4 @@ If you find my works interesting, want to connect with me, or just want to chat 
 * [linkedin.com/in/apara-venkateswaran](http://www.linkedin.com/in/apara-venkateswaran)
 * [facebook.com/aparavenkateswaran](http://www.facebook.com/aparavenkateswaran)
 
-Here's my <a href="/assets/resume/AparajithanVenkateswaran.pdf" target="_blank">resume</a> if that's what you're interested in.
+Here's my <a href="/assets/AparajithanVenkateswaran.pdf" target="_blank">resume</a> if that's what you're interested in.
