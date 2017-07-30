@@ -98,6 +98,78 @@ While doing so, we also need to separate the inputs, \\(X\\), and outputs, \\(y\
 
 ## Linear Regression
 
+### The Algorithm
+
+As I mentioned earlier, linear regression is perhaps the heart of machine learning.
+And the algorithm is the equivalent of the "Hello World" exercise.
+The algorithm is a very simple linear expression.
+
+\\[Y = WX + b\\]
+
+Here, \\(Y\\) is the output values for \\(X\\), the input values.
+\\(W\\) is referred to as the weights and \\(b\\) is referred to as the biases.
+Note that \\(Y\\) and \\(b\\) are vectors and \\(W\\) and \\(X\\) are matrices.
+This is, in many ways, analogous to the line equation in \\(2\\) dimensions you might be familiar with.
+
+\\[y = mx + c\\]
+
+The only difference is that we are extending and generalizing this relation to \\(n\\) dimensions.
+Just like being able to find a line equation between two points i.e., calculation \\(m\\) and \\(c\\),
+we are going to find the weights \\(W\\) and biases \\(b\\).
+
+In this way, we are going to map a *linear* relation between the sale prices and the features.
+It is important to stress on the fact that this is only a linear relationship.
+In reality, very few events are linearly correlated.
+
+Naturally the question we have is figuring out the weights and biases.
+To do this we will first randomly initialize the weights, and initialize the biases to \\(0\\).
+Then we will calculate the right hand side of the equation and compare it with the left hand side.
+We will define the error between them as the \\(Cost\\) or, the more commonly used term in neural networks, \\(loss\\).
+
+\\[loss = \frac{1}{2}\sum\limits_{i = 0}^n{((Y) - (WX + b))^2}\\]
+
+Then, this becomes an optimization problem where we are trying to find \\(W\\) and \\(b\\) to minimize the loss.
+There are various methods to optimize this.
+As usual we will stick with the simpler one - Gradient Descent Optimizer.
+Understanding this optimizer is perhaps beyond the scope of this article.
+But imagine optimizing a function in one variable using derivatives and
+generalizing that method to a function \\(n\\) variables.
+That is the core of gradient descent.
+
+Now, let's jump into the code.
+
+### The Implementation
+
+<script src="https://gist.github.com/AparaV/687220208a52f97ee907cfff091d4eee.js"></script>
+
+In Tensorflow, we first define and implement the algorithm in a structure called `graph`.
+The `graph` contains our input, output, weights, biases, and the optimizer.
+We will also define the loss function here. Then, we run the `graph` in a `session`.
+During each iteration, the optimizer will update the weights and biases based on the loss function.
+
+In our graph, we first define the train dataset values and labels (output), the validation and testing datasets.
+Note that we are defining them as `tf.constant`s. This means that these "variables" will not and cannot be modified when the `graph` is running.
+Next, we initialize the weights and biases. We treat these as `tf.Variable`s.
+Pay attention to the dimensions of these matrices. You will run into compilation errors if you get them wrong.
+This means that these "variables" have the capacity to be updated and modified during the course of our `session`.
+
+Now, we predict the \\(Y\\) values using the weights and biases using the `tf.matmul()` function.
+This is nothing but matrix multiplication. Then we add that to `biases`.
+But if you go back to the definition, `biases` is a single number while `tf.matmul(tf_train_dataset, weights)` is a vector.
+This might be confusing because you can only add a vector to another vector.
+But Tensorflow is quite clever. It understands that we mean to add the same scalar `biases` to each element of the vector.
+Think about this as converting the single number into a vector (or matrix) of same dimensions as the other vector,
+and then adding those together. This is called broadcasting.
+
+Then we calculate the `loss` as we defined previously. We can safely ignore `cost` for now.
+It's only purpose is to report the error we get.
+When using the gradient descent optimizer, we need a parameter (one of the hyperparamters) called learning rate.
+The term is self explanatory - it refers to how fast we want to minimize the `loss`.
+If it's too big, we will only keep increasing the `loss`. If it's too small, and the algorithm will converge very slowly.
+Here, we define `alpha` as the learning rate. After much experimentation, I've decided to use `0.01` as the learning rate.
+It might be beneficial to vary this value and test for yourself.
+Next, we define the `optimizer`.
+
  - Algorithm
  - Implementation
  - Results
