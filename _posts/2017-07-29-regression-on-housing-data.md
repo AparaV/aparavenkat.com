@@ -3,7 +3,7 @@ layout: post
 title: Regression on House Prices
 subtitle:
 description:
-published: true
+published: false
 comments: true
 ---
 
@@ -90,8 +90,9 @@ Its purpose is to serve as an unbiased judge and report the error on the model.
 Usually, the dataset is divided as 60% training, 20% validation and 20% testing. And we will follow that fashion.
 We will also shuffle the dataset to make sure data is equally distributed across the 3 datasets.
 
-So far we have been dealing with `pandas` dataframes. Tensorflow likes `numpy` arrays better.
-So, we will convert the dataframes into matrices. While doing so, we will also separate the inputs, \\(X\\), and outputs, \\(y\\).
+So far we have been dealing with `pandas` dataframes. Alas! Tensorflow likes `numpy` arrays better.
+So, we will have to fix that by converting the dataframes into matrices.
+While doing so, we also need to separate the inputs, \\(X\\), and outputs, \\(y\\).
 
 <script src="https://gist.github.com/AparaV/902692e441c06604703dbc7ffd2d3680.js"></script>
 
