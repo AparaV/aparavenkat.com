@@ -2,17 +2,20 @@
 layout: post
 title: Regression on House Prices
 subtitle:
-description:
-published: false
+description: >
+    Linear regression is perhaps the heart of machine learning. At least where it all started.And predicting the price of houses is the equivalent of the "Hello World" exercise in starting with linear regression. This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the Ames housing dataset
+published: true
 comments: true
 ---
 
 Linear regression is perhaps the heart of machine learning. At least where it all started.
 And predicting the price of houses is the equivalent of the "Hello World" exercise in starting with linear regression.
-This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the [Ames dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf).
+This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the [Ames housing dataset](https://ww2.amstat.org/publications/jse/v19n3/decock.pdf){:target="blank"}.
 <!--excerpt_ends-->
 This is a very simple (and perhaps naive) attempt at one of the beginner level Kaggle competition.
 Nevertheless, it is highly effective and demonstrates the power of linear regression.
+
+**All of the code used here is available in the form of a [Jupyter Notebook](https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb){:target="blank"} which you can run on your machine.**
 
 ## Pre-requisites
 
@@ -24,7 +27,7 @@ The tutorial also assumes the reader is familiar with how Kaggle competitions wo
 
 ## The Raw Data
 
-First off, we will need the data. The dataset we will be using is the Ames Housing dataset and can be downloaded from [here](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data).
+First off, we will need the data. The dataset we will be using is the Ames Housing dataset and can be downloaded from [here](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data){:target="blank"}.
 Opening up the `train.csv`, you will notice nearly 52 features of 1460 houses.
 What each of these features represent is described in `data_description.txt`.
 The file `test.csv` differs from `train.csv` in that there are fewer houses and the prices for each of the houses is not present.
@@ -32,7 +35,7 @@ We will use the `train.csv` file to train and build our model.
 Then, using that model, we will predict the prices for each of the houses in `test.csv`.
 
 You might want to spend some time studying this data by graphing charts, etc. to gain a better understanding of the data.
-This will definitely be helpful, but we will not do that.
+This will definitely be helpful, but we will not do that here.
 
 ## Cleaning Data
 
@@ -148,8 +151,8 @@ We will also define the loss function here. Then, we run the `graph` in a `sessi
 During each iteration, the optimizer will update the weights and biases based on the loss function.
 
 In our graph, we first define the train dataset values and labels (output), the validation and testing datasets.
-Note that we are defining them as `tf.constant`s. This means that these "variables" will not and cannot be modified when the `graph` is running.
-Next, we initialize the weights and biases. We treat these as `tf.Variable`s.
+Note that we are defining them as `tf.constant`. This means that these "variables" will not and can not be modified when the `graph` is running.
+Next, we initialize the weights and biases. We treat these as `tf.Variable`.
 Pay attention to the dimensions of these matrices. You will run into compilation errors if you get them wrong.
 This means that these "variables" have the capacity to be updated and modified during the course of our `session`.
 
@@ -168,22 +171,73 @@ The term is self explanatory - it refers to how fast we want to minimize the `lo
 If it's too big, we will only keep increasing the `loss`. If it's too small, and the algorithm will converge very slowly.
 Here, we define `alpha` as the learning rate. After much experimentation, I've decided to use `0.01` as the learning rate.
 It might be beneficial to vary this value and test for yourself.
-Next, we define the `optimizer`.
 
- - Algorithm
- - Implementation
- - Results
+Next, we define the `optimizer`. As mentioned earlier, we are using gradient descent with a learning rate `alpha`
+and trying to minimize `loss`. This will update the `tf.Variable` elements involved in the calculation of `loss`.
 
-## Neural Network
+After that, we are predicting the outputs on the validation and testing datasets using the new `weights` and `biases`.
+Finally, notice the `saver`. What this does is it saves the `weights`, `biases`, and all other `tf.Variable` into a checkpoint file.
+We can use these at a later stage to make our predictions.
 
- - Algorithm
- - Implementation
- - Results
+That is how our `graph` is constructed. Now, we can run the `graph` in our `session`.
 
-## Improvements
+We start our `session` by initializing the global variables. This means initializing all `tf.Variable`.
+Then we use the `.run()` function to run the `session` for `100000` steps.
+Generally, the more number of steps, the better your results.
+But `100000` can seem like a large number and will take a long time if you can't make use of GPU.
+If that is your case, you can either install `tensorflow-gpu` or just reduce `num_steps` to `10000`.
+After each run, we are storing the `cost` and `train_predictions` locally outside the graph.
+And after every `5000` steps, we are calculating the cost of out model on the validation dataset.
+At the end of the run, we save the `session` using the `saver` we created in the graph.
 
- - Regularization
- - Less cleaning up
- - Bins to prevent overfitting
+These are my results after `100000` iterations. The blue line is the actual value and the orange line is the predicted value.
+It's quite impressive that such a simple idea can yield really good results.
+There is still lots of room for improvement though. I will touch upon some of those ideas at the end.
 
-## Final Words
+![linear_regression_comparison]({{ site_url }}/assets/images/regression_housing_linear.png)
+
+### The Prediction
+
+Finally, we are ready to predict the prices of houses whose features are described in `test.csv`.
+First, we initialize a new `session`. Then we restore the variables from the `saver`.
+And using these restored `weights` and `biases`, we predict the output on the new dataset.
+You can save that into a `.csv` file and make a submission.
+You should get a score of `2.5804`. And you should be placed in the top 2000 ranks (as of 31 Jul 2017).
+
+## Improvements to Linear Regression
+
+As I mentioned earlier (and as you might have guessed) there is certainly room for improving this naive model.
+Here are a few ideas to think about:
+
+1. **Regularization** - This concept is very very important to make sure your model doesn't overfit the training data.
+This might lead to larger errors on the training set. But, your model is bound to generalize better outside your training set.
+This means that your model is more likely to be applicable in the real world if you use regularization.
+
+2. **Creating bins** - Remember how each of the numerical features (like area) are such varying numbers.
+To prevent overfitting, you can create bins for these features.
+For instance, all houses with area between 1000 and 1500 sq. ft would be assigned a value of 1 (say).
+I have seen this idea work really well for classification problems.
+
+3. **More features** - I dropped a lot of features reasoning out that they wouldn't cause the house price to be affected.
+In reality, I have no basis for that "fact". Actually, there is a good chance they there is at least a correlation (if not a causation) between them.
+And any correlation, no matter how small, will help your model. So don't drop them. Keep them around and test.
+You can even try your hand at engineering new features that you think might be helpful.
+
+4. **A new cost function** - Did you notice the range of house prices? The cost function we used did not take this into consideration.
+Think about it this way - we penalized the model for predicting a $5000 house to be $0 (i.e., a difference of $5000) by the same amount
+if it predicted a $200,000 house to be $150,000 (i.e., a difference of $5000). We know that this is wrong.
+Instead, you can define a new function that computes the square difference of \\(log\\).
+This will fix the problem of the large range of output values.
+
+5. **Non-linearities** - Our assumption was that the output was linearly related to these features.
+This is rarely the case. One way to fix that is randomly try creating new features \\(X'\\) from \\(X\\) where \\(X' = X^n\\)
+(\\(n\\) is another random number) and testing it out. This is clearly impossible and infeasible.
+One of the reasons why neural networks are amazing is that they automagically identify and map these non-linearities.
+
+## Next Steps...
+
+This post is already longer than I intended it to be. And at the same time, I feel that making this shorter would make it less adequate.
+So, the next article will continue on our discussion of the Ames housing data.
+And in the next article, we will be using neural networks and see why it can be a better approach.
+Meanwhile, the code for the neural network is already out there.
+So you are welcome to continue using the [Jupyter Notebook](https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb){:target="blank"} to try out neural networks.
