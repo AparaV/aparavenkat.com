@@ -3,7 +3,7 @@ layout: post
 title: Regression on House Prices
 subtitle:
 description: >
-    Linear regression is perhaps the heart of machine learning. At least where it all started.And predicting the price of houses is the equivalent of the "Hello World" exercise in starting with linear regression. This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the Ames housing dataset
+    Linear regression is perhaps the heart of machine learning. At least where it all started. This is perhaps the equivalent of the "Hello World" exercise. This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the Ames housing dataset
 published: true
 comments: true
 ---
