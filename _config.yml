@@ -18,7 +18,7 @@ author:
   url:            https://github.com/AparaV
 
 # Site Settings
-paginate:         5
+paginate:         7
 excerpt_separator: <!--excerpt_ends-->
 
 #Plugins
