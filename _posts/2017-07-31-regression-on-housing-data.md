@@ -238,6 +238,6 @@ One of the reasons why neural networks are amazing is that they automagically id
 
 This post is already longer than I intended it to be. And at the same time, I feel that making this shorter would make it less adequate.
 So, the next article will continue on our discussion of the Ames housing data.
-And in the next article, we will be using neural networks and see why it can be a better approach.
+And in the [next article]({% post_url 2017-08-12-neural-networks-on-housing-data %}), we will be using neural networks and see why it can be a better approach.
 Meanwhile, the code for the neural network is already out there.
 So you are welcome to continue using the [Jupyter Notebook](https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb){:target="blank"} to try out neural networks.
