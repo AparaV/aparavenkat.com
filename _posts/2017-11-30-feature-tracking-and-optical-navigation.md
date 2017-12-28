@@ -8,7 +8,7 @@ published: true
 comments: true
 ---
 
-This article is a simple version of the <a href="{{ site_url }}/assets/images/feature-tracking/report.pdf" target="_blank">research report</a> that aims at identifying and tracking craters in images for optical navigation in space. We first survey at existing image processing techniques. We then proceed to bootstrapping a deep neural network classifier with the help of TensorFlow Object Detection API and images from NASA’s Detecting Crater Impact Challenge. We then implement a preliminary tracking algorithm that stores images and computes mean squared error to detect if the crater has already been seen before.
+This article is a simplified version of the <a href="{{ site_url }}/assets/images/feature-tracking/report.pdf" target="_blank">research report</a> that aims at identifying and tracking craters in images for optical navigation in space. We first survey at existing image processing techniques. We then proceed to bootstrapping a deep neural network classifier with the help of TensorFlow Object Detection API and images from NASA’s Detecting Crater Impact Challenge. We then implement a preliminary tracking algorithm that stores images and computes mean squared error to detect if the crater has already been seen before.
 <!--excerpt_ends-->
 
 In this article, we additionally go into more details of the tracking algorithm. For the code, check the `object-detection` branch of our [GitHub repository](https://github.com/thibaudteil/OpNav_Tracking/).
