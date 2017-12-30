@@ -5,7 +5,7 @@ description: What do I want from university education? How do I want to approach
 comments: true
 ---
 
-If you had asked me why I want to go to university, and why I am studying what I am studying, a few months ago, I would have replied with superficial answers like, "Get a job" and  "I love mathematics". But after taking the class, **Critical Encounters**, my answer is completely different. This class made me rethink several aspects of life, and question who I wanted to be.
+If you had asked me why I want to go to university, and why I am studying what I am studying, a few months ago, I would have replied with superficial answers like, "Get a job" and  "I love mathematics". But after taking the class **Critical Encounters**, my answer is completely different. This class made me rethink several aspects of life, and question who I wanted to be.
 <!--excerpt_ends-->
 One of the final assignments for this class was to give _my_ statement on the philosophy of education. Here is the prompt for the assignment:
 
