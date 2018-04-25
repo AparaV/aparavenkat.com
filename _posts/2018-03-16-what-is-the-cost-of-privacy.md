@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Cost of Privacy
-description: 
+description: What would happen if you were able to trade your personal information legally? This paper discusses the mathematics of such a world along with the ethical and philosophical issues that tag along.
 subtitle:
 published: true
 comments: true
