@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-**UPDATE 4/24/2018** I am pleased to say that our paper was a *Meritorious Winner* (one of the top 10% papers that were submitted).
+**UPDATE 4/24/2018** I am pleased to say that our paper was selected as a *Meritorious Winner* (one of the top 10%)!
 
 Every year, the [Consortium for Mathematics and its Applications (COMAP)](http://www.comap.com/undergraduate/contests/){:target="_blank"} hosts an international contest for high school students and college undergraduates where the participants get to work in teams of upto 3 to analyze, and propose solutions to open ended problems. COMAP releases 6 problems (3 of which are mathematical, and the other 3 incorporate interdisciplinary ideas) at the beginning of the contest. The contest itself takes place over 4 days, and at the end, the teams submit a 20 page report on their work.
 <!--excerpt_ends-->
