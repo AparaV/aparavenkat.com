@@ -15,11 +15,11 @@ Luckily, only a small number of passengers bring their bike on the bus. So, unle
 
 I immediately got down to solving something that resembled a classic example taken from a probability textbook.
 
-### A Bernouilli Distribution
+### A Binomial Distribution
 
 > Let the probability that each passenger carries their bike on the bus be $$p$$. Now, suppose there are $$N \geq 2$$ passengers. What is the probability that at least two of them bring their bike?
 
-This is simply a [Bernoulli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution){:target="_blank"}. Let $$X$$ denote the number of bikes. Then $$X \sim Bernoulli(n, p)$$. And we have:
+This is simply a [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:target="_blank"}. Let $$X$$ denote the number of bikes. Then $$X \sim Binom(n, p)$$. And we have:
 
 \\[Pr(X = k \| N = n) = \binom{n}{k} p^{k} (1-p)^{n-k} \\]
 \\[Pr(X \geq 2 \| N = n) = \sum_{k=2}^{n} \binom{n}{k} p^{k} (1-p)^{n-k} \\]
