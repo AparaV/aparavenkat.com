@@ -29,7 +29,7 @@ This is simply a [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_
 If I know how many passengers are on the bus, I have a quantitative estimate of the number of free bike racks. However, while I am still waiting for the bus and cranking out probabilities, I do not have any prior knowledge about the number of passengers. This is where we have the liberty to make the problem interesting by coming up with a generative process for the number of passengers, $$N$$. Here are some basic facts to get started:
 
 - $$N$$ is a discrete variable.
-- There are different bus stops where passengers can get on (or get off). Think of these bus stops as discrete time intervals, and each passenger getting on at a bus stop as a single events.
+- There are different bus stops where passengers can get on (or get off). Think of these bus stops as discrete time intervals, and each passenger getting on at a bus stop as a single event.
 - The number of passengers getting on at each bus stop can be considered independent of the number of passengers getting on at the previous stop.
 
 This almost looks to me like a [Poisson process](https://en.wikipedia.org/wiki/Poisson_distribution){:target="_blank"}. The only hiccup is that, more passengers may get on at a larger bus stop i.e., the rate at which events occur is not constant (something that is fundamental to a Poisson distribution). But, we can still approximate $$N$$ using a Poisson distribution, hoping that the difference in rates of events cancel each other. So, $$N \sim Poisson(\lambda)$$ where $$\lambda$$ is the average number of passengers getting on a particular bus stop.
