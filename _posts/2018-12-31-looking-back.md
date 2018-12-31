@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Looking Behind and Looking Ahead - 2018 and 2019"
-description: What is the probability that there is no space on the bike racks when you want to carry your bike on the bus?
+description: The end of the year post. Some highlights of 2018 and what I'm looking forward to in 2019.
 subtitle: 
 published: true
 comments: true
