@@ -18,7 +18,7 @@ Some important things that happened in 2018...
 
 ### Research
 
-I started working with [Professor Daniel Larremore](http://danlarremore.com/){:target="_blank"} in January of 2018, and it has been amazing working with him and the people there. The broader view of what my lab is interested in is the structure of academic networks. I am helping that endeavor by automating the process of collecting data from academic CVs. This topic falls in the intersection of probabilistic modeling, machine learning, natural language processing, and ,interestingly, DNA sequencing. I worked on this project over the summer too and learned a lot. And I am looking forward to learning more!
+I started working with [Professor Daniel Larremore](http://danlarremore.com/){:target="_blank"} in January of 2018, and it has been amazing working with him and the people there. The broader view of what my lab is interested in is the structure of academic networks. I am helping that endeavor by automating the process of collecting data from academic CVs. This topic falls in the intersection of probabilistic modeling, machine learning, natural language processing, and, interestingly, DNA sequencing. I worked on this project over the summer too and learned a lot. And I am looking forward to learning more!
 
 ### Connecting the dots
 
