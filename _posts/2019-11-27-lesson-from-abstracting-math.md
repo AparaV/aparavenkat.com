@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A lesson in speed and math abstraction"
-description: Abstract away the details. Reduce the noise. Let the equations settle down. Now, breathe to a clearer picture.
+description: Abstract away the details. Reduce the noise. Let the equations settle down. Now, breathe to see a clearer picture.
 subtitle: 
 published: true
 comments: true
