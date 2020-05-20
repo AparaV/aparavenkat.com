@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thoughts on research opportunities"
-description: A conversation on how to go about finding the "right" research opportunities.
+description: "A conversation on how to go about finding the 'right' research opportunities."
 subtitle: 
 published: true
 comments: true
