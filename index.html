@@ -1,38 +1,23 @@
 ---
 layout: default
-pagination:
-  enabled: true
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-    {{ post.excerpt }}
-    <a href="{{ post.url }}">Continue reading</a>
-  </div>
-  {% endfor %}
-</div>
+<h2>About Me</h2>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.url }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.url }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<p>Hi, I am Apara. I am an incoming Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.</p>
+
+<p>Read more <a href="/bio">here</a>. Sometimes I write. You can find my writings <a href="/blog">here</a>.</p>
+
+<hr>
+
+<h2>News</h2>
+<ul>
+  {% assign events = site.data.news | sort: 'date' | reverse %}
+  {% for event in events limit: 25%}
+  <li>
+    <b>{{ event.date | date_to_string }} - </b> {{ event.description }}
+  </li>
+  {% endfor %}
+</ul>
+<p>You can find a list of all news events <a href="/archive#news-archive">here</a>.</p>

@@ -17,8 +17,10 @@ author:
   name:           'Aparajithan Venkateswaran'
   url:            https://github.com/AparaV
 
+
+include: ["_data/news.yml"]
+
 # Site Settings
-# paginate:         7
 pagination:
   enabled: true
   per_page: 7
