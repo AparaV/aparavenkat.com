@@ -16,7 +16,7 @@ title: Archive
       {% assign events = site.data.news | sort: 'date' | reverse %}
       {% for event in events %}
           <li>
-            <b>{{ event.date | date_to_string }} - </b> {{ event.description }}
+            {{ event.date | date_to_string }} - {{ event.description }}
           </li>
       {% endfor %}
     </ul>
