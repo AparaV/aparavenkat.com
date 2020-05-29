@@ -26,5 +26,3 @@ git config user.name "Apara Venkat"
 git add --all
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 git push --force origin gh-pages
-
-8b94c0f6e5c4309f984854c9cf35a3af588e06ae
