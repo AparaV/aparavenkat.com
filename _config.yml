@@ -46,5 +46,5 @@ github:
 collections:
     supplements:
         output: true
-    projects:
+    posts:
         output: false
