@@ -1,148 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-  <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <!-- Meta tags for sharing -->
-  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
-  
-    <meta content="Home" property="og:title" />
-  
-  
-    <meta content="article" property="og:type" />
-  
-  
-    <meta content="" property="og:description" />
-  
-  
-    <meta content="https://www.aparavenkat.com/" property="og:url" />
-  
-  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
-
-  <title>
-    
-      Aparajithan Venkateswaran &middot; Personal website
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
-  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
-  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
-  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
-                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-
-  <!-- JS -->
-  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
-
-  <!-- Google Analytics -->
-  <!-- Please change this if you are using the same website -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
-  <script>
-    // Disable Google Analytics when testing locally
-    var host = window.location.hostname;
-    if(host != "localhost") {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-90125911-3');
-    }
-  </script>
+---
+layout: default
+title: Home
+---
 
 
-</head>
-
-
-  <body>
-
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h2>
-          Aparajithan Venkateswaran
-      </h2>
-      <p class="lead" style="font-family:monospace;">/home/apara/</p>
-    </div>
-
-    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
-        <i class="fa fa-rss" aria-hidden="true"></i>
-    </a>
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-          
-              <a class="sidebar-nav-item" href="/archive/">Archive</a>
-          
-        
-      
-        
-      
-        
-          
-              <a class="sidebar-nav-item" href="/bio/">About</a>
-          
-        
-      
-        
-          
-        
-      
-        
-          
-              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
-          
-        
-      
-        
-      
-        
-          
-              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </nav>
-
-    <p>&copy; 2020. All rights reserved.</p>
-  </div>
-</div>
-
-
-    <div class="content container">
-      <div class="container box">
+<div class="container box">
   <h2>About Me</h2>
 
   <p>Hi, I am Apara. I am an incoming Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.</p>
@@ -155,40 +17,12 @@
 <div class="container box overflow-auto">
   <h2>News</h2>
   <ul>
-    
-    
+    {% assign events = site.data.news | sort: 'date' | reverse %}
+    {% for event in events limit: 25%}
     <li>
-      <b>24 May 2020 - </b> Website gets a make-over. You are looking at it right now.
+      <b>{{ event.date | date_to_string }} - </b> {{ event.description }}
     </li>
-    
-    <li>
-      <b>19 May 2020 - </b> I wrote an article about my <a href="/2020/05/19/hackcu-over-the-years">experience at HackCU</a>. 📝
-    </li>
-    
-    <li>
-      <b>18 May 2020 - </b> I started my summer internship at Microsoft in the Mixed Reality Team. 🤖
-    </li>
-    
-    <li>
-      <b>16 May 2020 - </b> I received my B.S. in Computer Science and Applied Mathematics from CU Boulder! 🎓
-    </li>
-    
-    <li>
-      <b>24 Apr 2020 - </b> I successfully defended my undergraduate thesis!
-    </li>
-    
-    <li>
-      <b>02 Apr 2020 - </b> I received <i>Outstanding Undergraduate for Academic Achievement Award</i>! 🥇
-    </li>
-    
+    {% endfor %}
   </ul>
   <p>You can find a list of all news events <a href="/archive#news-archive">here</a>.</p>
 </div>
-
-    </div>
-
-    <!-- txtpen highlighter -->
-    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
-
-  </body>
-</html>
