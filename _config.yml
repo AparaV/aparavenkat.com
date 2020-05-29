@@ -40,8 +40,7 @@ plugins:
 # Custom vars
 version:          2.1.0
 
-github:
-  repo:           https://github.com/AparaV/aparav.github.io
+repository:           https://github.com/AparaV/aparav.github.io
 
 # Collections
 collections:
