@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="How I built an app from scratch" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="My first web app and how I crafted it using Python" property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2016/12/26/how-i-built-an-app-from-scratch/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      How I built an app from scratch &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">How I built an app from scratch</h1>
+  
+    <span class="post-date">26 Dec 2016</span>
+  
+  <h4><i>Also posted at <a href="https://medium.com/@apara/how-i-built-an-app-from-scratch-cf71c9f7d23f#.t25o3b56f">medium.com</a></i></h4>
+  <p><a href="https://popularity-on-twitter.herokuapp.com/">Popularity on Twitter</a> was never intended to be what it is right now (an app hosted on <a href="http://heroku.com/">Heroku</a>).
+It started out as a weekend project to help me learn Python and APIs.
+I previously had little knowledge of Python and knew nothing about APIs.
+Over Thanksgiving break, I decided to learn them using the Twitter API.
+<!--excerpt_ends--></p>
+
+<p>The results of the simple <code class="language-plaintext highlighter-rouge">get_status</code> function seemed magical.
+And I decided to take it a bit further.
+By following a <a href="https://marcobonzanini.com/2015/03/02/mining-twitter-data-with-python-part-1/">tutorial</a>, I implemented a functionality to analyze tweets and find the most common words amongst them (ignoring stopwords like ‘the’, ‘I’, ‘there’, etc.) and plot a time frequency chart to see the tweet trends with time.
+But that wasn’t enough.</p>
+
+<h2 id="adding-my-small-feature">Adding my small feature</h2>
+
+<p>Nothing’s ever enough.
+I decided to add a small feature of my own that would track live tweets containing the requested search query and calculate a score to determine how popular the query is at that instant.
+This was where I started facing a lot of problems and thus learnt a lot.</p>
+
+<p>The biggest issue was that the streaming API would not stop until I terminated the script manually.
+So I had to modify the API wrapper’s implementation of the stream listener to add a timer to stop streaming after the limit exceeds.
+Then I realized that this method failed when streaming low volume tweets.
+After scouring stackoverflow to no avail, I came up with a novel idea.
+I used the original implementation, but ran it on a separate thread.
+I used a timer in the main thread and disconnected the stream, from the main thread, upon completion of the timer.
+Check out the <a href="https://gist.github.com/AparaV/6facd7db460b905933cf908c8b919b89">gist</a>.</p>
+
+<p>Then there is the calculation itself.
+As you might know, my formula isn’t necessarily perfect.
+But it does a good job of giving qualitative results when comparing two or more scores.
+The formula isn’t perfect because, it does not give you an absolutely deterministic score.
+Unlike looking at your math grade and feeling satisfied you got a 95, you cannot look at the score of a query and determine whether it is actually popular or not.
+This is not possible (correct me if I’m wrong) because the Streaming API does not allow you to get all tweets (and you do not want to, unless you are trying to run out of memory).
+You can only track tweets by applying a filter and there is no empty filter to download all of them.</p>
+
+<h2 id="the-algorithm">The algorithm</h2>
+
+<p>First, I had find all the factors that determine the popularity.
+The total number of tweets gathered in the time interval is the most obvious.
+The number of followers the tweeter has should also play a role because if he has more followers, then the tweet ends up on more user’s feeds.
+Then there is the retweet count.
+This makes sense because if a tweet is being retweeted more, then it is clearly reaching more people and getting more attention.
+The number of likes is similar to the retweet count.</p>
+
+<p>Hence, I calculated the total number of tweets ( \(T\) ).
+Then I summed up retweet count for all tweets ( \(T_R\) ) and calculated the retweet index ( \(R\) ).
+Then I averaged the number of followers each user had ( \(f_i\) ) across the entire set.
+Then, for the likes, I divided the likes each tweet had ( \(l_i\) ) with the number of followers the user had because liked tweets show up less on someone else’s feed.
+I averaged this new likes index ( \(L_i\) ) across the entire set.
+Then I summed them all up and divided them by the amount of time ( \(t\) ) the tweets were collected.</p>
+
+<p>\[ L_i = \frac{l_i}{f_i} \]
+\[ R = \frac{T_R}{T} \]
+\[p = \frac{\sum_{i}L_i}{T} + \frac{\sum_{i}f_i}{T} + R + T\]
+\[ P = \frac{p}{t} \]</p>
+
+<p>Clearly there are some fallacies here.
+For instance, I should probably factor in the number of followers for the retweets, similar to the likes count.
+Maybe I could assign weights to each of these factors and then find the score which would help a lot as it scales down the score to a range.
+There is obviously scope for improvement here.
+In fact, I want to improve this and I tweak this often when I get new ideas.</p>
+
+<p>Thus I created something that works alright locally, on the console.</p>
+
+<hr />
+
+<h2 id="the-next-level">The next level</h2>
+
+<p>During the winter break, I decided to take it to the next level by running it on a website.
+I knew how JavaScript works on browsers, but not much about Python and I’ve come across Python and web app put together frequently.</p>
+
+<p>I used Flask to set up a local server and added some (not so) fancy front-end stuff to deliver data the client provides to my Python program.
+Then I wanted to host it on some web service to show it to the world.</p>
+
+<h2 id="hosting-on-heroku">Hosting on Heroku</h2>
+
+<p>This was the next biggest hurdle.
+I had to learn how this service worked and modify a lot of my existing code to comply with their service.
+This was harder than I expected because I’m using Windows as my development environment and let’s just say that Windows has its own way of dealing with things that aren’t quite friendly with developers.
+And migrating the entire project to my VM wasn’t an option now.</p>
+
+<p>I learnt to live with Windows and finally managed to deploy it on Heroku.
+Then came the next shock.
+If the client wanted to stream for more than 30 seconds, the request would time out and lead to an error page.
+So I had to move the streaming process and calculation process to a background worker in a separate thread and lead the client to a loading page, which would periodically make calls to see if the calculation has completed.</p>
+
+<p>Finally, I had to make sure I notified the client if the app began to hit the rate limits set by the streaming API.
+This was necessary to prevent erroneous results from being delivered to the client and most importantly prevent Twitter from banning my API credentials for making frequent requests.</p>
+
+<h2 id="what-did-i-learn">What did I learn?</h2>
+
+<p>A great deal more about python – file I/O, turning a console app into a web app using Flask.
+I can also confidently say that I will be able to deploy another app on the Heroku infrastructure, which is pretty straightforward and intuitive now that I know how it works.
+Finally, I learnt a lot about multi-threading and feel safe about using threads, which is something I’ve been dodging for a while because it sounded very dangerous.</p>
+
+<p>Overall, it’s been an amazing learning experience.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>

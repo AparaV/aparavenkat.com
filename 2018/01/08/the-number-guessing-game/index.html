@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="The Number Guessing Game" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="I think of 5 numbers from 1 to 100. A friend, who has no idea what my 5 numbers are, then tells that you can pick a number from 31-60. What are the odds that the number you picked is one of the 5 numbers I thought of?" property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2018/01/08/the-number-guessing-game/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      The Number Guessing Game &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">The Number Guessing Game</h1>
+  
+    <span class="post-date">08 Jan 2018</span>
+  
+  <h4><i></i></h4>
+  <p>Let’s play a game. I think of 5 numbers from 1 to 100. A friend, who has no idea what my 5 numbers are, then tells that you can pick a number from 31 to 60. You win the game if the number you picked is one of the 5 numbers I thought of. Assume that I had no idea that you were going to be restricted to guessing only a number from 31 to 60 (otherwise it wouldn’t fair!). What are the odds of you winning the game?
+<!--excerpt_ends--></p>
+
+<h2 id="why-is-this-interesting">Why is this interesting?</h2>
+<p>Well, apart from the fact that a mathematician never shys away from a problem, this problem is interesting because, there is a seemingly complicated twist to <a href="#the-original-problem">the original problem</a>. It turns out that it actually isn’t that complicated at all.</p>
+
+<p>But, the problem is most interesting because of the answer to the question. So, you will have to stick until the end to know why this is intersting and worth thinking about. Now that we have established the conundrum of the <em>Hermeneutic Circle</em>, let’s dive into the solution. If you are very impatient, jump to the <a href="#results">results</a> to know the answer.</p>
+
+<h2 id="the-original-problem">The Original Problem</h2>
+<p>The question I posed is a spin-off of a very simple problem in probability. Let’s solve that before introducing the intricacies and restrictions. The problem goes like this:</p>
+<blockquote>
+  <p>I think of 5 numbers from 1 to 100. What are the odds that you guess exactly one of those numbers in a single attempt?</p>
+</blockquote>
+
+<p>The solution is straightforward. There are 5 right answers. And you have a pool of 100 numbers to guess from.
+\[Probability = \frac{5}{100} = 0.05 \]
+It will do well to remember the number 0.05. Now, let’s look at the problem at hand.</p>
+
+<h2 id="the-solution">The Solution</h2>
+<p>For the sake of simplicity, let’s call the person who thinks of the number as Player 1 (or <strong>P1</strong>) and the person who guesses as Player 2 (or <strong>P2</strong>). And for completeness, let’s call the person who imposes restrictions, making life harder for <strong>P2</strong>, as Referee (or <strong>R</strong>).</p>
+
+<p>Back to the original problem, let us study the situation before we answer the actual question. First of, notice that there are 6 different possibilites for the 5 numbers and range.</p>
+<ol>
+  <li>None of the 5 numbers lie in the range</li>
+  <li>Exactly 1 of the 5 numbers lie in the range</li>
+  <li>Exactly 2 of the 5 numbers lie in the range</li>
+  <li>Exactly 3 of the 5 numbers lie in the range</li>
+  <li>Exactly 4 of the 5 numbers lie in the range</li>
+  <li>All of the 5 numbers lie in the range</li>
+</ol>
+
+<p>For succinctness, let us call the event that exactly \(i\) numbers lie in the range as \(R_i\). So, the above mentioned possibilities are events \(R_0\), \(R_1\), \(R_2\), \(R_3\), \(R_4\), and \(R_5\). Notice that these events are mutually exclusive and exhaustive.</p>
+
+<p>Let us call the event that <strong>P2</strong> wins the game i.e., guesses a correct number as \(C\). It is actually easier for us to calculate the probability of \(C\) occurring conditioned on the events \(R_i\). It is also straightforward to calculate the probability of \(R_i\). So, with the help of law of total probability, we can answer the question posed as follows:</p>
+
+<p>\[P(C) = \sum\limits_{i = 0}^5{P(C|R_i) * P(R_i)} \]
+\[P(C|R_i) = \frac{i}{30}\]
+\[P(R_i) = \frac{(^{30}C_i) * (^{70}C_{5-i})}{^{100}C_5} \]
+\[P(C) = \sum\limits_{i = 0}^5{\frac{i}{30}*\frac{(^{30}C_i) * (^{70}C_{5-i})}{^{100}C_5}} = 0.05 \]</p>
+
+<p>Surprisingly we get the same answer got from the <a href="#the-original-problem">original problem</a> i.e., 0.05. Could this just be a coincidence?</p>
+
+<h2 id="generalization">Generalization</h2>
+<p>Let us generalize our formula for arbitrary values. Let \(S\) be the set of all elements from which <strong>P1</strong> can think of. And let \(k\) be the number of elements that <strong>P1</strong> thinks of. Now, <strong>R</strong> imposes a restriction on <strong>P2</strong>. Let \(A\) be that restriction i.e., the set of all elements from which <strong>P2</strong> can guess the answer. Let \(|S| = n\), \(|A| = m\), and \(A \subseteq S\). Therefore \(m \leq n\). Let the set of elements that <strong>P1</strong> thinks of be \(X\). Clearly \(|X| = k\).</p>
+
+<p>Our events are defined as before. \(R_i\) is the event that exactly \(i\) elements of \(X\) lie in \(A\) i.e., \(|X \cap A| = i\) where \(0 \leq i \leq k\). \(C\) is the event that <strong>P2</strong> wins the game. Again, applying the law of total probability, we have:</p>
+
+<p>\[P(C) = \sum\limits_{i = 0}^k{P(C|R_i) * P(R_i)} \]</p>
+
+<p>Consider the event \(C\) conditioned on \(R_i\). <strong>P2</strong> can guess from a total of \(m\) elements. But, only \(i\) of them can make <strong>P2</strong> win. Therefore, the probability of \(C\) conditioned on \(R_i\) can be written as:</p>
+
+<p>\[P(C|R_i) = \frac{i}{m}\]</p>
+
+<p>The number of ways event \(R_i\) can occur is the number of ways we can choose \(i\) elements from \(A\) and the number of ways we can choose the rest i.e., \((k - i)\) elements from \(S-A\). Note that because \(A \subseteq S\), \(|S - A| = n - m\). So, we can write the probability of \(R_i\) as:</p>
+
+<p>\[P(R_i) = \frac{(^{m}C_i) * (^{n-m}C_{k-i})}{^{n}C_k} \]</p>
+
+<p>Now, we can answer the generalized question:</p>
+
+<p>\[P(C) = \sum\limits_{i = 0}^k{\frac{i}{m}*\frac{(^{m}C_i) * (^{n-m}C_{k-i})}{^{n}C_k}} \]</p>
+
+<h2 id="results">Results</h2>
+<p>I have written a quick <a href="https://gist.github.com/AparaV/f5d9278e250331b5ca31a63db2a2d749" target="_blank">python script</a> to evaluate this for different values of \(n\), \(m\), and \(k\). Turns out that if we set \(n = 100\) and \(k = 5\), then for all \(m\) such that \(0 &lt; m \leq n\) \(P(C) = 0.05\). This is far too interesting to be just a coincidence…</p>
+
+<p>Well, in fact for arbitrary \(n &gt; 0\) and \(0 &lt; k \leq n\), as long as \(0 &lt; m \leq n\),</p>
+
+<p>\[P(C) = \frac{k}{n} \]</p>
+
+<p>This means that the restriction the referee <strong>R</strong> imposes on <strong>P2</strong> has no effect on the odds that they will win the game.</p>
+
+<h2 id="discussion">Discussion</h2>
+<p>Our intuition says that if <strong>R</strong> gives a smaller range for <strong>P2</strong> to guess from, then it reduces the probability that <strong>P2</strong> wins thus increasing the probability of <strong>P1</strong> winning. But we have just shown that our inherent human intuition is wrong just like the <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">Monty Hall Problem</a> and lots of <a href="https://www.scientificamerican.com/article/why-our-brains-do-not-intuitively-grasp-probabilities/" target="_blank">other times</a>.</p>
+
+<p>But how can we undersand the result we just derived intuitively? Keep in mind the way we solved the <a href="#the-original-problem">original problem</a>. Now, if the numbers are truly random, then the odds will be the same irrespective of the restriction imposed on <strong>P2</strong>. This is due to three facts:</p>
+
+<ol>
+  <li><strong>P1</strong>, the person thinking the numbers, doesn’t know the restriction that will be imposed.</li>
+  <li><strong>R</strong>, who sets the restriction, does not know what numbers <strong>P1</strong> has thought of.</li>
+  <li><strong>P2</strong>, the person guessing, also doesn’t know the numbers <strong>P1</strong> has thought of.</li>
+</ol>
+
+<p>Since we have eliminated bias in all three people playing the game, we need to account for all the different possibilites the situation creates. In doing so, the net effect of the restriction becomes nil. Thus, we end up with the <a href="#the-original-problem">original problem</a> again. We went to great lengths trying to complicate a simple problem only to go back to sqaure one!</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Shout out to my professor Chris Ketelsen and my classmate Michael Dresser for encouraging, and helping, me to think about this problem. Another shout out to my friend Aravindh Shankar for proof reading my solution.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>

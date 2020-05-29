@@ -1,28 +1,1991 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <link href="{{ site.url }}/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <title>Aparajithan Venkateswaran</title>
+ <link href="https://www.aparavenkat.com/atom.xml" rel="self"/>
+ <link href="https://www.aparavenkat.com/"/>
+ <updated>2020-05-29T22:35:52+00:00</updated>
+ <id>https://www.aparavenkat.com</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Aparajithan Venkateswaran</name>
+   <email></email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>HackCU Over the Years</title>
+   <link href="https://www.aparavenkat.com/2020/05/19/hackcu-over-the-years/"/>
+   <updated>2020-05-19T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2020/05/19/hackcu-over-the-years</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://team.hackcu.org/&quot; target=&quot;_blank&quot;&gt;HackCU&lt;/a&gt; is a student organization at the University of Colorado at Boulder. HackCU was started by &lt;a href=&quot;http://www.alexwalling.com/#/&quot; target=&quot;_blank&quot;&gt;two&lt;/a&gt; &lt;a href=&quot;https://dawsbot.com/&quot; target=&quot;_blank&quot;&gt;students&lt;/a&gt; who wanted to give other students the space to work on their side projects and ideas that they would otherwise would not have the opportunity to. This space was a hackathon. A hackathon can best be described as an invention marathon where people work, either alone or in teams, to create something over the course of 24 hours.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;I joined HackCU as a freshman in September 2016. It was the &lt;a href=&quot;/2017/04/28/hackcu-iii/&quot; target=&quot;_blank&quot;&gt;third year for HackCU&lt;/a&gt; as an organization. And now as I leave HackCU in its sixth year, HackCU has grown to be more than just a group that organizes hackathons. HackCU now organizes more events such as workshops, startup career fairs (although that was still a thing back in 2016), and has overall become more involved in the community. The team now try to experiment with other ideas. For instance, there was a hardware hackathon last year.&lt;/p&gt;
+
+&lt;p&gt;There has also been a large shift in the team culture and ethos. When I first joined HackCU, it was a pretty small team that was closely-knit. While there was structure to the team, it was rarely ever explicitly mentioned. It was simply something that everyone understood. But over the last four years, the scale of the events HackCU puts on has become increasingly larger, with the exception being this year. And that meant the team either had to put in more hours of work, or it had to increase in size. As all of us are students, the natural course of action was to increase the size of the team. And with that increased size of the team and scale of the events, also came a necessary shift in team culture and ethos.&lt;/p&gt;
+
+&lt;p&gt;The team size increased. And there emerged sub-teams each with their own focus. Now, there is a dedicated finance team that handled the budgets. There is a team that manages the servers and websites. And so on. Of course, these teams existed earlier, but were much less structured. A person on the finance team would also push commits to modify the website. Now, the structures are more rigid that one often gets the feeling of being pigeon-holed.&lt;/p&gt;
+
+&lt;p&gt;Such structures also had to be enforced across the teams. With such fragmentation, there needed to be some coordination between teams in order to ensure the overarching goal of organizing hackathons are still met. And these structures were formally established within the team. For the first time, a formal set of bylaws for the organization were written down. This is the biggest change I have seen at HackCU. It made me realize how the team has grown over the years that there necessitated the enforcement of “rules” in order to keep the wheels spinning.&lt;/p&gt;
+
+&lt;p&gt;And as the scale of the events became larger, the team and the events organized often came under scrutiny from the participants and the university administration. HackCU has always had a somewhat rocky relationship with the college. I was told stories of how the first ever hackathon was almost shut down by the college. Over the years, the college has come to recognize HackCU as an event that benefits students. Yet, it has always been difficult for us to secure a venue that can comfortably host 600 people. A single mishap last year and we were blacklisted from hosting our events at various buildings! As a result, this year we were forced to scale down to 400 people to the dismay of everyone including the team and the participants. If scaling up is difficult, this year showed me that scaling down comes with its own set of problems. For instance, it was hard to gauge the number of expected participants which unfortunately led us to turn away many people.&lt;/p&gt;
+
+&lt;p&gt;Another problem that has plagued HackCU is the sleeping situation. A campus policy states that it is illegal to sleep in campus buildings (unless you are in a dorm, obviously). And HackCU is a 24-hour event with people traveling from out-of-state and many driving from Fort Collins. How do you ask these people to not sleep, or wake them up if they are falling asleep? Last year, we booked a separate venue in Downtown Boulder and bussed people who wanted to take a break for a few hours. It kind of worked, but made the logistics harder to handle. Dealing with this problem is slightly more difficult. With infinite budget, it is possible to book Airbnb’s and hotels to host out-of-state participants. Another idea that has always been floating around, but never actually explored in any capacity, is matching out-of-state participants with students at CU or the HackCU team. Maybe some of these ideas will surface again to fruition in the future.&lt;/p&gt;
+
+&lt;p&gt;Despite all of these hurdles, I am surprised how much HackCU has grown in the last four years. One thing that struck me was how smooth the hackathon was from the organizers’ perspective. For the last three years, the night before the hackathon was always very stressful. This year, things seemed much more relaxed than before. That may also be due to the fact that I was slowly limiting my involvement, and I failed to notice the stress. The food this year was also of better quality. Usually we default to YellowBelly for one of the meals. This year the team decided to try something different, and it turned out to be really good. The judging process was far better planned and executed than any of the previous years. The workshops were also varied in content and skill levels to cater most people’s needs. And the overall quality itself has increased.&lt;/p&gt;
+
+&lt;p&gt;Reflecting on this reminded me of the &lt;em&gt;Life Cycle of a Student Community&lt;/em&gt; talk that &lt;a href=&quot;https://twitter.com/jna_sh&quot; target=&quot;_blank&quot;&gt;Joe Nash&lt;/a&gt; gives.  The ethos of HackCU has evolved over the last four years. You could think of the “first generation” as anchors trying to make sure the team is strong enough before straying too far from the harbor. Now, the team is under a whole new leadership who have different visions for what HackCU could be. As an example, during one of my last meetings the team was deciding whether to let go of the startup career fairs to focus more on workshops and hackathons. And HackCU still has a lot of changes coming along the way, especially with the pandemic threatening everything to become remote. At times, these changes in thinking pattern irked me. Nevertheless it was necessary in order for HackCU to continue being a successful student organization. It needs to be independent of the team members, in some sense, in order to evolve and adapt to the changing needs. And I am glad I was able to witness this metamorphosis.&lt;/p&gt;
+
+&lt;p&gt;This is the renewal part of the cycle. Everyone who were the “first generation” have graduated and the last of us just graduated in May 2020. And I am excited to see where the “next generation” carries the torches.&lt;/p&gt;
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>Thoughts on research opportunities</title>
+   <link href="https://www.aparavenkat.com/2020/03/01/thoughts-on-research/"/>
+   <updated>2020-03-01T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2020/03/01/thoughts-on-research</id>
+   <content type="html">&lt;p&gt;Recently, a friend asked me a few questions on finding research positions. My answers to her questions summarized my newfound philosophy on finding the “right” question to work on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; These are just like my opinions man. Not anyone else’s. As with all things, you should take it with a grain of salt.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; Hi, &lt;em&gt;X&lt;/em&gt; said that you were looking for research positions and wanted help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Her:&lt;/strong&gt; Hi! Yeah, I had a few questions about working in a lab. I’m trying to figure out if I can work at a lab this semester starting in March, take the summer off, and continue in the fall?&lt;/p&gt;
+
+&lt;p&gt;I’m also looking for a research opportunity that isn’t extremely coding heavy so if anything comes to mind let me know.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; It depends on the people you work with. There are organizations and research groups that employ you based on contracts. And the contract defines your length of stay, how many hours you will work, pay, etc. Generally, these contracts are “set in stone”, but the employers tend to understand you are a student and allow things to be less rigid.&lt;/p&gt;
+
+&lt;p&gt;Most of the time, ff you reach out to a professor whose research you think is cool, your work schedule might be more flexible. For instance, I worked for free with Dan Larremore for the first 3 months. Then, I asked him for a summer job and was on his payroll for the next year. Then, I took off to to an internship at Microsoft the next summer but still was able to work with him and get paid. Finally, I am doing a thesis with him right now.&lt;/p&gt;
+
+&lt;p&gt;I am happy to talk more about my research journey.&lt;/p&gt;
+
+&lt;p&gt;What kind of research things are you interested in?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Her:&lt;/strong&gt; Yeah I’ve been thinking about reaching out to professors but I’ve been worried it’s too late since it’s already March. I won’t be able to continue the research in the summer so I would need something flexible.&lt;/p&gt;
+
+&lt;p&gt;And I think I’m more interested in the labs housed under TAM as opposed to the ones housed under the engineering college.&lt;/p&gt;
+
+&lt;p&gt;What kind of work did you do with Dan Larremore? What did a day at “work” look like for you at the lab?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; I don’t think it’s too late. Research generally doesn’t follow semester schedules. Worst case, they tell you to start in Fall and that’s still better than nothing.&lt;/p&gt;
+
+&lt;p&gt;The work I do with Dan is more mathematical. When I started, I was working on automatically extracting data from faculty CVs to study the scientific ecosystem. Now, my thesis is focused on inferring hierarchy in networks based on interactions between different nodes and their characteristics (think ranking chess players).&lt;/p&gt;
+
+&lt;p&gt;When I worked full time, I would usually go to the lab space and spend most of my time reading, coding, and working out math on a whiteboard. Now, since it’s part-time, I generally work whenever/wherever I feel like. And he doesn’t mind if I work fewer hours I work as long as I have results to show every week.&lt;/p&gt;
+
+&lt;p&gt;But, this is a more CS/Math research group and the “typical day” is very different for different research groups even within the same field. For instance, in biology, you would spend more time doing wet lab stuff.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in TAM things, one thing I’d suggest is narrowing down exactly what you want to do and why you want to do that. Do you have a sense of that?&lt;/p&gt;
+
+&lt;p&gt;This question is hard to answer and generally trying multiple things can give a sense of what you like. In my case, I worked in an aerospace lab for a semester before I realized what I was doing was not interesting at all to me. And I met Dan after that.&lt;/p&gt;
+
+&lt;p&gt;Once you know that, you can move away from the TAM umbrella and find the same kind of things at various other places, giving you more options. As an example, someone I know (studying TAM) works as the scientific communicator/marketing and media person for a research group that analyzes data from Earth systems to better understand the environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Her:&lt;/strong&gt; It’s good to know that it maybe isn’t too late, I guess after talking to you a bit more I’ll get back to emailing professors about their labs.&lt;/p&gt;
+
+&lt;p&gt;I think I’m having difficulty narrowing down exactly what it is I want to do. I’ve read a lot of summaries about different labs but I have a hard time getting a sense of what I would be doing in a lab, so I guess I would have to just reach out and talk to professors about it, there’s no other solution to that.&lt;/p&gt;
+
+&lt;p&gt;Right now it’s kind of hard for me to see where to even start given I don’t know what I want to do. So here’s a question I’m gonna throw at you: There are a lot of interesting labs here at CU, but not every lab will be suitable for me to work at. Is there any way to narrow down what it is I wanna do besides “picking what seems the coolest”?&lt;/p&gt;
+
+&lt;p&gt;And what made you not like the aerospace lab?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; The first question you asked is something almost everyone struggles with at the beginning, and I didn’t even know I was facing this. I think an easier question to answer is, “What do I care about? Why?” Write down the answer. Literally, write it down. This could be research ideas/topics, problems in the world you care about, the kind of people you want to work with. This thinking helps focus your goals and declutter your mind from the coolness aspect (you may still have cool things, but you remove the ones you don’t care about). And this will change over time as you experience new things.&lt;/p&gt;
+
+&lt;p&gt;Then, it will be easier to find projects and people whose goals align with what you care about. And when you reach out to professors, it will be much easier to just tell them what you want and ask if they can offer it, but also be open and humble to their perspectives when you talk. An added benefit is that they will appreciate you for having put thought into what you want.&lt;/p&gt;
+
+&lt;p&gt;Another thing to realize is that trial and error is not a bad thing. Volunteer to work for someone (and sincerely do it) for a few weeks and see if it’s a good fit. Commit if you like it.&lt;/p&gt;
+
+&lt;p&gt;Another important thing I should mention is that you should also take into account the kind of people you want to work with. In my opinion, someone who is fun to work with and genuinely cares about your success is a better fit than someone who has racked up awards and citations but is toxic to be around.&lt;/p&gt;
+
+&lt;p&gt;The way I look at the question is there are two &lt;em&gt;orthogonal&lt;/em&gt; axes - my personal “joy” factor and does it impact the world in a way that is meaningful to me. Of course, this is just my answer and yours may be different.&lt;/p&gt;
+
+&lt;p&gt;I want to find something that hits both these categories. I want to enjoy my work and it should have a meaningful impact. For instance, curing cancer is an important issue and has a meaningful impact. However, working in a wet lab to address this issue is not something I would consider joyous (there are other ways I can attempt to solve this problem that bring me happiness at the same time). Another example is, I find string theory fascinating, but it does not impact the world in a way that is meaningful to me, at least in the foreseeable future.&lt;/p&gt;
+
+&lt;p&gt;And in the world of mathematics, it’s hard to find that sweet spot. There are only a handful of problems that do hit it. So recently, I’ve had to redefine what it means to have a meaningful impact. Now, I also care more about the &lt;em&gt;ripple effect&lt;/em&gt; as opposed to just the immediate applications.&lt;/p&gt;
+
+&lt;p&gt;So, to answer your second question, why did I not like the aerospace lab, after a few weeks into it, I realized it had almost zero impact. The code I wrote will probably be thrown away as soon as I leave. I was designing an autonomous navigation system in deep space, which is basically science fiction at this point. And I was using deep neural networks. Working on this project, I realized I did not find deep learning interesting, because it is a highly incomprehensible black box and that made it slightly disturbing. Essentially, it scored negative on both my axes.&lt;/p&gt;
+
+&lt;p&gt;Also, reading this, you may wonder if I had it all figured out and worry that you don’t. All of my answers are based on retrospection and reflection. The truth is, I did not actively have any of these thoughts when this happened. Talking to other people, and writing essays for grad school applications forced me to think through all this, which is why I have concrete thoughts. And in hindsight, I wish I did all this thinking before and it would have helped me better.&lt;/p&gt;
+
+&lt;p&gt;Does that answer your questions?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Her:&lt;/strong&gt; It really does answer my question, that was the most comprehensive response  possible. I’ve read it over a few times to make sure I didn’t miss any details, so thank you for that!&lt;/p&gt;
+
+&lt;p&gt;In terms of finding the right opportunity, do you think I should just start reaching out to professors via email and see where it takes me? I would like to find a set up where I won’t be paid and the work would be voluntary and I want to start getting some experience as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; Yep! That’s basically what I did. I reached out to Aaron Clauset twice before he turned me down (twice!) and pointed me to Dan. Luckily I was familiar with Dan’s work because I attended one of his talks.&lt;/p&gt;
+
+&lt;p&gt;Some professors are too busy to respond to/take new people. So if you don’t hear back in a week, move on.&lt;/p&gt;
+
+&lt;p&gt;And that’s another thing: find talks and colloquiums to attend. You get familiar with other cool things happening around campus and the world.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This conversation took place on Slack, which is why it was possible to make a post here. The conversation continued and revolved around specific research groups.&lt;/p&gt;
+
+&lt;p&gt;This is unedited for the most part - the edits were primarily fixing typos and grammar corrections. I decided to leave it in the form of a conversation to follow the Socratic method.&lt;/p&gt;
+
+&lt;p&gt;I hope this was interesting to read!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Updated March 3, 2020:&lt;/em&gt; Corrected an error about the research done at Earth lab. Rephrased my choice of axes, and examples for uninteresting problems, to avoid misinterpretation.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Looking Behind and Looking Ahead: 2019 and 2020</title>
+   <link href="https://www.aparavenkat.com/2020/01/04/looking-back-2019/"/>
+   <updated>2020-01-04T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2020/01/04/looking-back-2019</id>
+   <content type="html">&lt;p&gt;Here it is: the annual retrospection for 2019, along with the things I’m looking forward to in 2020.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;h2 id=&quot;looking-behind-at-2019&quot;&gt;Looking Behind at 2019&lt;/h2&gt;
+
+&lt;p&gt;2019 was an interesting year. Here are some of the highlights:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I took part in the &lt;a href=&quot;http://www.comap.com/undergraduate/contests/&quot; target=&quot;_blank&quot;&gt;Mathematical Competition in Modeling&lt;/a&gt; again in January 2019. Our team modeled the opioid crisis in Appalachia and our paper was chosen as one of the three outstanding winners.
+Here is a &lt;a href=&quot;https://www.colorado.edu/amath/2019/05/12/2019-math-contest-modeling-results&quot; target=&quot;_blank&quot;&gt;news article&lt;/a&gt; from CU Boulder’s Applied Math department.&lt;/li&gt;
+  &lt;li&gt;I spent the summer of 2019 in Seattle interning in Microsoft’s Edge Experimentation team.&lt;/li&gt;
+  &lt;li&gt;I also broke my foot in Seattle.&lt;/li&gt;
+  &lt;li&gt;I started working on my honors thesis. It involves modeling the effects of node covariates on the outcome on interactions between nodes in a complex network.&lt;/li&gt;
+  &lt;li&gt;I led a recitation group for Critical Encounters, which was a class that reshaped my thinking. The recitation involved discussing personal philosophies with four freshmen for an hour every week.&lt;/li&gt;
+  &lt;li&gt;I finally got my driver’s license.&lt;/li&gt;
+  &lt;li&gt;I took a few interesting classes in 2019 – Chaotic Dynamics, Randomized Algorithms, Network Science.&lt;/li&gt;
+  &lt;li&gt;I stared playing video games again.&lt;/li&gt;
+  &lt;li&gt;I applied to grad schools 🤞&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;looking-at-the-numbers&quot;&gt;Looking at the numbers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Number of goals that I set out to achieve: 3&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number of goals that I completed: 0 (this fell apart two weeks into classes)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of hackathons organized: 2&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Other competitions: &lt;a href=&quot;http://www.comap.com/undergraduate/contests/&quot; target=&quot;_blank&quot;&gt;MCM&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number of scientific papers read: 32 (+2 from last year)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of books read: 10 (-1 from last year)&lt;/li&gt;
+  &lt;li&gt;Number of books in progress: 1&lt;/li&gt;
+  &lt;li&gt;Favorite fiction: &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Once_and_Future_King&quot; target=&quot;_blank&quot;&gt;The Once and Future King&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Favorite non-fiction: &lt;a href=&quot;https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind&quot; target=&quot;_blank&quot;&gt;Sapiens: A Brief History of Humankind&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Favorite music album: &lt;a href=&quot;https://en.wikipedia.org/wiki/Lover_(album)&quot; target=&quot;_blank&quot;&gt;Lover&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Favorite movies: &lt;a href=&quot;https://en.wikipedia.org/wiki/Knives_Out_(film)&quot; target=&quot;_blank&quot;&gt;Knives Out&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Avengers:_Endgame&quot; target=&quot;_blank&quot;&gt;Avengers: Endgame&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Favorite TV show: &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Witcher_(TV_series)&quot; target=&quot;_blank&quot;&gt;The Witcher&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of concerts attended: 2
+    &lt;ul&gt;
+      &lt;li&gt;Most memorable: Lewis Capaldi (Seattle)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of theatrical performances attended: 5
+    &lt;ul&gt;
+      &lt;li&gt;Most memorable: &lt;a href=&quot;https://cupresents.org/event/1949/cu-theatre/broadway-christmas-carol/&quot; target=&quot;_blank&quot;&gt;Broadway Christmas Carol&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of video games played: 4
+    &lt;ul&gt;
+      &lt;li&gt;Most favorite: &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt&quot; target=&quot;_blank&quot;&gt;The Witcher 3: Wild Hunt&lt;/a&gt; (there’s a theme going on here…)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;States visited: Washington&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;New outdoor activities picked up: Nordic skiing&lt;/li&gt;
+  &lt;li&gt;Old outdoor activities continued: Hiking, climbing, mountain biking&lt;/li&gt;
+  &lt;li&gt;Number of 14ers completed: 0 (-1 from last year)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;looking-ahead-at-2020&quot;&gt;Looking Ahead at 2020&lt;/h2&gt;
+
+&lt;p&gt;Here are some things I am looking forward to in 2020:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Being more intentional about what I do&lt;/li&gt;
+  &lt;li&gt;Having more music - I’m excited to learn piano!&lt;/li&gt;
+  &lt;li&gt;Teaching - I will be a teaching assistant for Chaotic Dynamics&lt;/li&gt;
+  &lt;li&gt;Attending more concerts and theatrical performances&lt;/li&gt;
+  &lt;li&gt;Reading more&lt;/li&gt;
+  &lt;li&gt;Exploring more of Seattle and Washington this year&lt;/li&gt;
+  &lt;li&gt;Finishing my thesis!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And some goals I am setting for myself:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Read a scientific paper a week&lt;/li&gt;
+  &lt;li&gt;Read a book a month&lt;/li&gt;
+  &lt;li&gt;Complete 3 side projects&lt;/li&gt;
+  &lt;li&gt;Learn one new song every month&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it for now! Happy new year!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“What do you mean? Do you wish me a happy year, or mean that it is a happy year whether I want it or not; or that you feel happy this year; or that it is a year to happy on?”&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;“All of them at once!”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A lesson in speed and math abstraction</title>
+   <link href="https://www.aparavenkat.com/2019/11/27/lesson-from-abstracting-math/"/>
+   <updated>2019-11-27T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2019/11/27/lesson-from-abstracting-math</id>
+   <content type="html">&lt;p&gt;When simulating a model, it is easier to take a teleological perspective. It is easier to approach the problem with the end in mind and work backwards, writing code how we would describe the model in words. This is definitely a good start. Sometimes though, as you may have guessed, this does not give the most efficient code.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;p&gt;I encountered this problem when I was implementing a network SIR model. My original implementation took upwards of 3 hours to complete a single iteration. This is not very ideal, especially when running the model for different parameters to compare results.&lt;/p&gt;
+
+&lt;p&gt;There were two bottlenecks in my implementation. To my surprise, when I tried to strip the details away from these bottlenecks, I was left with what resembled a textbook problem from an introductory probability course. And solving these problems in their raw and uncouth form, seeming to have no purpose without the application, I reduced the runtime of a single iteration to less than 2 seconds.&lt;/p&gt;
+
+&lt;h2 id=&quot;bottleneck-01-infecting-people&quot;&gt;Bottleneck #01: Infecting people&lt;/h2&gt;
+
+&lt;p&gt;In the traditional SIR model, there is an infection stage where already infected individuals try to infect the people they come in contact with. In our version of the network SIR model, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; infected people travel to a different state and try to infect the &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; uninfected people at the destination with probability &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;My initial thought was to infect every uninfected person with each of the infected &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; people. If at least one of them is successful, then this person becomes infected. So, I naively wrote the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;infected_possibility = np.random.binomial(n, p, m)
+infected_possibility[infected_possibility &amp;gt; 0] = 1
+num_infected = np.sum(infected_possibility)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Basically, every element in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;infected_possibility&lt;/code&gt; vector tells the number of successful infections inflicted upon that person (after &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; attempts, where each attempt is an independent Bernoulli trial). Then, I binarize the vector and sum it to get the total number of infected people. Clearly, this was super slow.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-binomial-of-a-binomial&quot;&gt;A binomial of a binomial&lt;/h3&gt;
+
+&lt;p&gt;Taking a step back, all I care about is that there is at least one successful infection out of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; attempts. So, if &lt;script type=&quot;math/tex&quot;&gt;X_i&lt;/script&gt; is the total number of successful infections upon person &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;, then &lt;script type=&quot;math/tex&quot;&gt;X_i \sim Binomial(n, p)&lt;/script&gt;. So,&lt;/p&gt;
+
+&lt;p&gt;\[ P(X_i &amp;gt; 0) = 1 - P(X_i = 0)	= 1 - (1-p)^n. \]&lt;/p&gt;
+
+&lt;p&gt;This is the probability that there is at least one successful infection. Now, if I am treating each uninfected individual independently, then I essentially have another set of Bernoulli trials with probability &lt;script type=&quot;math/tex&quot;&gt;1 - (1-p)^n&lt;/script&gt;. Together, this becomes another binomial. In the end, all I care about is the random variable &lt;script type=&quot;math/tex&quot;&gt;Y \sim Binomial(m, 1 - (1-p)^n)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;This interesting turn of events leads to the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;prob = 1 - (1 - p)**n
+num_infected = np.random.binomial(m, prob)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Needless to say, this is extremely fast. For &lt;script type=&quot;math/tex&quot;&gt;n = 10, p = 0.1, m = 5000&lt;/script&gt;, the naive version took &lt;script type=&quot;math/tex&quot;&gt;795 \mu s&lt;/script&gt; while the mathematically intelligent version took only &lt;script type=&quot;math/tex&quot;&gt;9.69 \mu s&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;bottleneck-02-recovering-the-infected&quot;&gt;Bottleneck #02: Recovering the infected&lt;/h2&gt;
+
+&lt;p&gt;Another important step in the SIR model is the recovery step. There are different versions of this stage. In our version, and most other commonly used versions, each infected person can either recover, die, or stay infected with some probabilities &lt;script type=&quot;math/tex&quot;&gt;p_r, p_d, p_i&lt;/script&gt; (that sum to 1).&lt;/p&gt;
+
+&lt;p&gt;In my first implementation, I decided to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numpy.random.choice&lt;/code&gt; where my choices were 0 (recovered), 1 (stay infected), and 2 (dead). After randomly choosing from these options, I calculated their respective frequencies like:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = np.random.choice([0, 1, 2], m, p=[p_r, p_i, p_d])
+recovered = len(x[x == 0])
+dead = len(x[x == 2])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;While this doesn’t seem bad at first glance, numpy’s random choice generator can be slow. Besides, there is the masking operation after which I compute the size of the vectors. This made the code really slow. With &lt;script type=&quot;math/tex&quot;&gt;m = 5000&lt;/script&gt;, it took &lt;script type=&quot;math/tex&quot;&gt;529 \mu s&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;uniformly-simulate-the-choices&quot;&gt;Uniformly simulate the choices&lt;/h3&gt;
+
+&lt;p&gt;My initial reaction to fix this problem was to manually simulate the choices with a &lt;script type=&quot;math/tex&quot;&gt;Uniform(0, 1)&lt;/script&gt; distribution like:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = np.random.uniform(0, 1, m)
+recovered = len(np.asarray(x &amp;lt; p_r).nonzero()[0])
+dead = len(np.asarray(x &amp;lt; p_d).nonzero()[0])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This improved the performance to &lt;script type=&quot;math/tex&quot;&gt;250 \mu s&lt;/script&gt;. But this was still the bottleneck taking the simulation close to 1 hour to complete a single iteration.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-multinomial&quot;&gt;A multinomial?&lt;/h3&gt;
+
+&lt;p&gt;Abstract away the details. Now, breathe. What am I trying to do?&lt;/p&gt;
+
+&lt;p&gt;I have &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; objects. I want to assign each object to one of three groups. And I only care about the final counts in each group, not the assignment itself. This smells oddly so familiar. Can this be… a multinomial?&lt;/p&gt;
+
+&lt;p&gt;Turns out it is as simple as a multinomial distribution, and I was just wasting my energy worrying about the details!&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = np.random.multinomial(m, [p_r, p_i, p_d])
+recovered = x[0]
+dead = x[2]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This took an insane 3 hours to realize the connection and only &lt;script type=&quot;math/tex&quot;&gt;8.77 \mu s&lt;/script&gt; to run.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In the end, each iteration of this efficient simulation took less than 2 seconds to finish. With this, searching the parameter space and generating results should be very fast.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in running the results yourself, the &lt;a href=&quot;https://gist.github.com/AparaV/11ea3e2b338876ad6fc1aae67fbebad3&quot; target=&quot;_blank&quot;&gt;test notebook&lt;/a&gt; is available on &lt;a href=&quot;https://gist.github.com/AparaV/11ea3e2b338876ad6fc1aae67fbebad3&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;. The notebook also has some interesting failed alternate versions not discussed here. One version worth noting is realizing that Bottleneck #01 can also be re-imagined as a geometric distribution 😉&lt;/p&gt;
+
+&lt;h2 id=&quot;the-lesson&quot;&gt;The Lesson&lt;/h2&gt;
+
+&lt;p&gt;The lesson here is somewhat of a case for pure mathematics to applied mathematicians. As computer scientists and applied mathematicians, we often focus more on the applications. It becomes easy to get lost in the details of the system that we tend to miss the simplicity and beauty of the underlying mathematics. When we remove the details one by one and reduce the noise, the equations settle down leaving us with a simple, and maybe cute, textbook problem. And if it isn’t as simple as that, &lt;em&gt;then&lt;/em&gt; you’ve got some work cut out for you!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Looking Behind and Looking Ahead - 2018 and 2019</title>
+   <link href="https://www.aparavenkat.com/2018/12/31/looking-back/"/>
+   <updated>2018-12-31T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2018/12/31/looking-back</id>
+   <content type="html">&lt;p&gt;Here it is the end of the year post. I must say, even though I don’t write here often, I am at least consistently completing this ritual. This time, I’ve decided to combine the &lt;em&gt;retrospective&lt;/em&gt; and &lt;em&gt;future&lt;/em&gt; into one single post.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;h2 id=&quot;looking-behind-at-2018&quot;&gt;Looking Behind at 2018&lt;/h2&gt;
+
+&lt;p&gt;Some important things that happened in 2018…&lt;/p&gt;
+
+&lt;h3 id=&quot;research&quot;&gt;Research&lt;/h3&gt;
+
+&lt;p&gt;I started working with &lt;a href=&quot;http://danlarremore.com/&quot; target=&quot;_blank&quot;&gt;Professor Daniel Larremore&lt;/a&gt; in January of 2018, and it has been amazing working with him and the people there. The broader view of what my lab is interested in is the structure of academic networks. I am helping that endeavor by automating the process of collecting data from academic CVs. This topic falls in the intersection of probabilistic modeling, machine learning, natural language processing, and, interestingly, DNA sequencing. I worked on this project over the summer too and learned a lot. And I am looking forward to learning more!&lt;/p&gt;
+
+&lt;h3 id=&quot;connecting-the-dots&quot;&gt;Connecting the dots&lt;/h3&gt;
+
+&lt;p&gt;Something that makes mathematics and science very interesting to me is that everything seems to be connected. After accumulating the basic knowledge, you start to see connections between things you earlier thought were unrelated. I had the pleasure of experiencing that. Here are some of those:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In Spring 2018, two courses I took were Algorithms and Probability. An important algorithm we learnt was Quick Sort. At a later point in the semester, we calculated the expected runtime of this algorithm in Probability using the techniques we learnt in that class.&lt;/li&gt;
+  &lt;li&gt;In Fall 2017, I had taken Discrete mathematics and in Spring 2018, I had taken Differential Equations. I noticed that solving linear recurrences and linear homogeneous differential equations follwed a same pattern by finding the charactersitic equation. Turns out that linear recurrences represent dynamical systems in a discrete space and differential equations represent dynamical systems in a continuous space.&lt;/li&gt;
+  &lt;li&gt;In Spring 2018, I also took Operations Research. Once again, the same problems we solved in Algorithms including Max-Flow and shortest path cropped up in Operations Research and we were using different techniques to solve the problems. In Algorithms, we were solving the problem under some constraints that made it possible to solve them in polynomial time. In Operations Research, we solved the general problem which was usually in non-polynomial time.&lt;/li&gt;
+  &lt;li&gt;In Summer 2018, I realized that logistic regression from machine learning borrows a key idea called entropy from information theory!&lt;/li&gt;
+  &lt;li&gt;In Fall 2018, I took Fourier Analysis and Physics 3 (basic quantum physics). Being able to solve partial differential equations using the Fourier technique greatly helped me understand the Schrodinger equation (I think).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;philosophy-of-education&quot;&gt;Philosophy of Education&lt;/h3&gt;
+
+&lt;p&gt;At the end of 2017, I was asked to write my &lt;a href=&quot;../../../../philosophy/&quot; target=&quot;_blank&quot;&gt;Philosophy of Education&lt;/a&gt;. This made me rethink how I wanted to approach education. And a key ingredient to my newly formed philosophy of education was suspension of disbelief.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For education to be complete, I think there are times when we need to temporarily give up logic and reason, and indulge in something completely preposterous for pure enjoyment and spontaneity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At that time, I really didn’t know how. I am glad to say that I was lucky to find friends who taught me how to break the structures and truly be spontaneuous.&lt;/p&gt;
+
+&lt;h3 id=&quot;looking-at-the-numbers&quot;&gt;Looking at the numbers&lt;/h3&gt;
+
+&lt;p&gt;This was sort of inspired by the &lt;a href=&quot;https://aaronclauset.github.io/2018_YiR&quot; target=&quot;_blank&quot;&gt;post&lt;/a&gt; written by my professor &lt;a href=&quot;http://tuvalu.santafe.edu/~aaronc/&quot; target=&quot;_blank&quot;&gt;Aaron Clauset&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Number of goals that I set out to achieve: 3&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number of goals that I completed: 0.5 (our &lt;a href=&quot;/assets/pdf/cost-of-privacy.pdf&quot; target=&quot;_blank&quot;&gt;MCM paper&lt;/a&gt; will be published in 2019)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of side projects started: 4&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number of side projects completed: 0&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of hackathons organized: 2&lt;/li&gt;
+  &lt;li&gt;Number of hackathons attended: 1&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Other competitions: &lt;a href=&quot;http://www.comap.com/undergraduate/contests/&quot; target=&quot;_blank&quot;&gt;MCM&lt;/a&gt;, &lt;a href=&quot;https://buildyourfuture.withgoogle.com/events/google-games/#!?detail-content-tabby_activeEl=about&quot; target=&quot;_blank&quot;&gt;Google Games&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Number of scientific papers read: 30&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of books read: 11&lt;/li&gt;
+  &lt;li&gt;Number of books in progress: 2&lt;/li&gt;
+  &lt;li&gt;Favorite fiction: &lt;a href=&quot;https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird&quot; target=&quot;_blank&quot;&gt;To Kill a Mockingbird&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Favorite non-fiction: &lt;a href=&quot;https://www.amazon.com/Leonardo-Vinci-Walter-Isaacson/dp/1501139150&quot; target=&quot;_blank&quot;&gt;Leonardo da Vinci&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Favorite music album: &lt;a href=&quot;https://en.wikipedia.org/wiki/Calling_All_Dawns&quot; target=&quot;_blank&quot;&gt;Calling All Dawns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Favorite movies: &lt;a href=&quot;https://en.wikipedia.org/wiki/96_(film)&quot; target=&quot;_blank&quot;&gt;96 (Tamil)&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Outlaw_King&quot; target=&quot;_blank&quot;&gt;Outlaw King&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Favorite TV show: &lt;a href=&quot;https://en.wikipedia.org/wiki/Merlin_(2008_TV_series)&quot; target=&quot;_blank&quot;&gt;Merlin&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of concerts attended: 4
+    &lt;ul&gt;
+      &lt;li&gt;Most memorable: &lt;a href=&quot;https://calendar.colorado.edu/event/tommy_emmanuel#.XCpxrFxKhPY&quot; target=&quot;_blank&quot;&gt;Tommy Emmanuel&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of theatrical performances attended: 3
+    &lt;ul&gt;
+      &lt;li&gt;Most memorable: &lt;a href=&quot;https://www.denvercenter.org/stomp-returns-to-denver-in-all-its-explosive-syncopated-glory/&quot; target=&quot;_blank&quot;&gt;STOMP&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;States visited: California, Washington, Arizona
+    &lt;ul&gt;
+      &lt;li&gt;Most memorable city: Seattle, Washington&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Outdoor activities picked up: Hiking, climbing, mountain biking&lt;/li&gt;
+  &lt;li&gt;Number of 14ers completed: 1 (La Plata)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;looking-ahead-at-2019&quot;&gt;Looking Ahead at 2019&lt;/h2&gt;
+
+&lt;p&gt;Here are some things I am looking forward to in 2019:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Being more spontaneuous&lt;/li&gt;
+  &lt;li&gt;Doing more of the outdoor activities I picked up&lt;/li&gt;
+  &lt;li&gt;Attending more concerts and theatrical performances&lt;/li&gt;
+  &lt;li&gt;Reading more fiction (watching Merlin made me miss fantasy)&lt;/li&gt;
+  &lt;li&gt;The summer I am going to spend in Seattle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And some goals I am setting for myself:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Read a scientific paper a week&lt;/li&gt;
+  &lt;li&gt;Read a book a month&lt;/li&gt;
+  &lt;li&gt;Write more often&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it for now! Happy new year!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“What do you mean? Do you wish me a happy year, or mean that it is a happy year whether I want it or not; or that you feel happy this year; or that it is a year to happy on?”&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;“All of them at once!”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Estimating the Number of Free Bike Racks</title>
+   <link href="https://www.aparavenkat.com/2018/07/15/estimating-number-of-free-bike-racks/"/>
+   <updated>2018-07-15T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2018/07/15/estimating-number-of-free-bike-racks</id>
+   <content type="html">&lt;p&gt;If you have ever carried your bike on a RTD bus in Colorado, or even if you have just travelled in one, you will know that each bus has two bike racks at the front. Placing and retrieving your bike from these racks is almost effortless. If these racks are full, then you will have to store your bike in the storage compartment. Now, this can be really messy. Especially if someone else stores their bike after you (so your bike gets pushed back) and you get off before them (so you will need to take their bike out; take your bike out and; put their bike back in).&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;p&gt;Luckily, only a small number of passengers bring their bike on the bus. So, unless you are riding with your bike during rush hour, there is usually space in the bike racks. One morning, I noticed that the bike racks were full. Naturally, I assumed that this was a rush hour and it would be difficult for me to find a seat in the bus. However, there were only 8 passengers! This intrigued me. What are the odds that out of 8 passengers, 2 of them brought their bikes?&lt;/p&gt;
+
+&lt;p&gt;I immediately got down to solving something that resembled a classic example taken from a probability textbook.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-binomial-distribution&quot;&gt;A Binomial Distribution&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Let the probability that each passenger carries their bike on the bus be &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;. Now, suppose there are &lt;script type=&quot;math/tex&quot;&gt;N \geq 2&lt;/script&gt; passengers. What is the probability that at least two of them bring their bike?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is simply a &lt;a href=&quot;https://en.wikipedia.org/wiki/Binomial_distribution&quot; target=&quot;_blank&quot;&gt;Binomial distribution&lt;/a&gt;. Let &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; denote the number of bikes. Then &lt;script type=&quot;math/tex&quot;&gt;X \sim Binom(n, p)&lt;/script&gt;. And we have:&lt;/p&gt;
+
+&lt;p&gt;\[Pr(X = k | N = n) = \binom{n}{k} p^{k} (1-p)^{n-k} \]
+\[Pr(X \geq 2 | N = n) = \sum_{k=2}^{n} \binom{n}{k} p^{k} (1-p)^{n-k} \]&lt;/p&gt;
+
+&lt;h3 id=&quot;a-generative-process&quot;&gt;A Generative Process&lt;/h3&gt;
+
+&lt;p&gt;If I know how many passengers are on the bus, I have a quantitative estimate of the number of free bike racks. However, while I am still waiting for the bus and cranking out probabilities, I do not have any prior knowledge about the number of passengers. This is where we have the liberty to make the problem interesting by coming up with a generative process for the number of passengers, &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt;. Here are some basic facts to get started:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; is a discrete variable.&lt;/li&gt;
+  &lt;li&gt;There are different bus stops where passengers can get on (or get off). Think of these bus stops as discrete time intervals, and each passenger getting on at a bus stop as a single event.&lt;/li&gt;
+  &lt;li&gt;The number of passengers getting on at each bus stop can be considered independent of the number of passengers getting on at the previous stop.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This almost looks to me like a &lt;a href=&quot;https://en.wikipedia.org/wiki/Poisson_distribution&quot; target=&quot;_blank&quot;&gt;Poisson process&lt;/a&gt;. The only hiccup is that, more passengers may get on at a larger bus stop i.e., the rate at which events occur is not constant (something that is fundamental to a Poisson distribution). But, we can still approximate &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; using a Poisson distribution, hoping that the difference in rates of events cancel each other. So, &lt;script type=&quot;math/tex&quot;&gt;N \sim Poisson(\lambda)&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; is the average number of passengers getting on a particular bus stop.&lt;/p&gt;
+
+&lt;p&gt;\[Pr(N = n) = e^{-\lambda} \frac{\lambda^n}{n!} \]&lt;/p&gt;
+
+&lt;h3 id=&quot;putting-everything-together&quot;&gt;Putting everything together&lt;/h3&gt;
+
+&lt;p&gt;The Law of Total Probability gives a way to directly estimate the likelihood of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;:&lt;/p&gt;
+
+&lt;p&gt;\[Pr(X = x) = \sum_{n} Pr(X = x | N = n) Pr(N = n) \]&lt;/p&gt;
+
+&lt;p&gt;Since we want to know &lt;script type=&quot;math/tex&quot;&gt;Pr (X \geq 2)&lt;/script&gt;, we have &lt;script type=&quot;math/tex&quot;&gt;n \geq 2&lt;/script&gt;. Further, the seating capacity of a bus is &lt;script type=&quot;math/tex&quot;&gt;N_{max}&lt;/script&gt;. So, &lt;script type=&quot;math/tex&quot;&gt;2 \leq n \leq N_{max}&lt;/script&gt;. Putting everything together, we have:&lt;/p&gt;
+
+&lt;p&gt;\[Pr(X \geq 2) = \sum_{n=2}^{N_{max}} Pr(X \geq 2 | N = n) Pr(N = n) \]
+\[Pr(X \geq 2) = \sum_{n=2}^{N_{max}} \Big(\sum_{k=2}^{n} \binom{n}{k} p^{k} (1-p)^{n-k} e^{-\lambda}\Big) \frac{\lambda^n}{n!} \]&lt;/p&gt;
+
+&lt;h3 id=&quot;more-data&quot;&gt;More Data&lt;/h3&gt;
+
+&lt;p&gt;There is some neat math going on here. But, how much of what has been proposed is actually valid? This is where data can help validate (or discard) this model.&lt;/p&gt;
+
+&lt;p&gt;We can get a crude estimate of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; relatively easily. Just set &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; to be the fraction of people in Colorado who own a bike (which can be estimated with the number of bikes sold and the population). Fancier techniques can be used to polish this estimate, but this will suffice as a good starting point. Estimating &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; is the difficult part. We need data about how many people use the public bus. While I am sure this information is collected by the RTD, getting access to it is a different problem.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you know where I can get access to such data, or have ideas to overcome this limitation, you should definitely &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt;!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The Cost of Privacy</title>
+   <link href="https://www.aparavenkat.com/2018/03/16/what-is-the-cost-of-privacy/"/>
+   <updated>2018-03-16T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2018/03/16/what-is-the-cost-of-privacy</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;UPDATE 4/24/2018&lt;/strong&gt; I am pleased to say that our paper was selected as a &lt;em&gt;Meritorious Winner&lt;/em&gt; (one of the top 10%)!&lt;/p&gt;
+
+&lt;p&gt;Every year, the &lt;a href=&quot;http://www.comap.com/undergraduate/contests/&quot; target=&quot;_blank&quot;&gt;Consortium for Mathematics and its Applications (COMAP)&lt;/a&gt; hosts an international contest for high school students and college undergraduates where the participants get to work in teams of upto 3 to analyze, and propose solutions to open ended problems. COMAP releases 6 problems (3 of which are mathematical, and the other 3 incorporate interdisciplinary ideas) at the beginning of the contest. The contest itself takes place over 4 days, and at the end, the teams submit a 20 page report on their work.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Our team chose to model the cost of privacy. This is a particulatly interesting problem because private information (PI) can reveal a person’s personality, ideas, interests, and identity. And, social media networks like Facebook and Google are already using our PI to make profits. However, there is no system in place for the owner to receive financial compensation.&lt;/p&gt;
+
+&lt;p&gt;Modelling financial compensation for PI is no simple task. This is a senstive measure and highly dependant on risk and benefits associated with each person sharing their information. This not only varies from person to person, but also varies with what kind of information is being shared. We explored the value of PI and created a model that considers the trade of PI in a free market.&lt;/p&gt;
+
+&lt;p&gt;After considering the subjective nature of the task at hand, we are still left with addressing the politicial, cultural and ethical implications of the free trade of PI.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-summary&quot;&gt;Problem Summary&lt;/h2&gt;
+
+&lt;p&gt;The problem can be conquered by dividing it into the following sub-problems:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Develop a price point for PI that takes into account the risks and benefits involved in sharing data with an unknown third party&lt;/li&gt;
+  &lt;li&gt;With the help of the price point, create a pricing structure for PI&lt;/li&gt;
+  &lt;li&gt;Using this pricing structure, develop a pricing system that treats PI as a commodity that could be traded&lt;/li&gt;
+  &lt;li&gt;The model we develop should also take into account that human data is highly correlated i.e., the model should effectively capture the network effects of data sharing&lt;/li&gt;
+  &lt;li&gt;We also need to consider the political, cultural and ethical implications of PI being available for sale&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;our-model&quot;&gt;Our Model&lt;/h2&gt;
+
+&lt;p&gt;Without going into the &lt;a href=&quot;#full-report&quot;&gt;details&lt;/a&gt; of the model, we created a model with the following characteristics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;To create a price point for PI, we took a weighted average approach. We accounted for characteristics (such as education, age, etc.) that are most relevant to each specific facet of PI (social media, finance, general ID, etc.) and factored in the risk associated with people sharing their PI depending on the characteristics.&lt;/li&gt;
+  &lt;li&gt;Using this price point, we developed a pricing structure that depends on the actual value of each PI record (name, birthday, bank information, etc.). With this pricing structure we turned PI into a commodity and brought in forces of supply and demand for PI under the assumptions of a free market.&lt;/li&gt;
+  &lt;li&gt;To effectively capture the network effects of data sharing, we used network ranking algorithms (PageRank) to determine how much influence a person has in their society. We factored this into our pricing structure while also keeping in mind how connected the network is. Further, we also discussed the use of community detection algorithms (SpringRank) to get a better measure of how connected a person is.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It turns out that our model works under the assumptions of a free market and obeys the laws of microeconomics. Therefore, our model can theoretically scale well to real markets with factors such as government regulation and international trade.&lt;/p&gt;
+
+&lt;h2 id=&quot;full-report&quot;&gt;Full Report&lt;/h2&gt;
+
+&lt;p&gt;The complete discussion of our model is beyond the scope of this blog post. For more details, such as the assumptions of our model; the mathematics of our model; the strengths and weaknesses of our model and; sensitivity analysis and; a closer look at the ethical issues surrounding the trade of PI, do read the actual paper &lt;a href=&quot;/assets/pdf/cost-of-privacy.pdf&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledegements&quot;&gt;Acknowledegements&lt;/h2&gt;
+
+&lt;p&gt;Shout out to my awesome teammates, Johann and Brendan. &lt;br /&gt;
+I also want to thank Anne Dougherty, the head of the Applied Math Department at CU Boulder. &lt;br /&gt;
+And, of course, I also want to extend my thanks to the Engineering Honors Program for giving us the space and resources to work for 4 straight days on just math.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>The Number Guessing Game</title>
+   <link href="https://www.aparavenkat.com/2018/01/08/the-number-guessing-game/"/>
+   <updated>2018-01-08T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2018/01/08/the-number-guessing-game</id>
+   <content type="html">&lt;p&gt;Let’s play a game. I think of 5 numbers from 1 to 100. A friend, who has no idea what my 5 numbers are, then tells that you can pick a number from 31 to 60. You win the game if the number you picked is one of the 5 numbers I thought of. Assume that I had no idea that you were going to be restricted to guessing only a number from 31 to 60 (otherwise it wouldn’t fair!). What are the odds of you winning the game?
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;why-is-this-interesting&quot;&gt;Why is this interesting?&lt;/h2&gt;
+&lt;p&gt;Well, apart from the fact that a mathematician never shys away from a problem, this problem is interesting because, there is a seemingly complicated twist to &lt;a href=&quot;#the-original-problem&quot;&gt;the original problem&lt;/a&gt;. It turns out that it actually isn’t that complicated at all.&lt;/p&gt;
+
+&lt;p&gt;But, the problem is most interesting because of the answer to the question. So, you will have to stick until the end to know why this is intersting and worth thinking about. Now that we have established the conundrum of the &lt;em&gt;Hermeneutic Circle&lt;/em&gt;, let’s dive into the solution. If you are very impatient, jump to the &lt;a href=&quot;#results&quot;&gt;results&lt;/a&gt; to know the answer.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-original-problem&quot;&gt;The Original Problem&lt;/h2&gt;
+&lt;p&gt;The question I posed is a spin-off of a very simple problem in probability. Let’s solve that before introducing the intricacies and restrictions. The problem goes like this:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;I think of 5 numbers from 1 to 100. What are the odds that you guess exactly one of those numbers in a single attempt?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The solution is straightforward. There are 5 right answers. And you have a pool of 100 numbers to guess from.
+\[Probability = \frac{5}{100} = 0.05 \]
+It will do well to remember the number 0.05. Now, let’s look at the problem at hand.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;For the sake of simplicity, let’s call the person who thinks of the number as Player 1 (or &lt;strong&gt;P1&lt;/strong&gt;) and the person who guesses as Player 2 (or &lt;strong&gt;P2&lt;/strong&gt;). And for completeness, let’s call the person who imposes restrictions, making life harder for &lt;strong&gt;P2&lt;/strong&gt;, as Referee (or &lt;strong&gt;R&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Back to the original problem, let us study the situation before we answer the actual question. First of, notice that there are 6 different possibilites for the 5 numbers and range.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;None of the 5 numbers lie in the range&lt;/li&gt;
+  &lt;li&gt;Exactly 1 of the 5 numbers lie in the range&lt;/li&gt;
+  &lt;li&gt;Exactly 2 of the 5 numbers lie in the range&lt;/li&gt;
+  &lt;li&gt;Exactly 3 of the 5 numbers lie in the range&lt;/li&gt;
+  &lt;li&gt;Exactly 4 of the 5 numbers lie in the range&lt;/li&gt;
+  &lt;li&gt;All of the 5 numbers lie in the range&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For succinctness, let us call the event that exactly \(i\) numbers lie in the range as \(R_i\). So, the above mentioned possibilities are events \(R_0\), \(R_1\), \(R_2\), \(R_3\), \(R_4\), and \(R_5\). Notice that these events are mutually exclusive and exhaustive.&lt;/p&gt;
+
+&lt;p&gt;Let us call the event that &lt;strong&gt;P2&lt;/strong&gt; wins the game i.e., guesses a correct number as \(C\). It is actually easier for us to calculate the probability of \(C\) occurring conditioned on the events \(R_i\). It is also straightforward to calculate the probability of \(R_i\). So, with the help of law of total probability, we can answer the question posed as follows:&lt;/p&gt;
+
+&lt;p&gt;\[P(C) = \sum\limits_{i = 0}^5{P(C|R_i) * P(R_i)} \]
+\[P(C|R_i) = \frac{i}{30}\]
+\[P(R_i) = \frac{(^{30}C_i) * (^{70}C_{5-i})}{^{100}C_5} \]
+\[P(C) = \sum\limits_{i = 0}^5{\frac{i}{30}*\frac{(^{30}C_i) * (^{70}C_{5-i})}{^{100}C_5}} = 0.05 \]&lt;/p&gt;
+
+&lt;p&gt;Surprisingly we get the same answer got from the &lt;a href=&quot;#the-original-problem&quot;&gt;original problem&lt;/a&gt; i.e., 0.05. Could this just be a coincidence?&lt;/p&gt;
+
+&lt;h2 id=&quot;generalization&quot;&gt;Generalization&lt;/h2&gt;
+&lt;p&gt;Let us generalize our formula for arbitrary values. Let \(S\) be the set of all elements from which &lt;strong&gt;P1&lt;/strong&gt; can think of. And let \(k\) be the number of elements that &lt;strong&gt;P1&lt;/strong&gt; thinks of. Now, &lt;strong&gt;R&lt;/strong&gt; imposes a restriction on &lt;strong&gt;P2&lt;/strong&gt;. Let \(A\) be that restriction i.e., the set of all elements from which &lt;strong&gt;P2&lt;/strong&gt; can guess the answer. Let \(|S| = n\), \(|A| = m\), and \(A \subseteq S\). Therefore \(m \leq n\). Let the set of elements that &lt;strong&gt;P1&lt;/strong&gt; thinks of be \(X\). Clearly \(|X| = k\).&lt;/p&gt;
+
+&lt;p&gt;Our events are defined as before. \(R_i\) is the event that exactly \(i\) elements of \(X\) lie in \(A\) i.e., \(|X \cap A| = i\) where \(0 \leq i \leq k\). \(C\) is the event that &lt;strong&gt;P2&lt;/strong&gt; wins the game. Again, applying the law of total probability, we have:&lt;/p&gt;
+
+&lt;p&gt;\[P(C) = \sum\limits_{i = 0}^k{P(C|R_i) * P(R_i)} \]&lt;/p&gt;
+
+&lt;p&gt;Consider the event \(C\) conditioned on \(R_i\). &lt;strong&gt;P2&lt;/strong&gt; can guess from a total of \(m\) elements. But, only \(i\) of them can make &lt;strong&gt;P2&lt;/strong&gt; win. Therefore, the probability of \(C\) conditioned on \(R_i\) can be written as:&lt;/p&gt;
+
+&lt;p&gt;\[P(C|R_i) = \frac{i}{m}\]&lt;/p&gt;
+
+&lt;p&gt;The number of ways event \(R_i\) can occur is the number of ways we can choose \(i\) elements from \(A\) and the number of ways we can choose the rest i.e., \((k - i)\) elements from \(S-A\). Note that because \(A \subseteq S\), \(|S - A| = n - m\). So, we can write the probability of \(R_i\) as:&lt;/p&gt;
+
+&lt;p&gt;\[P(R_i) = \frac{(^{m}C_i) * (^{n-m}C_{k-i})}{^{n}C_k} \]&lt;/p&gt;
+
+&lt;p&gt;Now, we can answer the generalized question:&lt;/p&gt;
+
+&lt;p&gt;\[P(C) = \sum\limits_{i = 0}^k{\frac{i}{m}*\frac{(^{m}C_i) * (^{n-m}C_{k-i})}{^{n}C_k}} \]&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;I have written a quick &lt;a href=&quot;https://gist.github.com/AparaV/f5d9278e250331b5ca31a63db2a2d749&quot; target=&quot;_blank&quot;&gt;python script&lt;/a&gt; to evaluate this for different values of \(n\), \(m\), and \(k\). Turns out that if we set \(n = 100\) and \(k = 5\), then for all \(m\) such that \(0 &amp;lt; m \leq n\) \(P(C) = 0.05\). This is far too interesting to be just a coincidence…&lt;/p&gt;
+
+&lt;p&gt;Well, in fact for arbitrary \(n &amp;gt; 0\) and \(0 &amp;lt; k \leq n\), as long as \(0 &amp;lt; m \leq n\),&lt;/p&gt;
+
+&lt;p&gt;\[P(C) = \frac{k}{n} \]&lt;/p&gt;
+
+&lt;p&gt;This means that the restriction the referee &lt;strong&gt;R&lt;/strong&gt; imposes on &lt;strong&gt;P2&lt;/strong&gt; has no effect on the odds that they will win the game.&lt;/p&gt;
+
+&lt;h2 id=&quot;discussion&quot;&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;Our intuition says that if &lt;strong&gt;R&lt;/strong&gt; gives a smaller range for &lt;strong&gt;P2&lt;/strong&gt; to guess from, then it reduces the probability that &lt;strong&gt;P2&lt;/strong&gt; wins thus increasing the probability of &lt;strong&gt;P1&lt;/strong&gt; winning. But we have just shown that our inherent human intuition is wrong just like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Monty_Hall_problem&quot; target=&quot;_blank&quot;&gt;Monty Hall Problem&lt;/a&gt; and lots of &lt;a href=&quot;https://www.scientificamerican.com/article/why-our-brains-do-not-intuitively-grasp-probabilities/&quot; target=&quot;_blank&quot;&gt;other times&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But how can we undersand the result we just derived intuitively? Keep in mind the way we solved the &lt;a href=&quot;#the-original-problem&quot;&gt;original problem&lt;/a&gt;. Now, if the numbers are truly random, then the odds will be the same irrespective of the restriction imposed on &lt;strong&gt;P2&lt;/strong&gt;. This is due to three facts:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;P1&lt;/strong&gt;, the person thinking the numbers, doesn’t know the restriction that will be imposed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;, who sets the restriction, does not know what numbers &lt;strong&gt;P1&lt;/strong&gt; has thought of.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;P2&lt;/strong&gt;, the person guessing, also doesn’t know the numbers &lt;strong&gt;P1&lt;/strong&gt; has thought of.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Since we have eliminated bias in all three people playing the game, we need to account for all the different possibilites the situation creates. In doing so, the net effect of the restriction becomes nil. Thus, we end up with the &lt;a href=&quot;#the-original-problem&quot;&gt;original problem&lt;/a&gt; again. We went to great lengths trying to complicate a simple problem only to go back to sqaure one!&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;Shout out to my professor Chris Ketelsen and my classmate Michael Dresser for encouraging, and helping, me to think about this problem. Another shout out to my friend Aravindh Shankar for proof reading my solution.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2018 Goals</title>
+   <link href="https://www.aparavenkat.com/2018/01/01/2018-goals/"/>
+   <updated>2018-01-01T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2018/01/01/2018-goals</id>
+   <content type="html">&lt;p&gt;Last year (2017), I had set &lt;a href=&quot;/2017/01/11/2017-goals/&quot;&gt;three long term goals&lt;/a&gt;. It focused entirely on computer science. It didn’t entirely go well. Perhaps that could be attributed to the naiveness of the goals. This year, I will once again set three goals for the year. But, this time, I want to make sure that these are not focused only on computer science.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;goal-1&quot;&gt;Goal 1&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Write at least one technical blog post each month&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Last year, I tried to commit code each day thinking that I will learn something in that process. But, it turned out that it actually stopped me from learning something. Hopefully, this task will achieve the same end goal. Why? This will force me to constantly work on something technical throughout the year. This could be anything from a cool math problem I solved or explaining a complex topic or a research project I am working on. This will also improve my scientific writing skills.&lt;/p&gt;
+
+&lt;h2 id=&quot;goal-2&quot;&gt;Goal 2&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Read at least 20 books&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I love reading books. But lately I haven’t been able to find the time to read all the books I want to. So, I put this goal out there to motivate me to read books. These could be anything from fiction to non-fiction, though I look at myself reading more of fantasy and science fiction more than anything else.&lt;/p&gt;
+
+&lt;h2 id=&quot;goal-3&quot;&gt;Goal 3&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Co-author a technical research paper or journal article&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is probably the most far-fetched goal I have ever set for myself. That is good. It constantly makes me improve and learn. I have started doing research (since the Fall of 2017), so hopefully this isn’t really as far-fetched as I think it is. This will keep me on my toes.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Those are the three goals I am setting for myself. At the end of this year, I will look back and evaluate how successful I was accomplishing them.&lt;/p&gt;
+
+&lt;p&gt;That’s it for now. I wish you a happy new year!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2017: A Retrospective</title>
+   <link href="https://www.aparavenkat.com/2017/12/30/2017-review/"/>
+   <updated>2017-12-30T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/12/30/2017-review</id>
+   <content type="html">&lt;p&gt;2017 was a long year, good nonetheless. I want to take a moment to look back at the highlights of 2017. Some of the things I cover here are the &lt;a href=&quot;#goals&quot;&gt;goals I set out at the beginning&lt;/a&gt;; some of my favorite &lt;a href=&quot;#books&quot;&gt;books&lt;/a&gt;; the good stuff – &lt;a href=&quot;#research&quot;&gt;research&lt;/a&gt;; and other &lt;a href=&quot;#misc&quot;&gt;miscellaneous things&lt;/a&gt;.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
+
+&lt;p&gt;I set out 2017 with some goals (found &lt;a href=&quot;/2017/01/11/2017-goals/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;). Here is how well that went:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;1 commit a day challenge&lt;/strong&gt;: It started off well. But halfway through, I realized that I was writing code and committing code not because I &lt;em&gt;wanted&lt;/em&gt; to do that, but because I felt &lt;em&gt;obligated&lt;/em&gt;. So, I decided to quit the challenge as it was ridiculous and taking away time that I could have spent learning something else.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Solve 100 problems on Project Euler&lt;/strong&gt;: I solved &lt;a href=&quot;https://github.com/AparaV/project-euler&quot; target=&quot;_blank&quot;&gt;77 problems&lt;/a&gt;. Then, school and research started taking priority and I soon forgot about this. Maybe I will complete it in 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Implementing Neural Algorithm for Artistic Style&lt;/strong&gt;: I actually managed to complete this one. Here is the link to the &lt;a href=&quot;https://github.com/AparaV/artistic-style&quot; target=&quot;_blank&quot;&gt;source code&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;No matter how bad (or good, depending on how you look at it) these went, I am still planning on writing a set of new goals for 2018. Hopefully these are more realistic and I actually manage to stick to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
+
+&lt;p&gt;These are my favorite books that I read in 2017 (though all of them are much older):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mistborn Trilogy [Brandon Sanderson]&lt;/strong&gt;: I went in not knowing what to expect and that is the best reading experience. The magic system is really well defined with limitations. It keeps you guessing what’s about to happen and what does happen is nothing you expected, but all the clues were right there in front of you! You can buy them &lt;a href=&quot;https://www.amazon.com/Mistborn-Trilogy-Boxed-Hero-Ascension/dp/076536543X/ref=sr_1_1?ie=UTF8&amp;amp;qid=1514497478&amp;amp;sr=8-1&amp;amp;keywords=mistborn&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Death of Ivan Illych [Leo Tolstoy]&lt;/strong&gt;: This book made me think about how I want to live my life. It is a tad bit dark, but I recommend this book to everyone, no matter how old you are. You can buy it &lt;a href=&quot;https://www.amazon.com/Death-Ivan-Ilyich-Leo-Tolstoy/dp/1512381322/ref=sr_1_1?s=books&amp;amp;ie=UTF8&amp;amp;qid=1514497602&amp;amp;sr=1-1&amp;amp;keywords=death+of+ivan+ilyich&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Great Mathematical Problems [Ian Stewart]&lt;/strong&gt;: Discusses 10 of the most famous math problems and their history. If you love math, you should definitely read this book. If you don’t, reading this book will change your opinion. Slightly. You can buy it &lt;a href=&quot;https://www.amazon.com/Great-Mathematical-Problems-Ian-Stewart/dp/1846683378/ref=sr_1_2?s=books&amp;amp;ie=UTF8&amp;amp;qid=1514497753&amp;amp;sr=1-2&amp;amp;keywords=ian+stewart+the+great+mathematical+problems&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;research&quot;&gt;Research&lt;/h2&gt;
+
+&lt;p&gt;I started out doing research the Fall of this year. The Fall semester I worked in the AVS laboratory in the Aerospace department on feature tracking algorithms for optical navigation in space. We (myself and a post-doc student) bootstrapped a deep neural network to identify craters in images with TensorFlow Object Detection API. We then came up with a tracking algorithm to track the craters in videos. You can read the blog post I wrote on that &lt;a href=&quot;/2017/11/30/feature-tracking-and-optical-navigation/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Starting 2018, I will be working on a new project developing mathematical models for feature extraction from texts.&lt;/p&gt;
+
+&lt;h2 id=&quot;misc&quot;&gt;Misc&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I took Critical Encounters. This class had a real impact on me and made me rethink several aspects of my life. It made me think about what kind of a person I want to be and how I should live my life. This was where I read &lt;em&gt;The Death of Ivan Illych&lt;/em&gt; by Leo Tolstoy. I also wrote &lt;em&gt;my&lt;/em&gt; &lt;a href=&quot;../../../../philosophy/&quot; target=&quot;_blank&quot;&gt;Philosophy of Education&lt;/a&gt; as an assigment for this class.&lt;/li&gt;
+  &lt;li&gt;I travelled to New York in August for HackCon V - a conference for hackathon organizers. Here is the &lt;a href=&quot;/2017/08/07/hackcon-v/&quot; target=&quot;_blank&quot;&gt;post&lt;/a&gt; I wrote.&lt;/li&gt;
+  &lt;li&gt;I wrote two posts explaining how to use TensorFlow to build a &lt;a href=&quot;/2017/07/31/regression-on-housing-data/&quot; target=&quot;_blank&quot;&gt;linear regression model&lt;/a&gt; and a simple &lt;a href=&quot;/2017/08/12/neural-networks-on-housing-data/&quot; target=&quot;_blank&quot;&gt;neural network&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;My three favorite movies this year (in that order) are Logan, Dunkirk and The Greatest Showman. &lt;strong&gt;Note:&lt;/strong&gt; I edited and replaced Wonder Woman with The Greatest Showman.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it for now. See you again in 2018!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Philosophy of Education</title>
+   <link href="https://www.aparavenkat.com/2017/12/19/philosophy-of-education/"/>
+   <updated>2017-12-19T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/12/19/philosophy-of-education</id>
+   <content type="html">&lt;p&gt;If you had asked me why I want to go to university, and why I am studying what I am studying, a few months ago, I would have replied with superficial answers like, “Get a job” and  “I love mathematics”. But after taking the class &lt;strong&gt;Critical Encounters&lt;/strong&gt;, my answer is completely different. This class made me rethink several aspects of life, and question who I wanted to be.
+&lt;!--excerpt_ends--&gt;
+One of the final assignments for this class was to give &lt;em&gt;my&lt;/em&gt; statement on the philosophy of education. Here is the prompt for the assignment:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;What do you want from university education? How do you want to approach it? What is its purpose in your life?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And this was my response.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;At the crux, education is a very simple notion. Who is educated know that they know nothing. And I want my university education to be an embodiment of that idea. I want to be challenged every day, and every moment - I want to be constantly reminded that the only thing I can ever know for sure is that I know nothing. I want my education to equip me with the tools necessary to wrestle with the thought that I will forever remain this way. And through these challenges, I want to identify, and maybe invent, myself. Finally, I want my education to allow me to make my own choices - not those defined by the society - with the newfound perception of myself. As Merton says, “[…] to identify who it is that chooses”.&lt;/p&gt;
+
+&lt;p&gt;I want to approach my education from three different avenues - curiosity, skepticism, and suspension of disbelief. Though they are conflicting at a superficial level, I think they reflect the idea that “&lt;em&gt;Knowing that I know nothing&lt;/em&gt;” is the essence of education. Firstly, I want to approach education with curiosity, a yearning to know more about everything. Only with this constant dissatisfaction of what I know right now can I ever truly learn that I know nothing. Next, I want to approach everything that my curious mind wants to know with a degree of skepticism. The fact that I know nothing should make me question whether the source of this new idea, be it a book or a lecturer, knows anything. Doubting and questioning everything is the key to understanding that we all know nothing. Finally, I want to approach education by suspending disbelief. Sometimes, perhaps to prevent the elusive case of Ivan Illych-ism, it is better to suspend your rationality, and believe something surreal for the sake of it. For education to be complete, I think there are times when we need to temporarily give up logic and reason, and indulge in something completely preposterous for pure enjoyment and spontaneity. Approaching education from these contrasting paths is a great challenge by itself. And I think that this is the way to identify myself.&lt;/p&gt;
+
+&lt;p&gt;The purpose of education in my life, on an abstract level, is to be able to make my own learned choices, and have my own conscious opinions. Armed with these, I want to spread the same to my society. I want to help others to make their own learned choices, and have their own conscious opinions. I want to use the gift that is my education to help others. Concretely, this would be something, but not necessarily, along the lines of setting up a charity for those in need; bridging the scientific gap across the world and; coming up with technology that helps people with terminal illnesses like cancer. In short, with my education, I want to make a difference in others’ lives.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This made me really think about what is it I want from my university education. Now, that I have discovered why I truly want to be educated, I think it is of utmost importance that I never lose sight of this. I also think that it is important for others to know what I value the most in education. Due to those reasons, and others, I have made a permalink to my statement on the philosophy of education to me homepage. You can find the link on the navigation pane. And here you go - &lt;a href=&quot;../../../../philosophy/&quot;&gt;Philosophy of Education&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Feature Tracking and Optical Navigation</title>
+   <link href="https://www.aparavenkat.com/2017/11/30/feature-tracking-and-optical-navigation/"/>
+   <updated>2017-11-30T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/11/30/feature-tracking-and-optical-navigation</id>
+   <content type="html">&lt;p&gt;This article is a simplified version of the &lt;a href=&quot;/assets/images/feature-tracking/report.pdf&quot; target=&quot;_blank&quot;&gt;research report&lt;/a&gt; that aims at identifying and tracking craters in images for optical navigation in space. We first survey at existing image processing techniques. We then proceed to bootstrapping a deep neural network classifier with the help of TensorFlow Object Detection API and images from NASA’s Detecting Crater Impact Challenge. We then implement a preliminary tracking algorithm that stores images and computes mean squared error to detect if the crater has already been seen before.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;p&gt;In this article, we additionally go into more details of the tracking algorithm. For the code, check the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object-detection&lt;/code&gt; branch of our &lt;a href=&quot;https://github.com/thibaudteil/OpNav_Tracking/&quot;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Ever since humans landed on the moon, it became clear than deep space travel is a possibility in the future. One of the biggest issues faced by satellites and probes that we have sent into space is that they do are unable to react to the presence of other astronomical objects real time. This means that they must rely on scientists back at Earth for navigation. Satellite images get sent back to Earth for scientists to study the situation. At the least, the time delay slows down the mission progress and causes overhead.&lt;/p&gt;
+
+&lt;p&gt;In this article, we attempt to provide a method to track craters on astronomical objects. We will first identify potential craters on the astronomical object. Then we will start tracking these potential crates and calculate how far these craters have been displaced since the last image was taken. We can then feed these inputs into a navigation filter for thr actual navigation.&lt;/p&gt;
+
+&lt;h2 id=&quot;our-workflow&quot;&gt;Our Workflow&lt;/h2&gt;
+
+&lt;p&gt;This research area is very broad and involves three big topics – identification of craters, tracking of craters, and navigation. This article will mainly focus on the crater identification and will briefly touch upon tracking.&lt;/p&gt;
+
+&lt;p&gt;Our workflow, for tackling the identification of features, is to design two different models that achieve the same results simultaneously. The first will use pure image processing techniques to identify craters. The second will be a mixture of image processing and machine learning techniques. Then we will either choose one of either models, or a combination of both, based on their robustness.&lt;/p&gt;
+
+&lt;p&gt;For the second question, tracking craters, we discuss a preliminary algorithm we designed.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-processing&quot;&gt;Image Processing&lt;/h2&gt;
+
+&lt;p&gt;We used off-the-shelf feature detection algorithms to test their robustness. OpenCV offers many feature detectors like Hough Circle Finding method and Harris Corner Detection. These feature detectors provided by OpenCV allow for decent crater findings, but need significant tuning. This leads to questions regarding robustness and automation, and this is where machine learning might lead to better results.&lt;/p&gt;
+
+&lt;p&gt;Here is a sample result we got after a lot of fine tuning. As you can see, the results are decent, but not very precise.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/feature-tracking/image_processing.jpg&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;deep-learning&quot;&gt;Deep Learning&lt;/h2&gt;
+
+&lt;p&gt;Instead of training a deep convolutional neural network from scratch, we decided to bootstrap a neural network using the TensorFlow Object Detection API and images from NASA. The base model we trained on was originally trained on the &lt;a href=&quot;http://cocodataset.org&quot;&gt;COCO dataset&lt;/a&gt; with the architecture of award winning &lt;a href=&quot;https://arxiv.org/abs/1512.03385&quot;&gt;Microsoft’s 152 layer residual neural network&lt;/a&gt;. We trained the model for nearly 10 hours and got these results at the end.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/feature-tracking/pic1.png&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/assets/images/feature-tracking/pic2.png&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/assets/images/feature-tracking/pic3.png&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/assets/images/feature-tracking/pic4.png&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tracking&quot;&gt;Tracking&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Note: This goes into more detail than the report&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Tracking craters presented a problem. We began by comparing the cropped images of craters against one another by computing the norm of the difference of pixels. But, we are not making using of another import result we are calculating. The rate at which a crater moves across the camera depends on the speed of the satellite. And under normal conditions, the motion of the crater can be seen as continuous. So, if the distance between the center of two craters across two consecutive frames is small, then it is likely that the two craters are the same.&lt;/p&gt;
+
+&lt;p&gt;Thus, we have two different parameters - one that tries to say that two craters are different (the norm of difference), and another that tries to say that two craters are the same (the euclidean distance between the centers). With this, we can construct a new cost function as follows:&lt;/p&gt;
+
+&lt;p&gt;\[Cost(X, Y)= \alpha\frac{\left\lVert {X − Y} \right\rVert}{\left\lVert {X^{0} − Y} \right\rVert} + \beta(\left\lVert {X_c − Y_c} \right\rVert - 0.5)\]&lt;/p&gt;
+
+&lt;p&gt;Here \(\alpha\) is a hyperparameter that we can tune. We also normalize the norm of the difference to keep the errors within a small range. \(X^{0}\) is the first crater against which we compare \(Y\). So, the first term becomes just \(\alpha\) when we compare agains the first image \(X^{0}\). \(\beta\) is a parameter that depends on the rate at which craters move across the camera i.e., the speed of the satellite. In fact, we can easily see that \(\beta\) depends inversely on the speed. \(X_c\) and \(Y_c\) are the vectors representing the centers of the craters \(X\) and \(Y\) respectively.&lt;/p&gt;
+
+&lt;p&gt;Now, we can generalize an say that two craters are different if their cost is greater than a threshold we set, say \(\lambda\). Otherwise, we assign the crater a new tag. Here are some results we got using our algorithm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/feature-tracking/tags2.png&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;On the whole, we can conclude that traditional image processing techniques are not consistent. They need lots of preprocessing and manual fine tuning to work, which is what we are trying to avoid. Neural networks yield much better results and are also efficient – takes ~0.4s for a single 600x400px image.&lt;/p&gt;
+
+&lt;p&gt;Our preliminary tracking is sometimes lacking in robustness. Sometimes, we observed that the same crater gets different tags, and different craters get the same tag. We need to implement a third feature that penalizes the algorithm (increases the cost) if the crater has not been seen for a while. We could also try incorporating a simple Kalman filter that predicts the position of craters to assist our algorithm.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-research&quot;&gt;Future Research&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We need to be able to track craters consistently, reliably, and efficiently. We need to improve upon our preliminary algorithm and increase the accuracy of our algorithm.&lt;/li&gt;
+  &lt;li&gt;We need to start modelling our algorithms under different lighting conditions and angles, which is more realistic.&lt;/li&gt;
+  &lt;li&gt;We need to use our results as inputs to navigation filters such as the Kalman Filter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Clearly, we have a long way to go before this can be put to practice. But, this is a step in the right direction.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thibaud Teil, my mentor for this research project&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hanspeterschaub.info/main.html&quot;&gt;Dr. Hanspeter Schaub&lt;/a&gt;, the director of &lt;a href=&quot;http://hanspeterschaub.info/AVSlab.html&quot;&gt;AVS Laboratory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dr. Beth Myers and You’re@CU Program&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;[1] Simonyan, Zisserman (2014) “&lt;em&gt;Very Deep Convolutional Neural Networks for Large-Scale Image Recognition&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[2] Szegedy, Liu et. al (2015) “&lt;em&gt;GoogLeNet&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[3] Girshick, Donahue, et. al. (2014) “&lt;em&gt;Rich feature hierarchies for accurate object detection and semantic segmentation&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[4] Urbach, Stepinski (2009) “&lt;em&gt;Automatic detection of sub-km craters in high resolution planetary images&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[5] Kalal, Mikolajczyk, Matas (2010) “&lt;em&gt;Tracking-Learning-Detection&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[6] Dor, Tsiotras “&lt;em&gt;Application of ORB-SLAM to Spacecraft Non-Cooperative Rendezvous&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[7] Mur-Artal, Tardos (2016) “&lt;em&gt;ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;[8] Ross Girshick (2015) “&lt;em&gt;Fast R-CNN&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Datasets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;[9] NASA Detecting Crater Impact Challenge - &lt;a href=&quot;https://www.nasa.gov/feature/detecting-crater-impact-challenge&quot;&gt;https://www.nasa.gov/feature/detecting-crater-impact-challenge&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[10] COCO Dataset - &lt;a href=&quot;http://cocodataset.org&quot;&gt;http://cocodataset.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;[11] TensorFlow Object Detection API - &lt;a href=&quot;https://github.com/tensorflow/models/tree/master/research/object_detection&quot;&gt;https://github.com/tensorflow/models/tree/master/research/object_detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[12] OpenCV - &lt;a href=&quot;https://opencv.org&quot;&gt;https://opencv.org&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Neural Networks on House Prices</title>
+   <link href="https://www.aparavenkat.com/2017/08/12/neural-networks-on-housing-data/"/>
+   <updated>2017-08-12T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/08/12/neural-networks-on-housing-data</id>
+   <content type="html">&lt;p&gt;In the &lt;a href=&quot;/2017/07/31/regression-on-housing-data/&quot;&gt;previous article&lt;/a&gt;, we used linear regression to predict the price of houses.
+Then, we saw that this model does not find any non-linear correlations.
+The most fascinating thing about neural networks is that they automatically model
+any non-linearities present in the phenomenon.
+In this article, we will use neural networks to overcome that shortcoming.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that this is a follow-up post. We already downloaded, and cleaned the &lt;a href=&quot;https://ww2.amstat.org/publications/jse/v19n3/decock.pdf&quot; target=&quot;blank&quot;&gt;Ames housing dataset&lt;/a&gt;
+in the &lt;a href=&quot;/2017/07/31/regression-on-housing-data/&quot;&gt;previous article&lt;/a&gt;.
+If you haven’t done that already, you should probably go ahead and finish that first.
+In addition to that, we also split the dataset into 3 parts (training, validation, and testing).
+I will jump into the code assuming that’s already done.
+Or if you prefer, you can follow along by running the &lt;a href=&quot;https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All of the code used here is available in the form of a &lt;a href=&quot;https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb&quot; target=&quot;blank&quot;&gt;Jupyter Notebook&lt;/a&gt; which you can run on your machine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-neural-network&quot;&gt;What is a Neural Network?&lt;/h2&gt;
+
+&lt;p&gt;As one might think, neural networks are systems that are modelled after the human nervous system.
+The human body has neurons that connected together is a very complex network,
+with each neuron branching out to many other neurons and getting input signals from multiple neurons.
+Similarly, in AI, neural networks can be thought of as inputs going to different temporary outputs,
+and those going to other temporary outputs, and so on until we lead the final temporary outputs to
+the final output.
+Each of these temporary outputs are called hidden layers because they don’t really expose themselves anywhere else.&lt;/p&gt;
+
+&lt;p&gt;The image (taken from &lt;a href=&quot;https://en.wikipedia.org/wiki/Artificial_neural_network&quot;&gt;Wikipedia&lt;/a&gt;) below will help you understand the flow of inputs to outputs.
+&lt;img src=&quot;/assets/images/neural_network.png&quot; alt=&quot;neural_network&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice that we are leading our features to multiple values.
+Think of each of these values as a separate linear problem (like the one we solved earlier).
+These new vector of values inside the hidden layer will now serve as new features for our problem.
+In this manner, we can construct many such hidden layers with different number of features.
+Finally, when we are happy, we can direct these features to the actual output.
+Generally speaking, more hidden layers equals better performance. But you must watch out for overfitting.&lt;/p&gt;
+
+&lt;p&gt;Notice that we described each of these connections as linear problems.
+That means they must have weights and biases. We find these parameters using a process called &lt;a href=&quot;https://en.wikipedia.org/wiki/Backpropagation&quot; target=&quot;blank&quot;&gt;&lt;em&gt;backpropagation&lt;/em&gt;&lt;/a&gt;.
+It’s called backpropagation because we use the final output and proceed in the direction towards the input
+(back) to reconstruct the weights and biases.
+The mathematics is a bit more complex than the one for linear regression and is beyond the scope of this article.
+Finally, we use an optimizer, just like Gradient Descent (in this tutorial we will be using Gradient Descent),
+to help converge the cost function.&lt;/p&gt;
+
+&lt;p&gt;An important aspect of neural networks is feeding the hidden layers into the next layer.
+It so happens that sometimes the gradient (when performing backpropagation) can vanish or explode.
+To prevent that we have activation functions.
+The most commonly used activation function is the Rectified Linear Unit function,
+abreviated as ReLU and is defined as follows:&lt;/p&gt;
+
+&lt;p&gt;\[f(x) = max(0, x)\]&lt;/p&gt;
+
+&lt;p&gt;It basically sets all negative values for the input to \(0\).
+This function also significantly speeds up our computation process.&lt;/p&gt;
+
+&lt;p&gt;Remember that a simple linear regression has two big drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The number of parameters are small and fixed&lt;/li&gt;
+  &lt;li&gt;They only model linear correlations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is why neural nets (NN) have an edge over linear regression:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There is great flexibility over the number of parameters (and hence performance).
+You can control the number of hidden layers and the number of nodes in each hidden layer.&lt;/li&gt;
+  &lt;li&gt;Since there are multiple layers each being activated by an ReLU,
+neural networks automagically model any non-linear correlations.
+The better your NN (not necessarily having more hidden layers), the more non-linear correlations it captures.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-design-of-our-neural-net&quot;&gt;The Design of Our Neural Net&lt;/h2&gt;
+
+&lt;p&gt;The NN we are going to create is a rather modest one. It has only one hidden layer.
+So, you can consider it more of a proof-of-concept that NNs are better than linear regression.&lt;/p&gt;
+
+&lt;p&gt;Our initial number of features is \(38\). So this is the size of our input layer.
+We will map this onto our hidden layer. Our hidden layer will have a size of \(16\).
+This hidden layer will undergo linear rectification with ReLUs.
+That will serve as features for our output.&lt;/p&gt;
+
+&lt;p&gt;The image below represents our NN
+&lt;img src=&quot;/assets/images/neural_network_2.png&quot; alt=&quot;neural_network_2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The neural network can be defined by these equations. Here, \(X\) is the input matrix,
+\(W_i\) and \(b_i\) are weights and biases respectively. \(X_2\) represents the
+hidden layer, and \(y\) is the output.&lt;/p&gt;
+
+&lt;p&gt;\[x_2 = W_1X + b_1\]
+\[X_2 = ReLU(x_2)\]
+\[y = W_2X_2 + b_2\]&lt;/p&gt;
+
+&lt;h2 id=&quot;training-the-neural-net&quot;&gt;Training the Neural Net&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/AparaV/05b398de2a179234896b687bec4abd7f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Continuing on after cleaning the data, we create some variables to store the size of the training data.
+Next, we define the number of activation units in out hidden layer as \(16\).
+Now, we are ready to construct our graph.&lt;/p&gt;
+
+&lt;p&gt;As in the previous case, we define the datasets as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.constant&lt;/code&gt; because we don’t want to modify them in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt;.
+Observe that we have two sets of weights and biases.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weights_1&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases_1&lt;/code&gt; map our input variables to the hidden layer. And the matrix sizes are defined in such a manner.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weights_2&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases_2&lt;/code&gt; map the hidden layer to the output.
+Then we have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;steps&lt;/code&gt;. We’ll discuss this more when we move on to the optimzation.&lt;/p&gt;
+
+&lt;p&gt;Now, we define out &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;model&lt;/code&gt;. This is simply a rendition of the mathematical equations we described earlier in TensorFlow style.
+We do this for code reuse and readability.&lt;/p&gt;
+
+&lt;p&gt;Now, we compute the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost&lt;/code&gt;. The cost function we are using here is the same we used in the previous post.
+So you can read that one to gain more insight.&lt;/p&gt;
+
+&lt;p&gt;Then we optimize and minimize the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost&lt;/code&gt;. This time, we are not using a fixed learning rate.
+Instead, we exponentially decay the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;learning_rate&lt;/code&gt; i.e., as we run more iterations, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;learning_rate&lt;/code&gt; slowly becomes smaller and smaller.
+As we get closer to the minima, we start moving slower towards the minima to ensure that we do not miss it.
+This is where the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;steps&lt;/code&gt; comes into play. This variable keeps track of the number of iterations.
+And finally, the optimizer we use will be gradient descent.&lt;/p&gt;
+
+&lt;p&gt;Finally, we use our parameters and predict the output for the test and validation dataset.&lt;/p&gt;
+
+&lt;p&gt;Now, we are ready to train our model. We initiate a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Session&lt;/code&gt; with our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; and run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1000000&lt;/code&gt; steps.
+If you do not have access to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow-gpu&lt;/code&gt;, I recommend you reduce the number of iterations for faster results.
+After running, we save our weights and biases for later use.
+You may want to read the previous post for a line by line code description.&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;We first reconstruct our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; by initiating a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Session&lt;/code&gt; and restoring variables from the checkpoint file.
+Then we predict the sale prices of the test data from these weights and biases.
+Remember to predict the output using the same model you used to train.&lt;/p&gt;
+
+&lt;p&gt;Here is a graph comparing the actual values (blue) and predicted values (orange).
+&lt;img src=&quot;/assets/images/neural_network_comparison.png&quot; alt=&quot;neural_network_comparison&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This model has a score of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.23802&lt;/code&gt;. This is a slight improvement from linear regression.
+And this should place a few hundred ranks above your previous rank on the leaderboards.&lt;/p&gt;
+
+&lt;h2 id=&quot;scope-for-improvement&quot;&gt;Scope for Improvement&lt;/h2&gt;
+
+&lt;p&gt;As you can see, there is still room for improvement.
+In fact, we started out saying that NNs are, generally speaking, better than linear regression and our NN was only slightly better than the linear regression.
+Here are some things you can do to make the NN better:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Better feature engineering&lt;/strong&gt; - Here is a list of things you can do to have better features:
+    &lt;ul&gt;
+      &lt;li&gt;Keep more features. We dropped lots of features. I bet there is some correlation between these features and the sale price.&lt;/li&gt;
+      &lt;li&gt;Creating bins instead of using actual features can prevent overfitting.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Better cost function&lt;/strong&gt; - The cost function we used does not take the large range of sale prices into consideration.
+Think about it this way - we penalized the model for predicting a $5000 house to be $0 (i.e., a difference of $5000) by the same amount
+if it predicted a $200,000 house to be $150,000 (i.e., a difference of $5000). We know that this is wrong.
+Instead, you can define a new function that computes the square difference of \(log\).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Prevent overfitting&lt;/strong&gt; - You can use &lt;a href=&quot;https://en.wikipedia.org/wiki/Regularization_(mathematics)&quot; target=&quot;blank&quot;&gt;regularization&lt;/a&gt; to prevent this.
+In fact, in NN, there is more sophisticated method called &lt;a href=&quot;https://en.wikipedia.org/wiki/Convolutional_neural_network#Dropout&quot; target=&quot;blank&quot;&gt;Dropout&lt;/a&gt;.
+My guess is that this won’t work well because our training data is small. But you should definitely check it out.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Go deeper&lt;/strong&gt; - Try experimenting with multiple hidden layers and vary the number of activation units in each layer.
+This is really just a shot in the dark, but you never know what’s going to turn up!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;final-words&quot;&gt;Final Words&lt;/h2&gt;
+
+&lt;p&gt;I think this is a really great hands-on experience to get your feet wet with machine learning and TensorFlow.
+If you have any questions, or see any factual inaccuracies, let me know in the discussion below or &lt;a href=&quot;/contact&quot; target=&quot;blank&quot;&gt;contact&lt;/a&gt; me.
+I plan on writing more tutorials, especially for the other two &lt;a href=&quot;https://www.kaggle.com/competitions&quot; target=&quot;blank&quot;&gt;Getting Started Kaggle Competitions&lt;/a&gt;.
+If you think you’d want to read those, subscribe to the &lt;a href=&quot;/atom.xml&quot; target=&quot;blank&quot;&gt;RSS&lt;/a&gt; feed and stay updated.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hackcon V</title>
+   <link href="https://www.aparavenkat.com/2017/08/07/hackcon-v/"/>
+   <updated>2017-08-07T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/08/07/hackcon-v</id>
+   <content type="html">&lt;p&gt;3 days beside a beautiful lake, under the summer sun. 400 avid hackers who care about the community.
+Thousands of ideas shared. That’s probably how I’d describe Hackcon V in three lines.
+But it is so much more than that.
+Hackcon is the annual conference that brings together some of the most passionate hackathon organizers
+around the world to share ideas and views on how to make the hackathon community a better place for everyone.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;p&gt;Here, I’d like to share some of the big things I learnt there.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-themes&quot;&gt;The Themes&lt;/h2&gt;
+
+&lt;p&gt;The three main themes at Hackcon this year were making the community more welcoming to beginners;
+making the community more inclusive and; engaging the community.&lt;/p&gt;
+
+&lt;h2 id=&quot;hello-world&quot;&gt;Hello, World!&lt;/h2&gt;
+
+&lt;p&gt;Why do we need beginners at a hackathon?
+For sustainability – the same reason the society insists on educating the younger population.
+There needs to be a community after the current hackers graduate.&lt;/p&gt;
+
+&lt;p&gt;Hackathons can quickly get intimidating.
+Imagine being surrounded by 400 people who have an IQ of 200 for 24 hours.
+That’s how newcomers imagine themselves when they enter a hackathon.
+In reality, it is hardly the case. There is a dire need for every newcomer to realize this.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Having workshops aimed at beginners can definitely boost their confidence.
+Mock hackathons, like hack nights, can help them familiarize with the hacking ambience.&lt;/li&gt;
+  &lt;li&gt;Most beginners fail to complete their project because they refuse to ask for help.
+And that’s because they think their question is “stupid”.
+But the experienced hacker knows that there is no such thing as a “stupid question”.
+This problem can probably be fixed by tagging experience hackers along with a novice
+or have a mentor dedicated to helping that team.&lt;/li&gt;
+  &lt;li&gt;Another way to boost confidence and encourage more people to complete their project
+is to give prizes that are dedicated to beginners.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-inclusive&quot;&gt;More Inclusive&lt;/h2&gt;
+
+&lt;p&gt;The first thing that comes to mind when we talk about inclusivity is probably gender,
+race, religion, and nationality. But the term is much broader than that.
+For instance, the education level of participants, and the field the participants are
+studying are often overlooked in hackathons.&lt;/p&gt;
+
+&lt;p&gt;They’re usually dominated by college students studying computer science.
+There is a difference between diversity and inclusivity.
+As mentioned in the keynote by &lt;a href=&quot;https://twitter.com/dearanzeta&quot; target=&quot;blank&quot;&gt;Alex de Aranzeta&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Diversity is about inviting everyone to the party. Inclusivity is about asking them to dance.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you are not being inclusive, then having a diverse population at your event
+doesn’t really count towards anything that actually means something.&lt;/p&gt;
+
+&lt;h2 id=&quot;engaging-the-community&quot;&gt;Engaging the Community&lt;/h2&gt;
+
+&lt;p&gt;We need to engage the community and keep the momentum going even after the hackathon.
+Having lots of workshops, tech talks, coding nights, bar camps, etc. is probably a good way to do this.
+Involving enthusiastic professors and professionals from the community is another great idea.
+Finding other student clubs or meetups that have similar goals and interests,
+and helping each other is yet another great idea. This can also help expand the audience of both communities.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-words&quot;&gt;Final Words&lt;/h2&gt;
+
+&lt;p&gt;I must still say that Hackcon was much more than that.
+Putting together everything that happened there would be nigh impossible.
+It must be something that must experienced.
+My favorite part was the final keynote given by &lt;a href=&quot;https://twitter.com/jna_sh&quot; target=&quot;blank&quot;&gt;Joe Nash&lt;/a&gt;
+from GitHub, “The Life of a Student Community”.
+This was my first Hackcon and I’m pretty sure that it won’t be the last.
+I will conclude by urging you to register for the next hackathon if you’ve never
+been to one before, and consider attending the next Hackcon if you’re already an avid hacker!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Regression on House Prices</title>
+   <link href="https://www.aparavenkat.com/2017/07/31/regression-on-housing-data/"/>
+   <updated>2017-07-31T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/07/31/regression-on-housing-data</id>
+   <content type="html">&lt;p&gt;Linear regression is perhaps the heart of machine learning. At least where it all started.
+And predicting the price of houses is the equivalent of the “Hello World” exercise in starting with linear regression.
+This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the &lt;a href=&quot;https://ww2.amstat.org/publications/jse/v19n3/decock.pdf&quot; target=&quot;blank&quot;&gt;Ames housing dataset&lt;/a&gt;.
+&lt;!--excerpt_ends--&gt;
+This is a very simple (and perhaps naive) attempt at one of the beginner level Kaggle competition.
+Nevertheless, it is highly effective and demonstrates the power of linear regression.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;All of the code used here is available in the form of a &lt;a href=&quot;https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb&quot; target=&quot;blank&quot;&gt;Jupyter Notebook&lt;/a&gt; which you can run on your machine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-requisites&quot;&gt;Pre-requisites&lt;/h2&gt;
+
+&lt;p&gt;This article assumes the reader to be fluent in Python to understand the code snippets.
+At least a strong background in other programming languages should be necessary.
+We will build our models using Tensorflow.
+So basic knowledge Tensorflow would be helpful, but is not a necessity.
+The tutorial also assumes the reader is familiar with how Kaggle competitions work.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-raw-data&quot;&gt;The Raw Data&lt;/h2&gt;
+
+&lt;p&gt;First off, we will need the data. The dataset we will be using is the Ames Housing dataset and can be downloaded from &lt;a href=&quot;https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt;.
+Opening up the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train.csv&lt;/code&gt;, you will notice nearly 52 features of 1460 houses.
+What each of these features represent is described in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data_description.txt&lt;/code&gt;.
+The file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test.csv&lt;/code&gt; differs from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train.csv&lt;/code&gt; in that there are fewer houses and the prices for each of the houses is not present.
+We will use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train.csv&lt;/code&gt; file to train and build our model.
+Then, using that model, we will predict the prices for each of the houses in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test.csv&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You might want to spend some time studying this data by graphing charts, etc. to gain a better understanding of the data.
+This will definitely be helpful, but we will not do that here.&lt;/p&gt;
+
+&lt;h2 id=&quot;cleaning-data&quot;&gt;Cleaning Data&lt;/h2&gt;
+
+&lt;p&gt;The cleaning of data refers to many operations. Here we will be performing feature engineering (creating new features),
+filling in missing values, feature scaling, and feature encoding.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/AparaV/f47e8054f44547f812788a6aa41233aa.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;52 features is a bit overwhelming.
+And if you have spent time studying what each of these features represent,
+you’d probably say that many of the features are redundant to some extent i.e., they play a very small role in the price of a house.
+So the first thing we will do is remove these features and make life simpler.
+The code snippet describes the features we want to get rid off.
+But, before we remove them forever, notice that the total porch area and total number of bathrooms is split into 2 columns.
+Again, to make life simpler, we will combine them into a single total porch area and a single total number of bathrooms.
+Now, we can go ahead and get rid off all these unwanted features.&lt;/p&gt;
+
+&lt;p&gt;The next thing we want to do is handle missing values. There are various ways to tackle this problem.
+An aggressive approach is to remove that entire training example.
+This can be bad if there are lots of missing values because you will lose too much data.
+But then, why would you train a model if you think you don’t have enough data?
+A simple and effective approach is to replace the missing value with mode (the most frequent value taken by that feature).
+A more sophisticated (and maybe better) technique is to study the other features and determine the missing value using probability and statistics.
+You might have guessed it - we are going to deal with missing values be replacing it with the mode.&lt;/p&gt;
+
+&lt;p&gt;The next thing we want to do is scale down the features.
+The motivation behind this is that some of our features have a large range of values.
+And this makes it difficult for our optimizer to converge. But, more on that later.
+We will use the following method for rescaling.&lt;/p&gt;
+
+&lt;p&gt;\[ x’_i = \frac{x_i - min(X)}{max(X) - min(X)}\]&lt;/p&gt;
+
+&lt;p&gt;Here, \(x_i\) is the \(i^{th}\) example of the feature \(X\) and, \(min(X)\) and \(max(X)\) refer to the minimum and maximum values the feature \(X\) takes respectively.
+An important thing to note is that you do not want to scale the output i.e., the Sale Price.
+This can lead to large errors in output and leave you clueless for a long time.&lt;/p&gt;
+
+&lt;p&gt;In machine learning, we almost always deal with numbers.
+But many of the features have letters for values where each letter (or sequence of letters) refer to a particular category.
+This is true for many datasets. And it also makes life difficult for us. And we do not like it when life becomes difficult.
+So, we will encode each of these features i.e., we will map a one-to-one correspondence from each of these categories to a number.
+The code snippet demonstrates how we achieve this.&lt;/p&gt;
+
+&lt;p&gt;The data we have now is almost ready for training.&lt;/p&gt;
+
+&lt;h2 id=&quot;splitting-dataset&quot;&gt;Splitting Dataset&lt;/h2&gt;
+
+&lt;p&gt;A standard practice is to split the data into 3 parts - training, validation and test datasets.
+We will use the training dataset alone to actually train the model.
+Then we will use the errors the model gives on the validation dataset to tune our hyperparamters.
+But now, the model we trained has “seen” the validation dataset.
+This means that if we were to report the error the model produced using either the training or validation datasets, our real error would be biased because this model has been exposed and modified to minimize the error on these datasets.
+This is where the test dataset comes into play.
+Its purpose is to serve as an unbiased judge and report the error on the model.&lt;/p&gt;
+
+&lt;p&gt;Usually, the dataset is divided as 60% training, 20% validation and 20% testing. And we will follow that fashion.
+We will also shuffle the dataset to make sure data is equally distributed across the 3 datasets.&lt;/p&gt;
+
+&lt;p&gt;So far we have been dealing with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pandas&lt;/code&gt; dataframes. Alas! Tensorflow likes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numpy&lt;/code&gt; arrays better.
+So, we will have to fix that by converting the dataframes into matrices.
+While doing so, we also need to separate the inputs, \(X\), and outputs, \(y\).&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/AparaV/902692e441c06604703dbc7ffd2d3680.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;linear-regression&quot;&gt;Linear Regression&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-algorithm&quot;&gt;The Algorithm&lt;/h3&gt;
+
+&lt;p&gt;As I mentioned earlier, linear regression is perhaps the heart of machine learning.
+And the algorithm is the equivalent of the “Hello World” exercise.
+The algorithm is a very simple linear expression.&lt;/p&gt;
+
+&lt;p&gt;\[Y = WX + b\]&lt;/p&gt;
+
+&lt;p&gt;Here, \(Y\) is the output values for \(X\), the input values.
+\(W\) is referred to as the weights and \(b\) is referred to as the biases.
+Note that \(Y\) and \(b\) are vectors and \(W\) and \(X\) are matrices.
+This is, in many ways, analogous to the line equation in \(2\) dimensions you might be familiar with.&lt;/p&gt;
+
+&lt;p&gt;\[y = mx + c\]&lt;/p&gt;
+
+&lt;p&gt;The only difference is that we are extending and generalizing this relation to \(n\) dimensions.
+Just like being able to find a line equation between two points i.e., calculation \(m\) and \(c\),
+we are going to find the weights \(W\) and biases \(b\).&lt;/p&gt;
+
+&lt;p&gt;In this way, we are going to map a &lt;em&gt;linear&lt;/em&gt; relation between the sale prices and the features.
+It is important to stress on the fact that this is only a linear relationship.
+In reality, very few events are linearly correlated.&lt;/p&gt;
+
+&lt;p&gt;Naturally the question we have is figuring out the weights and biases.
+To do this we will first randomly initialize the weights, and initialize the biases to \(0\).
+Then we will calculate the right hand side of the equation and compare it with the left hand side.
+We will define the error between them as the \(Cost\) or, the more commonly used term in neural networks, \(loss\).&lt;/p&gt;
+
+&lt;p&gt;\[loss = \frac{1}{2}\sum\limits_{i = 0}^n{((Y) - (WX + b))^2}\]&lt;/p&gt;
+
+&lt;p&gt;Then, this becomes an optimization problem where we are trying to find \(W\) and \(b\) to minimize the loss.
+There are various methods to optimize this.
+As usual we will stick with the simpler one - Gradient Descent Optimizer.
+Understanding this optimizer is perhaps beyond the scope of this article.
+But imagine optimizing a function in one variable using derivatives and
+generalizing that method to a function \(n\) variables.
+That is the core of gradient descent.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s jump into the code.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-implementation&quot;&gt;The Implementation&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/AparaV/687220208a52f97ee907cfff091d4eee.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In Tensorflow, we first define and implement the algorithm in a structure called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt;.
+The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; contains our input, output, weights, biases, and the optimizer.
+We will also define the loss function here. Then, we run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt;.
+During each iteration, the optimizer will update the weights and biases based on the loss function.&lt;/p&gt;
+
+&lt;p&gt;In our graph, we first define the train dataset values and labels (output), the validation and testing datasets.
+Note that we are defining them as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.constant&lt;/code&gt;. This means that these “variables” will not and can not be modified when the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; is running.
+Next, we initialize the weights and biases. We treat these as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Variable&lt;/code&gt;.
+Pay attention to the dimensions of these matrices. You will run into compilation errors if you get them wrong.
+This means that these “variables” have the capacity to be updated and modified during the course of our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, we predict the \(Y\) values using the weights and biases using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.matmul()&lt;/code&gt; function.
+This is nothing but matrix multiplication. Then we add that to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt;.
+But if you go back to the definition, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt; is a single number while &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.matmul(tf_train_dataset, weights)&lt;/code&gt; is a vector.
+This might be confusing because you can only add a vector to another vector.
+But Tensorflow is quite clever. It understands that we mean to add the same scalar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt; to each element of the vector.
+Think about this as converting the single number into a vector (or matrix) of same dimensions as the other vector,
+and then adding those together. This is called broadcasting.&lt;/p&gt;
+
+&lt;p&gt;Then we calculate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt; as we defined previously. We can safely ignore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost&lt;/code&gt; for now.
+It’s only purpose is to report the error we get.
+When using the gradient descent optimizer, we need a parameter (one of the hyperparamters) called learning rate.
+The term is self explanatory - it refers to how fast we want to minimize the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt;.
+If it’s too big, we will only keep increasing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt;. If it’s too small, and the algorithm will converge very slowly.
+Here, we define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alpha&lt;/code&gt; as the learning rate. After much experimentation, I’ve decided to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.01&lt;/code&gt; as the learning rate.
+It might be beneficial to vary this value and test for yourself.&lt;/p&gt;
+
+&lt;p&gt;Next, we define the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimizer&lt;/code&gt;. As mentioned earlier, we are using gradient descent with a learning rate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alpha&lt;/code&gt;
+and trying to minimize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt;. This will update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Variable&lt;/code&gt; elements involved in the calculation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;After that, we are predicting the outputs on the validation and testing datasets using the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weights&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt;.
+Finally, notice the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;saver&lt;/code&gt;. What this does is it saves the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weights&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt;, and all other &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Variable&lt;/code&gt; into a checkpoint file.
+We can use these at a later stage to make our predictions.&lt;/p&gt;
+
+&lt;p&gt;That is how our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; is constructed. Now, we can run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;graph&lt;/code&gt; in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We start our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt; by initializing the global variables. This means initializing all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tf.Variable&lt;/code&gt;.
+Then we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.run()&lt;/code&gt; function to run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt; for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100000&lt;/code&gt; steps.
+Generally, the more number of steps, the better your results.
+But &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100000&lt;/code&gt; can seem like a large number and will take a long time if you can’t make use of GPU.
+If that is your case, you can either install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorflow-gpu&lt;/code&gt; or just reduce &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;num_steps&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10000&lt;/code&gt;.
+After each run, we are storing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train_predictions&lt;/code&gt; locally outside the graph.
+And after every &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5000&lt;/code&gt; steps, we are calculating the cost of out model on the validation dataset.
+At the end of the run, we save the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt; using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;saver&lt;/code&gt; we created in the graph.&lt;/p&gt;
+
+&lt;p&gt;These are my results after &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100000&lt;/code&gt; iterations. The blue line is the actual value and the orange line is the predicted value.
+It’s quite impressive that such a simple idea can yield really good results.
+There is still lots of room for improvement though. I will touch upon some of those ideas at the end.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/regression_housing_linear.png&quot; alt=&quot;linear_regression_comparison&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-prediction&quot;&gt;The Prediction&lt;/h3&gt;
+
+&lt;p&gt;Finally, we are ready to predict the prices of houses whose features are described in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test.csv&lt;/code&gt;.
+First, we initialize a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;session&lt;/code&gt;. Then we restore the variables from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;saver&lt;/code&gt;.
+And using these restored &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weights&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biases&lt;/code&gt;, we predict the output on the new dataset.
+You can save that into a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; file and make a submission.
+You should get a score of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.5804&lt;/code&gt;. And you should be placed in the top 2000 ranks (as of 31 Jul 2017).&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements-to-linear-regression&quot;&gt;Improvements to Linear Regression&lt;/h2&gt;
+
+&lt;p&gt;As I mentioned earlier (and as you might have guessed) there is certainly room for improving this naive model.
+Here are a few ideas to think about:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Regularization&lt;/strong&gt; - This concept is very very important to make sure your model doesn’t overfit the training data.
+This might lead to larger errors on the training set. But, your model is bound to generalize better outside your training set.
+This means that your model is more likely to be applicable in the real world if you use regularization.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Creating bins&lt;/strong&gt; - Remember how each of the numerical features (like area) are such varying numbers.
+To prevent overfitting, you can create bins for these features.
+For instance, all houses with area between 1000 and 1500 sq. ft would be assigned a value of 1 (say).
+I have seen this idea work really well for classification problems.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;More features&lt;/strong&gt; - I dropped a lot of features reasoning out that they wouldn’t cause the house price to be affected.
+In reality, I have no basis for that “fact”. Actually, there is a good chance they there is at least a correlation (if not a causation) between them.
+And any correlation, no matter how small, will help your model. So don’t drop them. Keep them around and test.
+You can even try your hand at engineering new features that you think might be helpful.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;A new cost function&lt;/strong&gt; - Did you notice the range of house prices? The cost function we used did not take this into consideration.
+Think about it this way - we penalized the model for predicting a $5000 house to be $0 (i.e., a difference of $5000) by the same amount
+if it predicted a $200,000 house to be $150,000 (i.e., a difference of $5000). We know that this is wrong.
+Instead, you can define a new function that computes the square difference of \(log\).
+This will fix the problem of the large range of output values.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Non-linearities&lt;/strong&gt; - Our assumption was that the output was linearly related to these features.
+This is rarely the case. One way to fix that is randomly try creating new features \(X’\) from \(X\) where \(X’ = X^n\)
+(\(n\) is another random number) and testing it out. This is clearly impossible and infeasible.
+One of the reasons why neural networks are amazing is that they automagically identify and map these non-linearities.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps…&lt;/h2&gt;
+
+&lt;p&gt;This post is already longer than I intended it to be. And at the same time, I feel that making this shorter would make it less adequate.
+So, the next article will continue on our discussion of the Ames housing data.
+And in the &lt;a href=&quot;/2017/08/12/neural-networks-on-housing-data/&quot;&gt;next article&lt;/a&gt;, we will be using neural networks and see why it can be a better approach.
+Meanwhile, the code for the neural network is already out there.
+So you are welcome to continue using the &lt;a href=&quot;https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb&quot; target=&quot;blank&quot;&gt;Jupyter Notebook&lt;/a&gt; to try out neural networks.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Productivity Toolkit</title>
+   <link href="https://www.aparavenkat.com/2017/07/15/my-productivity-toolkit/"/>
+   <updated>2017-07-15T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/07/15/my-productivity-toolkit</id>
+   <content type="html">&lt;p&gt;August is fast approaching. This means that summer is about to end and school is about to begin soon. For some of you, school might have already started.
+And it’s time to start studying and managing stress again.
+Learning tough concepts, remembering when assignments are due, juggling time between school and life, pulling in an all-nighter to finish that project, and what not. In short, it’s time to become more productive.
+&lt;!--excerpt_ends--&gt;
+This article will outline the tools (software) that I have used and am still using to stay on track.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-apps&quot;&gt;The Apps&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.todoist.com/&quot;&gt;&lt;strong&gt;Todoist&lt;/strong&gt;&lt;/a&gt; - Todo lists are notoriously effective in that you get a sense of satisfaction each time you strike off a task. And this app meets all my todo list needs. I can set recurring tasks such as weekly homework. I can create “Projects” to sort my tasks into different categories. What I do is create a project for each of my subject, a project where I put my personal tasks (like writing this blog post), and a project for long term goals. I earlier used to have &lt;a href=&quot;https://www.wunderlist.com/&quot;&gt;Wunderlist&lt;/a&gt;, but I switched over to Todoist because of its minimalistic interface.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://habitica.com/&quot;&gt;&lt;strong&gt;Habitica&lt;/strong&gt;&lt;/a&gt; - This is a habit tracker I use. This makes habits more interesting because of the RPG interface. Basically you build good habits and destroy bad ones to earn experience and gold that can be used to enhance your hero. You can party with friends and go on quests with your hero which is pretty cool and quite motivating if you like games. In fact, you can also make this your todo list. But, as a personal preference, I don’t do that because using this just as a todo list is overkill.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pomodero Timers&lt;/strong&gt; - Pomodero technique is quite effective when it comes to channeling your focus and getting started on that assignment you’ve been putting off for far too long. There are a lot of different apps that help you do the same thing. On iOS, there is a cool one called &lt;a href=&quot;https://itunes.apple.com/us/app/forest-stay-focused-be-present/id866450515?mt=8&quot;&gt;Forest&lt;/a&gt;. But if you’re poor (like me), you’re better off using &lt;a href=&quot;https://itunes.apple.com/us/app/tide-focus-timer-to-study-work-relax/id1077776989?mt=8&quot;&gt;Tide&lt;/a&gt;, which also has a cool UI.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-laptop&quot;&gt;The Laptop&lt;/h2&gt;
+
+&lt;p&gt;As a (college) student, the laptop can be your best investment. But to make it more effective with studying, you should start organizing and cleaning it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/desktop-screenshot.png&quot; alt=&quot;desktop-screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My desktop has just Recycle Bin and This PC icons. So this way, whenever I open my laptop to do something productive, I don’t get lost on a plethora of different files. Occasionally, you might want to place a file right on your desktop to remind yourself that the first thing you do once you open your laptop is to open that file. Another thing to notice on that screenshot is that my taskbar has only the essential icons - File explorer, Spotify (for some music), OneNote to take notes, Visual Studio (because I love C++), and Chrome. This once again, keeps me focused on the task.&lt;/p&gt;
+
+&lt;p&gt;Also when your files are more organized, it is so much easier to go back and look for something you saved one year ago. Hence, next time when you’re done with your paper at 1 AM and you’re so tired that you just want to go to bed, take that extra minute to save that paper in its appropriate folder.&lt;/p&gt;
+
+&lt;p&gt;One last thing about laptops - always backup your files. Be it Dropbox, Google Drive or an external hard disk. I cannot stress on how important this is. Also carry a few memory sticks in your bag with the most important files. This can save you when your laptop fails to work when you’re presenting something.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-phone&quot;&gt;The Phone&lt;/h2&gt;
+
+&lt;p&gt;The next important gadget in human lives today is a smart phone. It is a smart phone. So make sure you utilize its smartness. Once again, I cannot emphasize the importance of keeping your phone home screen clean. Don’t clutter it. Android and iOS both offer you to group apps together in a “folder”. Make use of this.&lt;/p&gt;
+
+&lt;p&gt;Here is a neat trick I use to make sure I don’t get distracted by my phone. I group all of my social media apps and games into one folder. Then, I place the most frequently used apps (Facebook, Instagram, etc.) in the last screen of that folder. This makes me crave less for social media than when the app is blatantly staring at my face telling me to open it. Another neat trick: Disable all notifications but the important ones (like phone and messaging). This prevents me from checking my apps every time the badge icon pops up.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-browser&quot;&gt;The Browser&lt;/h2&gt;
+
+&lt;p&gt;Internet has made the use of browsers mandatory. And the most popular choice is Google Chrome. Here are some Chrome extensions that I use to make my life better:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://adblockplus.org/&quot;&gt;&lt;strong&gt;AdBlock&lt;/strong&gt;&lt;/a&gt; - I can’t remember how happy I was when this &lt;em&gt;free&lt;/em&gt; extension removed all of those annoying ads and pop-ups from those websites. The best part is that it can remove YouTube ads too! And did I mention that this was free?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://mixmax.com/&quot;&gt;&lt;strong&gt;MixMax&lt;/strong&gt;&lt;/a&gt; - Email tracking. This extension lets you know when people have opened your email. It also lets you schedule sending emails and reminds you to go back to a conversation. Another cool thing this can do is create polls in emails and plan events with a mini calendar. Oh, remember typing out the same email to multiple people with minor changes. MixMax takes care of that by allowing you to create templates that you can reuse. This is not entirely free, but the free version is still totally worth it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://momentumdash.com/&quot;&gt;&lt;strong&gt;Momentum&lt;/strong&gt;&lt;/a&gt; - Open up your browser to beautiful and serene scenery with an inspirational quote to motivate you throughout the day.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I know that this list is not completely exhaustive. There are many other tools and techniques that you can use to stay productive. I will perhaps outline them in another post in the future as my needs and technology improve.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ethics in Machine Learning</title>
+   <link href="https://www.aparavenkat.com/2017/06/18/ethics-in-machine-learning/"/>
+   <updated>2017-06-18T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/06/18/ethics-in-machine-learning</id>
+   <content type="html">&lt;p&gt;The ethics of how a Machine Learning (ML) or an Artificially Intelligent (AI) system is to function is a common thought that arises when we read about significant advancements in those fields. Will this &lt;em&gt;sentience&lt;/em&gt; take over humanity? Or will it help us reach a Utopian era? It’s definitely not a binary question. But, one of the less commonly asked questions (and perhaps rightly so) is “Was this built and founded with the right virtues?”. And this question concerns less about the motivation behind building a ML system than it seems.&lt;/p&gt;
+
+&lt;!--excerpt_ends--&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;If you have no experience or no knowledge about what a ML system is, think of it as a black box. A black box which when posed with a question outputs an answer that has a high probability of being correct. In order to get this high probability, we need to setup the black box first.&lt;br /&gt;&lt;br /&gt;
+In practice, we try to create a set of many black boxes and choose the one with the highest accuracy. To build these we need lots of data and an algorithm. Think of the data as a long list of questions with correct answers. The algorithm &lt;em&gt;learns&lt;/em&gt; from this data. Each black box in a set has a slightly different version of the same algorithm. Finally, we pick the version that is most accurate (technically called &lt;em&gt;tuning the hyperparameters&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problems&quot;&gt;The Problems&lt;/h2&gt;
+
+&lt;p&gt;In ML, there are primarily three possible avenues for &lt;em&gt;cheating&lt;/em&gt;. They are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data&lt;/li&gt;
+  &lt;li&gt;Algorithm&lt;/li&gt;
+  &lt;li&gt;Results&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1-the-data&quot;&gt;1. The Data&lt;/h3&gt;
+
+&lt;p&gt;This is perhaps the biggest of the Three Problems. A good ML system needs lots of data. But where are we going to get this data? And if this data we are seeking doesn’t already exist, how are we going to mine it? Sometimes, the data sought exists already. It might be open sourced and free. It might be publically available for a price. Or the data might be privately owned by a group of people. All is well, if it’s free and open sourced. Perhaps it is good even if it’s available to buy. But is it alright if you steal the someone’s private data? You might lean towards “No”. But what if that data, currently accessible only to a few, can help millions around the world with your brand new ML model. Would it then be considered &lt;em&gt;right&lt;/em&gt;? Suddenly the question does not seem so black and white.&lt;br /&gt;&lt;br /&gt;
+The answer becomes more ambiguous when we talk about tracking people anonymously, without their consent, to collect data. This data could perhaps be used to detect unusual activities. We already know &lt;a href=&quot;https://www.theguardian.com/world/2013/aug/01/new-york-police-terrorism-pressure-cooker&quot; target=&quot;_blank&quot;&gt;our web searches are being tracked&lt;/a&gt;. If your ML system can help prevent the next terrorist attack by tracking the common people, does it become right to track them? Or does the action at least become justified?&lt;/p&gt;
+
+&lt;h3 id=&quot;2-the-algorithm&quot;&gt;2. The Algorithm&lt;/h3&gt;
+
+&lt;p&gt;It’s a good thing that many of the important and useful algorithms are open sourced. This means that everybody has access to it and some even allow us to modify it and make profit. This is great! Now, once again, imagine the same scenario with the data. If a group of people own a patented algorithm, the laws make it illegal to use the same algorithm. But what if that algorithm, in the right hands can help millions? Can one’s own sense of right and wrong be used to reverse engineer the algorithm to benefit others? This deals with theft of intellectual property, but is nonetheless a concern of ML.&lt;br /&gt;&lt;br /&gt;
+A problem with developing a new algorithm is closely tied with the datasets. If you don’t have a complete dataset (i.e., you have a dataset that doesn’t accurately consolidate a good number of all possible cases), it might just happen that your resulting ML system becomes biased and it could start discriminating. For example, an AI that helps a bank determine whether to invest in a particular business could deny loans to everybody with a poor credit history even though their business has great potential (something a human would have noticed and made an exception for). This is a bad example of automating human tasks that could take place unnoticed.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-the-results&quot;&gt;3. The Results&lt;/h3&gt;
+
+&lt;p&gt;The first two problems are concerned with the larger picture. This one is more isolated to ML. In ML, to report the accuracy of a model, we compare the results the model produced to the actual answers. The more close they are, the higher the accuracy. There are different ways to report this score.&lt;br /&gt;&lt;br /&gt;
+The most common way people cheat here, is they train their model on a dataset and report the error they get on the same dataset. This is a common mistake beginners make because they don’t understand that it is wrong. And it’s also a mistake that is sometimes made intentionally to be able to report a greater accuracy.&lt;br /&gt;&lt;br /&gt;
+Why is this wrong? Imagine you are preparing for an exam and you are given a list of questions and answers to prepare for it. If you get the same questions in the exam, is your score on the exam a good measure of how much you learnt? Or is it a measure of how much you were able to memorize? The same is true for a computer. If you test the model on the same dataset you trained, your model will yield a high accuracy because, your model has now &lt;em&gt;memorized&lt;/em&gt; the dataset and knows all the correct answers. But if I ask it a new question, there is a good chance that the answer is way off. This problem is called &lt;em&gt;overfitting the dataset&lt;/em&gt;. Thankfully, the fix to this problem is very simple, but is out of the scope of this article.&lt;br /&gt;&lt;br /&gt;
+Another way to cheat is creating a synthetic dataset on which the model performs extremely well and using that to report the accuracy.&lt;br /&gt;&lt;br /&gt;
+If you’re wondering if people even do this, take a look at the leaderboards of some Kaggle competitions. In the public dataset (the training dataset), there are many people with high accuracies. But, when looking at the leaderboards in the private dataset (an invisible test dataset), only few who had high scores in the earlier leaderboard got similar results. The others had models that heavily overfit the data. Such a model, if put into practice, is only detrimental to the society.&lt;br /&gt;&lt;br /&gt;
+This might not seem like a big ethical issue. Alas! It still concerns and questions the integrity of a ML engineer.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-moderator&quot;&gt;A moderator?&lt;/h2&gt;
+
+&lt;p&gt;Many of the questions I posed above are subjective. What might seem right to one person will seem wrong to another. But these problems make use think about what we are willing to do to bring about a good change. I think, what we need is a set of bylaws, a code of conduct if you will, that an engineer should adhere to while designing a ML system. A violation of this code should entail the consequence of the ML system to never be put to use.&lt;/p&gt;
+
+&lt;p&gt;And why does all of these matter? It matters because there is such a thing as right and wrong and we must ensure that we always pick the right path to improve the world.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HackCU III</title>
+   <link href="https://www.aparavenkat.com/2017/04/28/hackcu-iii/"/>
+   <updated>2017-04-28T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/04/28/hackcu-iii</id>
+   <content type="html">&lt;p&gt;Last week, the third edition of Colorado’s largest student hackathon, &lt;a href=&quot;https://hackcu.org/&quot;&gt;HackCU III&lt;/a&gt;, took place at Boulder. With nearly 400 hackers from all over US, this 24 hour hackathon is the largest one yet. And being a part of the &lt;a href=&quot;https://2017.hackcu.org/#team&quot;&gt;organizing team&lt;/a&gt; this year was an amazing experience.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;p&gt;Along with meeting new people, the learning, and having fun, the best thing about a hackathon is simply being in an atmosphere filled with passionate students skipping school, sleep, and what-not to travel a long way just to do what they love - creating something cool. Even if you’re not a tech person, if you’ve ever been to a place that is so full of energy and enthusiasm you’d definitely agree that there’s no other place you’d rather be!&lt;/p&gt;
+
+&lt;h2 id=&quot;my-role&quot;&gt;My role&lt;/h2&gt;
+
+&lt;p&gt;I was mostly involved in the web team and helped build the website. The website was nearly finished early in January, so I started helping put together another event - &lt;a href=&quot;https://startups2students.hackcu.org/&quot;&gt;Startups2Students&lt;/a&gt;. As the main event drew closer, we started creating a live page that displays updated schedules, a countdown timer, API’s and hardware available, etc. We used Google Sheets to fetch the information to display on the website rather than editing the source. This was done to make sure that it is easy for any admin to edit the schedule on the fly (as opposed to someone cloning, fetching commits, and all that mess) and to bypass the caching process (we don’t want any hacker to have an outdated schedule simply because they didn’t clear their browser cache).&lt;/p&gt;
+
+&lt;h2 id=&quot;other-cool-things-we-used&quot;&gt;Other cool things we used&lt;/h2&gt;
+
+&lt;p&gt;We had a &lt;a href=&quot;https://github.com/HackCU/mercurysms&quot;&gt;SMS notification system&lt;/a&gt; through which we could send text messages reminding hackers about upcoming tech talks, workshops, deadlines, etc. This was a really sweet software we had. However, we never tested the software on a large set of phone numbers. So, unfortunately, during the first run, the server timed out and killed the program. This was because Twilio took a long time to validate a single request and running it on an entire list timed out the process. And during the event, we didn’t have enough time to find a legit solution (like a separate worker/thread). So, the impromptu hack (&lt;em&gt;it is a hackathon&lt;/em&gt;) was overwriting the worker timeout.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;UPDATE 05/23/2017&lt;/strong&gt;: I was able to fix it by moving the process to a background worker and making AJAX calls to check for completion. View this &lt;a href=&quot;https://github.com/HackCU/mercurysms/pull/6&quot;&gt;Pull request&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This year, we also used &lt;a href=&quot;https://github.com/ehzhang/HELPq&quot;&gt;HelpQ&lt;/a&gt; created by the HackMIT team for mentoring hackers. Earlier, Slack was used. But with 400 hackers, Slack is very inefficient and requests for help can get buried in messages. So we &lt;a href=&quot;https://github.com/HackCU/mentors&quot;&gt;adapted HelpQ&lt;/a&gt;. It is a very effective tool that uses tickets hackers create to tell mentors what issues they have with their code. The mentors, on the other side, can view all of these tickets and choose the one they want to help with. Despite my initial skepticism, quite a few hackers and mentors used this and I think we will definitely use this moving forward (unless we find a better alternative). You can find some stats we collected from that app &lt;a href=&quot;https://www.aparavenkat.com/supplements/hackcu-iii-mentors-stats/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;during-the-hackathon&quot;&gt;During the hackathon&lt;/h2&gt;
+
+&lt;p&gt;The event was 24 hours and I was there during the entire event. I took a 90 minute (power?) nap at 1:30 AM. At other times, you’d have probably met me at check-in at MATH 100 or at the MLH Hardware Lab helping you folks check out the right hardware. Or you might have seen me moving tables around or caught me taking out the trash or refilling RedBull (they ran out fast!).&lt;/p&gt;
+
+&lt;p&gt;I haven’t been to a lot of hackathons. But I felt that HackCU proceeded smoothly overall except for two small hiccups. At the beginning, the lunch order was messed up by the vendor (which we corrected soon to get more food!). And towards the end, there was a lot of confusion and panic among hackers about when they had to submit their projects to Devpost. This was due to the clock on out-of-state hackers’ computers not set to MST (Mountain Standard Time). So the countdown on the live page and the Devpost both told the hackers to submit their hacks an hour earlier! Luckily we found what was going wrong soon and notified all hackers to correct their clocks.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-aftermath&quot;&gt;The aftermath&lt;/h2&gt;
+
+&lt;p&gt;After the closing ceremonies, and after all the hackers had bid farewells, came the most tedious job - cleaning up the rooms. The building we had rented was a new building and the officials wanted the rooms to be super clean after the event. So we manually picked out all the trash and soda cans that hackers left behind. wiped all the tables clean with a solvent, cleared the boards that had been used, vacuumed the carpets, rearranged the tables to how they were before, etc. It was very tiring work - especially vacuuming the carpets. The coffee spills are another story.&lt;/p&gt;
+
+&lt;p&gt;10 people cleaning up after 400 hackers is quite a tall task. Since we’re planning to expand to 600 hackers next year, we’re also thinking about hiring a professional cleaning service next time.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-remarks-and-takeaways&quot;&gt;Final remarks and takeaways&lt;/h2&gt;
+
+&lt;p&gt;The venue we had (Wolf Law Building) was not best suited for a hackathon. Firstly, there was no classroom that could house all the hackers for opening and closing ceremonies. There was a court room, but that was out of bounds and it couldn’t serve as an auditorium. This brings us to the next issue - for the ceremonies, we rented a classroom that was 15 minutes away from the hacking space. This was quite disheartening and confusing to hackers. Finally, as mentioned earlier, the officials wanted the building to be spotless after the event (can’t blame them). And the entire place was carpeted. This made cleaning [vacuuming] a tedious job. And, spills are inevitable and spills on carpets are always harder to clean.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If there were so many issues with this venue, why did you people rent it in the first place?&lt;/strong&gt;&lt;br /&gt;
+This was the only building on campus that could house 400 hackers and allowed overnight events. Other event spaces were either too expensive or did not allow overnight events (which meant hackers couldn’t sleep at the venue). So we had to make the best out of what we had.&lt;/p&gt;
+
+&lt;p&gt;With that said, here are some takeaways. As a hacker (or any sensible human being) you must really take the following seriously when you travel to hackathons (or any other event):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Always clean up after your mess. If you spilt coffee on the table, go get a paper towel and wipe it clean. It is much easier to clean a coffee spill when the coffee still hasn’t dried up.&lt;/li&gt;
+  &lt;li&gt;If it is a mess you can’t clean up on your own (such as a radioactive leak), inform one of the admins or other staff.&lt;/li&gt;
+  &lt;li&gt;If you emptied a soda can, throw it in the trash. Don’t leave it lying around or wait for someone else to do it.&lt;/li&gt;
+  &lt;li&gt;When you travel to another state, make sure to update your computer and phone clocks to the local time (just like your watches during daylight savings). This can prevent mass false panic attacks at a later time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;the-future&quot;&gt;The future&lt;/h2&gt;
+
+&lt;p&gt;Now that this edition came to successful end, our team has taken a small break and started buckling up for the final exams. Next year, it’s going to be a lot bigger and better with  more cool prizes! So be sure to keep an eye out for us next year and return to make more awesome stuff! Until then, keep hacking hard!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Math-Functions and Computer Science</title>
+   <link href="https://www.aparavenkat.com/2017/03/19/math-functions-and-computer-science/"/>
+   <updated>2017-03-19T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/03/19/math-functions-and-computer-science</id>
+   <content type="html">&lt;p&gt;Over the past few weeks, I’ve been &lt;a href=&quot;https://github.com/AparaV/math-functions&quot;&gt;compiling&lt;/a&gt; some of the recurring procedures I had used to solve the first &lt;a href=&quot;https://github.com/AparaV/project-euler&quot;&gt;50 problems&lt;/a&gt; of &lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt;.
+While solving these math problems, I needed to find the most efficient method to get the solution.
+The underlying idea to solve most these are the same and it is pretty simple.
+But as you proceed, the simple method you had used earlier will take a really long time to produce an answer.
+&lt;!--excerpt_ends--&gt;
+So you need to improve upon these methods to make them run faster.
+Sometimes, you’ll have pushed the simple idea to the extreme and it still won’t work.
+In that case, you need to come up with a better algorithm or implementation.&lt;/p&gt;
+
+&lt;p&gt;In this post, I’ll try to work my way through one of the most commonly used procedure - finding a prime number; checking whether a number is prime; or counting the primes - and how I improved it over the course of solving the first 50 problems.
+During the discussion, I’ll also attempt to give my most efficient implementation (so far).&lt;/p&gt;
+
+&lt;h2 id=&quot;primality-test&quot;&gt;Primality test&lt;/h2&gt;
+&lt;p&gt;Perhaps the most simple way to check whether a number is a prime is the trial division taught in elementary school.
+And it is still very effective. In fact, it is the only method guaranteed to give correct result (a consequence of the definition of prime numbers.
+It’s true that there are other probabilistic and heuristic tests, but none of them are proved even though they work for numbers larger as \(10^{10}\) .&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is what I’ve implemented in my library. But, we can clearly do better than this brute force.
+So I will also bring to light a probabilistic method to solve this. This &lt;a href=&quot;https://en.wikipedia.org/wiki/Fermat_primality_test&quot;&gt;test&lt;/a&gt; was proposed by Fermat.
+This works for most cases. And in base \(2\), for numbers up till \(2.5 * 10^{10}\), only \(21853\) numbers fail.
+So once can easily store these values in a hash table and if the test passes, searching for this number will reveal whether it is a prime or not.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;probablePrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;probablePrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probablePrime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;storing-primes&quot;&gt;Storing primes&lt;/h2&gt;
+&lt;p&gt;Other common problems were finding the n&lt;sup&gt;th&lt;/sup&gt; prime and creating the sieve.&lt;/p&gt;
+
+&lt;p&gt;Finding the n&lt;sup&gt;th&lt;/sup&gt; is a very rote approach where I check  every number whether it is a prime or not.
+An improvement to this is to check only the odd numbers. An even better improvement would be to cache all the prime numbers found earlier.
+Then check the next number only against these prime numbers. This is the final implementation I chose.
+Another approach would be to use the sieve. But, we need to create a sieve of size larger than position of the n&lt;sup&gt;th&lt;/sup&gt; prime.
+While there are asymptotic functions that produce such upper bounds, they are not accurate for smaller sizes and this worsens the memory usage.&lt;/p&gt;
+
+&lt;p&gt;Now, moving onto the sieve, the problems I came across were relatively of smaller range and a simple &lt;a href=&quot;https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes&quot;&gt;Sieve of Eratosthenes&lt;/a&gt; served well.
+However I had to refine it and improve the implementation to hit a decent runtime.&lt;/p&gt;
+
+&lt;p&gt;Here is my final implementation of it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;memset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int64_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int64_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are a couple of things that I’d like to draw to attention here.
+The first thing to notice is that I abandoned the use of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vector&lt;/code&gt;.
+This is plain because, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vector&lt;/code&gt; is a secondary data structure and they increase the runtime of the program.
+With a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bool&lt;/code&gt; array, the program ran in under a minute.
+The second modification I made was abandoning the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop.
+Earlier, I had used a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop to initialize the values of the array to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt;.
+I did away with this using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;memset&lt;/code&gt;. With &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;memset&lt;/code&gt;, the compiler can assign values in any order (fastest order).
+However, in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; loop, you are forcing the compiler to go in one direction.&lt;/p&gt;
+
+&lt;p&gt;Here is a chart comparing the runtimes. The code can be found &lt;a href=&quot;https://gist.github.com/AparaV/9cff8ec826fc5465f44bfb5825f5a826&quot;&gt;here&lt;/a&gt;
+&lt;img src=&quot;https://www.aparavenkat.com/assets/images/sieve-runtime-comparison.png&quot; alt=&quot;runtime-comparison&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, I finalized on this procedure, and it works really well so far.
+The only caveat is that you do need to remember to deallocate any memory to prevent memory leaks.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-remarks&quot;&gt;Final remarks&lt;/h2&gt;
+&lt;p&gt;There are two takeaways from solving these problems:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Grab a piece of paper and work out the problem by drawing graphs or writing equations. In most cases, you will realize something that you didn’t catch and find that the problem isn’t really that hard. Then, instead of starting by coding a brute force solution, you already have an algorithm to work with. This can save so much time when optimizing brute force.&lt;/li&gt;
+  &lt;li&gt;Sometimes, writing it out won’t work. You won’t see patterns. Recursion won’t help. In fact, it will only get worse. Then you should quickly implement a dirty brute force. Work your way from there and see how you can optimize it. Skip through loops. Cache items. And if there is an alternative to recursion, almost always choose the alternative because, recursion on large items can cause the stack to overflow (which you don’t want!).&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's new?</title>
+   <link href="https://www.aparavenkat.com/2017/02/19/what's-new/"/>
+   <updated>2017-02-19T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/02/19/what's-new</id>
+   <content type="html">&lt;p&gt;It’s already two months into the new year. I guess that no longer makes it a new year.
+Nonetheless, there are some new things going on that I thought I should update.
+&lt;!--excerpt_ends--&gt;
+You might have &lt;a href=&quot;/2017/01/11/2017-goals/&quot;&gt;read about the goals&lt;/a&gt; I had set for myself.&lt;/p&gt;
+
+&lt;p&gt;The first challenge, is going really well. I am still yet to miss a day of committing code.
+Hopefully, I’ll be able to continue to do the same throughout the year.
+This was mainly possible because this tied in with my second challenge.&lt;/p&gt;
+
+&lt;p&gt;The second challenge was solving 100 problems on Project Euler.
+I have now solved the first 50 problems using C++ with each program running less than 500 ms.
+You can look at the code on my &lt;a href=&quot;https://github.com/AparaV/project-euler&quot;&gt;GitHub&lt;/a&gt;.
+Review it, star it, fork it, and share your views on it.&lt;/p&gt;
+
+&lt;p&gt;I am really a long way from completing the third goal.
+For starters, I decided to work through the classic machine learning course taught by Andrew Ng.
+It is available on &lt;a href=&quot;https://www.coursera.org/learn/machine-learning&quot;&gt;Coursera&lt;/a&gt;.
+If you haven’t heard of it, you should totally check it out.
+In my opinion, the course is taught really well, though it might have a learning curve if you are unfamiliar with calculus and linear algebra.
+I have finished 8 weeks, as of now, out of the total 11.
+I’ve been uploading my solutions to the assignments on &lt;a href=&quot;https://github.com/AparaV/machine-learning&quot;&gt;GitHub&lt;/a&gt;.&lt;br /&gt;
+DO NOT CHEAT!&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-is-new&quot;&gt;But what is new?&lt;/h2&gt;
+
+&lt;p&gt;True, all of this has just been updates on what I’ve been doing the past month.
+There are two new things that I plan to work on in the coming days (or weeks, depending on my school work).&lt;/p&gt;
+
+&lt;h3 id=&quot;1---a-new-library&quot;&gt;#1 - A New Library&lt;/h3&gt;
+
+&lt;p&gt;While solving through the first 50 problems on Project Euler, I realized that I was reusing most of my code.
+And the code I had written earlier was just not fast enough to complete the problem in under a second.
+So I had to look at alternatives and optimize the code.
+And there were many times, when I found a really fast algorithm for some problem I had encountered.
+So, I thought to myself, &lt;em&gt;“What if I could just put together a simple library that encompasses all of these functions?”&lt;/em&gt;.
+Thus, I decided to work on putting together this library in C++ with all of these functions in their most efficient form.
+The list of all these functions isn’t very big.
+So hopefully, this will not take more than a few days to finish writing.&lt;/p&gt;
+
+&lt;p&gt;And I’ll write a detailed post explaining the routines I used and compare their runtimes with other possible routines once I complete it.&lt;/p&gt;
+
+&lt;p&gt;Fun Fact:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;I’ve found that using a boolean array to be much faster than using a vector of same size.
+In fact, with a vector, the code took more than a minute to run (I didn’t time it and terminated the program. Perhaps I should provide stats next time…).
+But with a boolean array, it ran in under 300ms.
+I’ve also concluded that the memset function, introduced in C, is faster than using a loop to initialize values in an array.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2---course-planner&quot;&gt;#2 - &lt;a href=&quot;https://github.com/AparaV/course-planner&quot;&gt;Course Planner&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;If you follow me on GitHub (which you &lt;a href=&quot;https://github.com/AparaV&quot;&gt;should&lt;/a&gt;), you’d have seen that I created an app using JavaScript.
+This &lt;a href=&quot;http://plancourses.herokuapp.com/&quot;&gt;app&lt;/a&gt; will help you plan courses helping you choose them in the right order.
+The code performs well on relatively simple input.
+But on more complex input, it fails to give sound advice, even though it’s logically correct.
+That’s the reason I’ve not yet made a post on how awesome it is (or I am).
+The fix I’ve been thinking of involves adding a co-requisite course along with the pre-requisite.
+In the coming weeks, I hope to work on it and come up with a better algorithm to sort courses.&lt;/p&gt;
+
+&lt;p&gt;Those are the two new things I’ve proposed to work on.
+And as usual, since this goes public, I need to keep my word and work on them.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Because you’ve been really nice and read the entire post, here is a bonus.
+I joined the HackCU team last September.
+What we do is mainly organize hackathons.
+There are two, &lt;a href=&quot;https://localday2016.hackcu.org/&quot;&gt;Local Hack Day&lt;/a&gt; and &lt;a href=&quot;https://hackcu.org/&quot;&gt;HackCU III&lt;/a&gt;.
+Local Hack Day is already over.
+HackCU III is coming up and you should totally register for it.
+Apart from those, we organize &lt;a href=&quot;https://startups2students.hackcu.org/&quot;&gt;Startups2Students&lt;/a&gt;.
+This event is aimed at bridging the gap between startups in Colorado and the students.
+Once again, you should register for it because it’s free, we provide pizza, and it’s a great opportunity to meet new people!
+Feel free to &lt;a href=&quot;https://www.aparavenkat.com/contact&quot;&gt;hit me up&lt;/a&gt;  if you have any questions!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2017 Goals</title>
+   <link href="https://www.aparavenkat.com/2017/01/11/2017-goals/"/>
+   <updated>2017-01-11T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2017/01/11/2017-goals</id>
+   <content type="html">&lt;p&gt;It is an unspoken custom for everyone to start something new at the beginning of a new year.
+There are people who want to begin a new habit that would improve their life.
+There are people who decide to give up a bad habit.
+And there are people who set out on some challenges trying to get it done before the year ends.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;p&gt;What all of them are essentially doing is setting goals for themselves and embarking on an adventure pushing themselves out of their comfort zone.
+By the end, they would have made a difference, at least to themselves and the people around them (if not &lt;a href=&quot;https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634&quot;&gt;bringing fiction to life&lt;/a&gt;), and that is all that matters.&lt;/p&gt;
+
+&lt;p&gt;I too have decided to do something along those lines.
+I have set three goals for the year 2017.
+Hopefully they will be interesting and give me a fresh experience.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;1 commit a day challenge:&lt;/strong&gt;
+Commit at least once a day to an open source repository.
+This could be anything from personal projects to school work to something else that might pop up.
+But that one commit should be an insightful one. While I do not mean coming up with a new algorithm every day (that could maybe be a challenge for 2018), this commit should not be petty like editing a Readme file.
+You can track my progress at &lt;a href=&quot;https://github.com/AparaV&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Solve 100 problems on Project Euler:&lt;/strong&gt;
+&lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; is notoriously famous for its perfect amalgamation of mathematics and computer science.
+Although I have already solved 12 problems before the start of this challenge, I will stick to solving the first 100 problems.
+You can track my progress on &lt;a href=&quot;https://github.com/AparaV/project-euler&quot;&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Implementing Neural Algorithm for Artistic Style:&lt;/strong&gt;
+This &lt;a href=&quot;https://arxiv.org/pdf/1508.06576v2.pdf&quot;&gt;paper&lt;/a&gt; proposes a deep learning network for the creation of artistic images combining various styles.
+Various implementations of this algorithm keep popping up in my feed.
+So I decided to implement my own version of this.
+Since I have little background in Machine Learning, I need to work a lot to accomplish this task.
+My plan is to implement this in Python using the &lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;Tensorflow&lt;/a&gt; library.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Those are the three challenges.
+Now that I’ve put this online, and you have seen this, I need to keep my word and give it my best shot.
+And in December you will hear back from me regarding my progress on these tasks.&lt;/p&gt;
+
+&lt;p&gt;A happy new year to you!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To all Tolkien fans out there who ask me:&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;“What do you mean? Do you wish me a happy year, or mean that it is a happy year whether I want it or not; or that you feel happy this year; or that it is a year to happy on?”&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;I say unto you, &lt;em&gt;“All of them at once!”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How I built an app from scratch</title>
+   <link href="https://www.aparavenkat.com/2016/12/26/how-i-built-an-app-from-scratch/"/>
+   <updated>2016-12-26T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2016/12/26/how-i-built-an-app-from-scratch</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://popularity-on-twitter.herokuapp.com/&quot;&gt;Popularity on Twitter&lt;/a&gt; was never intended to be what it is right now (an app hosted on &lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt;).
+It started out as a weekend project to help me learn Python and APIs.
+I previously had little knowledge of Python and knew nothing about APIs.
+Over Thanksgiving break, I decided to learn them using the Twitter API.
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;p&gt;The results of the simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get_status&lt;/code&gt; function seemed magical.
+And I decided to take it a bit further.
+By following a &lt;a href=&quot;https://marcobonzanini.com/2015/03/02/mining-twitter-data-with-python-part-1/&quot;&gt;tutorial&lt;/a&gt;, I implemented a functionality to analyze tweets and find the most common words amongst them (ignoring stopwords like ‘the’, ‘I’, ‘there’, etc.) and plot a time frequency chart to see the tweet trends with time.
+But that wasn’t enough.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-my-small-feature&quot;&gt;Adding my small feature&lt;/h2&gt;
+
+&lt;p&gt;Nothing’s ever enough.
+I decided to add a small feature of my own that would track live tweets containing the requested search query and calculate a score to determine how popular the query is at that instant.
+This was where I started facing a lot of problems and thus learnt a lot.&lt;/p&gt;
+
+&lt;p&gt;The biggest issue was that the streaming API would not stop until I terminated the script manually.
+So I had to modify the API wrapper’s implementation of the stream listener to add a timer to stop streaming after the limit exceeds.
+Then I realized that this method failed when streaming low volume tweets.
+After scouring stackoverflow to no avail, I came up with a novel idea.
+I used the original implementation, but ran it on a separate thread.
+I used a timer in the main thread and disconnected the stream, from the main thread, upon completion of the timer.
+Check out the &lt;a href=&quot;https://gist.github.com/AparaV/6facd7db460b905933cf908c8b919b89&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then there is the calculation itself.
+As you might know, my formula isn’t necessarily perfect.
+But it does a good job of giving qualitative results when comparing two or more scores.
+The formula isn’t perfect because, it does not give you an absolutely deterministic score.
+Unlike looking at your math grade and feeling satisfied you got a 95, you cannot look at the score of a query and determine whether it is actually popular or not.
+This is not possible (correct me if I’m wrong) because the Streaming API does not allow you to get all tweets (and you do not want to, unless you are trying to run out of memory).
+You can only track tweets by applying a filter and there is no empty filter to download all of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-algorithm&quot;&gt;The algorithm&lt;/h2&gt;
+
+&lt;p&gt;First, I had find all the factors that determine the popularity.
+The total number of tweets gathered in the time interval is the most obvious.
+The number of followers the tweeter has should also play a role because if he has more followers, then the tweet ends up on more user’s feeds.
+Then there is the retweet count.
+This makes sense because if a tweet is being retweeted more, then it is clearly reaching more people and getting more attention.
+The number of likes is similar to the retweet count.&lt;/p&gt;
+
+&lt;p&gt;Hence, I calculated the total number of tweets ( \(T\) ).
+Then I summed up retweet count for all tweets ( \(T_R\) ) and calculated the retweet index ( \(R\) ).
+Then I averaged the number of followers each user had ( \(f_i\) ) across the entire set.
+Then, for the likes, I divided the likes each tweet had ( \(l_i\) ) with the number of followers the user had because liked tweets show up less on someone else’s feed.
+I averaged this new likes index ( \(L_i\) ) across the entire set.
+Then I summed them all up and divided them by the amount of time ( \(t\) ) the tweets were collected.&lt;/p&gt;
+
+&lt;p&gt;\[ L_i = \frac{l_i}{f_i} \]
+\[ R = \frac{T_R}{T} \]
+\[p = \frac{\sum_{i}L_i}{T} + \frac{\sum_{i}f_i}{T} + R + T\]
+\[ P = \frac{p}{t} \]&lt;/p&gt;
+
+&lt;p&gt;Clearly there are some fallacies here.
+For instance, I should probably factor in the number of followers for the retweets, similar to the likes count.
+Maybe I could assign weights to each of these factors and then find the score which would help a lot as it scales down the score to a range.
+There is obviously scope for improvement here.
+In fact, I want to improve this and I tweak this often when I get new ideas.&lt;/p&gt;
+
+&lt;p&gt;Thus I created something that works alright locally, on the console.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-next-level&quot;&gt;The next level&lt;/h2&gt;
+
+&lt;p&gt;During the winter break, I decided to take it to the next level by running it on a website.
+I knew how JavaScript works on browsers, but not much about Python and I’ve come across Python and web app put together frequently.&lt;/p&gt;
+
+&lt;p&gt;I used Flask to set up a local server and added some (not so) fancy front-end stuff to deliver data the client provides to my Python program.
+Then I wanted to host it on some web service to show it to the world.&lt;/p&gt;
+
+&lt;h2 id=&quot;hosting-on-heroku&quot;&gt;Hosting on Heroku&lt;/h2&gt;
+
+&lt;p&gt;This was the next biggest hurdle.
+I had to learn how this service worked and modify a lot of my existing code to comply with their service.
+This was harder than I expected because I’m using Windows as my development environment and let’s just say that Windows has its own way of dealing with things that aren’t quite friendly with developers.
+And migrating the entire project to my VM wasn’t an option now.&lt;/p&gt;
+
+&lt;p&gt;I learnt to live with Windows and finally managed to deploy it on Heroku.
+Then came the next shock.
+If the client wanted to stream for more than 30 seconds, the request would time out and lead to an error page.
+So I had to move the streaming process and calculation process to a background worker in a separate thread and lead the client to a loading page, which would periodically make calls to see if the calculation has completed.&lt;/p&gt;
+
+&lt;p&gt;Finally, I had to make sure I notified the client if the app began to hit the rate limits set by the streaming API.
+This was necessary to prevent erroneous results from being delivered to the client and most importantly prevent Twitter from banning my API credentials for making frequent requests.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-did-i-learn&quot;&gt;What did I learn?&lt;/h2&gt;
+
+&lt;p&gt;A great deal more about python – file I/O, turning a console app into a web app using Flask.
+I can also confidently say that I will be able to deploy another app on the Heroku infrastructure, which is pretty straightforward and intuitive now that I know how it works.
+Finally, I learnt a lot about multi-threading and feel safe about using threads, which is something I’ve been dodging for a while because it sounded very dangerous.&lt;/p&gt;
+
+&lt;p&gt;Overall, it’s been an amazing learning experience.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>7 superheroes I'd like to be</title>
+   <link href="https://www.aparavenkat.com/2016/12/17/7-superheroes-id-like-to-be/"/>
+   <updated>2016-12-17T00:00:00+00:00</updated>
+   <id>https://www.aparavenkat.com/2016/12/17/7-superheroes-id-like-to-be</id>
+   <content type="html">&lt;p&gt;Why 7 heroes and not a solid number like 5 or 10?
+Well, 7 is a magical number possessing the power of wibbly-wobbly, timey-wimey…
+It’s 7 because I had 7 perfect heroes in mind.
+I neither wanted to cut it short by removing some nor extend it by adding unnecessary people.
+That said, here you go:
+&lt;!--excerpt_ends--&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Doctor Strange&lt;/strong&gt; &lt;br /&gt;
+A stupefying costume, a red cloak that makes you fly, access to the mystic forces, proficiency in martial arts, and not to mention a skilled neurosurgeon.
+These alone make it impossible to not want to be the ‘mightiest magician in cosmos’.
+And back in the good ol’ days, he was unstoppable.
+The writers had to nerf him to make the comics more interesting.
+I guess being the Sorcerer Supreme means being the strongest entity in the universe.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Magneto&lt;/strong&gt; &lt;br /&gt;
+If you have read the comics, you would know that this mutant has power over the entire electromagnetic spectrum (not just metals and magnetic elements as portrayed in the movies).
+This implies he can control everything from light to anything that has a magnetic field associated with it.
+All atoms have a small electromagnetic field due to electrons and thus Magneto can wield nearly everything.
+He even lifted Mjolnir by manipulating the magnetic field around it!
+Wait, what?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Wolverine&lt;/strong&gt; &lt;br /&gt;
+Who doesn’t like this absolute badass! Accelerated healing, regeneration, claws, and the entire skeleton laced with Adamantium.
+This guy is immortal (until they decided to kill him off in the Old Man Logan arc).
+He’s the best there is at what he does. Quick to temper, you do not want to get on his bad side.
+Actually, it is not possible for you to get on his good side either.
+So you better just stay out of his way.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avatar&lt;/strong&gt; &lt;br /&gt;
+The Avatar, master of the elements of water, earth, fire, and air, is probably not your conventional comic book hero (even though there are comics).
+He/she is still a hero who tries to bring peace and balance to the world.
+With the power of the elements, comes the power to do crazy things (like controlling lava).
+And then, there is the Avatar state that gives you the combined strength of all your past lives making you ever more powerful.
+Enough said!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Wonder Woman&lt;/strong&gt; &lt;br /&gt;
+While most of the other heroes on this list are all about fighting and destruction, Diana is a symbol of truth, justice and peace.
+Oh, she can put up a good fight if that’s what you want but, she is more of a defender of peace and equality.
+With the Lasso of Truth, Indestructible Bracelets and occasionally the sword, this demigod is the perfect balance of diplomacy and deadliness.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Professor Xavier&lt;/strong&gt; &lt;br /&gt;
+Another mutant, but a mutant like no other, Professor X is perhaps the greatest telepath in the Marvel universe.
+Magneto had to alter the earth’s magnetic field to reduce Charles’ telepathic range.
+He even has the power to learn new things by tapping into the learning center of someone else’s brain.
+Eidetic memory, manipulating someone, projecting himself into someone’s mind are a few of the perks that come with telepathy.
+He is so powerful he can project himself into the astral plane! Even if the others don’t, at least the very basic mind reading should count for something.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Batman&lt;/strong&gt; &lt;br /&gt;
+A man with nothing else but (extremely) strong will can do anything.
+Batman is an example of that.
+Strip him of all his gadgets, money, martial skills and he will still come out alive.
+He actually did survive when Darkseid threw him back in time to the Stone Age.
+He has defeated Superman and survived, and he had a successful plan to take out the entire Justice League.
+Even Captain America recognized him as a formidable opponent!
+I think this man, with no super powers, has done some extraordinary things that serve as an inspiration to everyone that ‘Anybody can be a hero’.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
 
 </feed>

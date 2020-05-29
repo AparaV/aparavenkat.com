@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="Neural Networks on House Prices" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="Using a neural network to predict the price of houses on the Ames housing dataset.
+" property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2017/08/12/neural-networks-on-housing-data/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      Neural Networks on House Prices &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Neural Networks on House Prices</h1>
+  
+    <span class="post-date">12 Aug 2017</span>
+  
+  <h4><i></i></h4>
+  <p>In the <a href="/2017/07/31/regression-on-housing-data/">previous article</a>, we used linear regression to predict the price of houses.
+Then, we saw that this model does not find any non-linear correlations.
+The most fascinating thing about neural networks is that they automatically model
+any non-linearities present in the phenomenon.
+In this article, we will use neural networks to overcome that shortcoming.
+<!--excerpt_ends--></p>
+
+<p>Note that this is a follow-up post. We already downloaded, and cleaned the <a href="https://ww2.amstat.org/publications/jse/v19n3/decock.pdf" target="blank">Ames housing dataset</a>
+in the <a href="/2017/07/31/regression-on-housing-data/">previous article</a>.
+If you haven’t done that already, you should probably go ahead and finish that first.
+In addition to that, we also split the dataset into 3 parts (training, validation, and testing).
+I will jump into the code assuming that’s already done.
+Or if you prefer, you can follow along by running the <a href="https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb">Jupyter Notebook</a>.</p>
+
+<p><strong>All of the code used here is available in the form of a <a href="https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb" target="blank">Jupyter Notebook</a> which you can run on your machine.</strong></p>
+
+<h2 id="what-is-a-neural-network">What is a Neural Network?</h2>
+
+<p>As one might think, neural networks are systems that are modelled after the human nervous system.
+The human body has neurons that connected together is a very complex network,
+with each neuron branching out to many other neurons and getting input signals from multiple neurons.
+Similarly, in AI, neural networks can be thought of as inputs going to different temporary outputs,
+and those going to other temporary outputs, and so on until we lead the final temporary outputs to
+the final output.
+Each of these temporary outputs are called hidden layers because they don’t really expose themselves anywhere else.</p>
+
+<p>The image (taken from <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Wikipedia</a>) below will help you understand the flow of inputs to outputs.
+<img src="/assets/images/neural_network.png" alt="neural_network" /></p>
+
+<p>Notice that we are leading our features to multiple values.
+Think of each of these values as a separate linear problem (like the one we solved earlier).
+These new vector of values inside the hidden layer will now serve as new features for our problem.
+In this manner, we can construct many such hidden layers with different number of features.
+Finally, when we are happy, we can direct these features to the actual output.
+Generally speaking, more hidden layers equals better performance. But you must watch out for overfitting.</p>
+
+<p>Notice that we described each of these connections as linear problems.
+That means they must have weights and biases. We find these parameters using a process called <a href="https://en.wikipedia.org/wiki/Backpropagation" target="blank"><em>backpropagation</em></a>.
+It’s called backpropagation because we use the final output and proceed in the direction towards the input
+(back) to reconstruct the weights and biases.
+The mathematics is a bit more complex than the one for linear regression and is beyond the scope of this article.
+Finally, we use an optimizer, just like Gradient Descent (in this tutorial we will be using Gradient Descent),
+to help converge the cost function.</p>
+
+<p>An important aspect of neural networks is feeding the hidden layers into the next layer.
+It so happens that sometimes the gradient (when performing backpropagation) can vanish or explode.
+To prevent that we have activation functions.
+The most commonly used activation function is the Rectified Linear Unit function,
+abreviated as ReLU and is defined as follows:</p>
+
+<p>\[f(x) = max(0, x)\]</p>
+
+<p>It basically sets all negative values for the input to \(0\).
+This function also significantly speeds up our computation process.</p>
+
+<p>Remember that a simple linear regression has two big drawbacks:</p>
+<ul>
+  <li>The number of parameters are small and fixed</li>
+  <li>They only model linear correlations</li>
+</ul>
+
+<p>This is why neural nets (NN) have an edge over linear regression:</p>
+<ul>
+  <li>There is great flexibility over the number of parameters (and hence performance).
+You can control the number of hidden layers and the number of nodes in each hidden layer.</li>
+  <li>Since there are multiple layers each being activated by an ReLU,
+neural networks automagically model any non-linear correlations.
+The better your NN (not necessarily having more hidden layers), the more non-linear correlations it captures.</li>
+</ul>
+
+<h2 id="the-design-of-our-neural-net">The Design of Our Neural Net</h2>
+
+<p>The NN we are going to create is a rather modest one. It has only one hidden layer.
+So, you can consider it more of a proof-of-concept that NNs are better than linear regression.</p>
+
+<p>Our initial number of features is \(38\). So this is the size of our input layer.
+We will map this onto our hidden layer. Our hidden layer will have a size of \(16\).
+This hidden layer will undergo linear rectification with ReLUs.
+That will serve as features for our output.</p>
+
+<p>The image below represents our NN
+<img src="/assets/images/neural_network_2.png" alt="neural_network_2" /></p>
+
+<p>The neural network can be defined by these equations. Here, \(X\) is the input matrix,
+\(W_i\) and \(b_i\) are weights and biases respectively. \(X_2\) represents the
+hidden layer, and \(y\) is the output.</p>
+
+<p>\[x_2 = W_1X + b_1\]
+\[X_2 = ReLU(x_2)\]
+\[y = W_2X_2 + b_2\]</p>
+
+<h2 id="training-the-neural-net">Training the Neural Net</h2>
+
+<script src="https://gist.github.com/AparaV/05b398de2a179234896b687bec4abd7f.js"></script>
+
+<p>Continuing on after cleaning the data, we create some variables to store the size of the training data.
+Next, we define the number of activation units in out hidden layer as \(16\).
+Now, we are ready to construct our graph.</p>
+
+<p>As in the previous case, we define the datasets as <code class="language-plaintext highlighter-rouge">tf.constant</code> because we don’t want to modify them in the <code class="language-plaintext highlighter-rouge">graph</code>.
+Observe that we have two sets of weights and biases.
+<code class="language-plaintext highlighter-rouge">weights_1</code> and <code class="language-plaintext highlighter-rouge">biases_1</code> map our input variables to the hidden layer. And the matrix sizes are defined in such a manner.
+<code class="language-plaintext highlighter-rouge">weights_2</code> and <code class="language-plaintext highlighter-rouge">biases_2</code> map the hidden layer to the output.
+Then we have <code class="language-plaintext highlighter-rouge">steps</code>. We’ll discuss this more when we move on to the optimzation.</p>
+
+<p>Now, we define out <code class="language-plaintext highlighter-rouge">model</code>. This is simply a rendition of the mathematical equations we described earlier in TensorFlow style.
+We do this for code reuse and readability.</p>
+
+<p>Now, we compute the <code class="language-plaintext highlighter-rouge">cost</code>. The cost function we are using here is the same we used in the previous post.
+So you can read that one to gain more insight.</p>
+
+<p>Then we optimize and minimize the <code class="language-plaintext highlighter-rouge">cost</code>. This time, we are not using a fixed learning rate.
+Instead, we exponentially decay the <code class="language-plaintext highlighter-rouge">learning_rate</code> i.e., as we run more iterations, the <code class="language-plaintext highlighter-rouge">learning_rate</code> slowly becomes smaller and smaller.
+As we get closer to the minima, we start moving slower towards the minima to ensure that we do not miss it.
+This is where the <code class="language-plaintext highlighter-rouge">steps</code> comes into play. This variable keeps track of the number of iterations.
+And finally, the optimizer we use will be gradient descent.</p>
+
+<p>Finally, we use our parameters and predict the output for the test and validation dataset.</p>
+
+<p>Now, we are ready to train our model. We initiate a <code class="language-plaintext highlighter-rouge">tf.Session</code> with our <code class="language-plaintext highlighter-rouge">graph</code> and run the <code class="language-plaintext highlighter-rouge">graph</code> for <code class="language-plaintext highlighter-rouge">1000000</code> steps.
+If you do not have access to <code class="language-plaintext highlighter-rouge">tensorflow-gpu</code>, I recommend you reduce the number of iterations for faster results.
+After running, we save our weights and biases for later use.
+You may want to read the previous post for a line by line code description.</p>
+
+<h2 id="results">Results</h2>
+
+<p>We first reconstruct our <code class="language-plaintext highlighter-rouge">graph</code> by initiating a <code class="language-plaintext highlighter-rouge">tf.Session</code> and restoring variables from the checkpoint file.
+Then we predict the sale prices of the test data from these weights and biases.
+Remember to predict the output using the same model you used to train.</p>
+
+<p>Here is a graph comparing the actual values (blue) and predicted values (orange).
+<img src="/assets/images/neural_network_comparison.png" alt="neural_network_comparison" /></p>
+
+<p>This model has a score of <code class="language-plaintext highlighter-rouge">2.23802</code>. This is a slight improvement from linear regression.
+And this should place a few hundred ranks above your previous rank on the leaderboards.</p>
+
+<h2 id="scope-for-improvement">Scope for Improvement</h2>
+
+<p>As you can see, there is still room for improvement.
+In fact, we started out saying that NNs are, generally speaking, better than linear regression and our NN was only slightly better than the linear regression.
+Here are some things you can do to make the NN better:</p>
+<ul>
+  <li><strong>Better feature engineering</strong> - Here is a list of things you can do to have better features:
+    <ul>
+      <li>Keep more features. We dropped lots of features. I bet there is some correlation between these features and the sale price.</li>
+      <li>Creating bins instead of using actual features can prevent overfitting.</li>
+    </ul>
+  </li>
+  <li><strong>Better cost function</strong> - The cost function we used does not take the large range of sale prices into consideration.
+Think about it this way - we penalized the model for predicting a $5000 house to be $0 (i.e., a difference of $5000) by the same amount
+if it predicted a $200,000 house to be $150,000 (i.e., a difference of $5000). We know that this is wrong.
+Instead, you can define a new function that computes the square difference of \(log\).</li>
+  <li><strong>Prevent overfitting</strong> - You can use <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)" target="blank">regularization</a> to prevent this.
+In fact, in NN, there is more sophisticated method called <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network#Dropout" target="blank">Dropout</a>.
+My guess is that this won’t work well because our training data is small. But you should definitely check it out.</li>
+  <li><strong>Go deeper</strong> - Try experimenting with multiple hidden layers and vary the number of activation units in each layer.
+This is really just a shot in the dark, but you never know what’s going to turn up!</li>
+</ul>
+
+<h2 id="final-words">Final Words</h2>
+
+<p>I think this is a really great hands-on experience to get your feet wet with machine learning and TensorFlow.
+If you have any questions, or see any factual inaccuracies, let me know in the discussion below or <a href="/contact" target="blank">contact</a> me.
+I plan on writing more tutorials, especially for the other two <a href="https://www.kaggle.com/competitions" target="blank">Getting Started Kaggle Competitions</a>.
+If you think you’d want to read those, subscribe to the <a href="/atom.xml" target="blank">RSS</a> feed and stay updated.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>
