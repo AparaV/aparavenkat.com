@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="Feature Tracking and Optical Navigation" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="Detecting and tracking craters in astronomical objects for the purpose of optical navigation
+" property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2017/11/30/feature-tracking-and-optical-navigation/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      Feature Tracking and Optical Navigation &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Feature Tracking and Optical Navigation</h1>
+  
+    <span class="post-date">30 Nov 2017</span>
+  
+  <h4><i></i></h4>
+  <p>This article is a simplified version of the <a href="/assets/images/feature-tracking/report.pdf" target="_blank">research report</a> that aims at identifying and tracking craters in images for optical navigation in space. We first survey at existing image processing techniques. We then proceed to bootstrapping a deep neural network classifier with the help of TensorFlow Object Detection API and images from NASA’s Detecting Crater Impact Challenge. We then implement a preliminary tracking algorithm that stores images and computes mean squared error to detect if the crater has already been seen before.
+<!--excerpt_ends--></p>
+
+<p>In this article, we additionally go into more details of the tracking algorithm. For the code, check the <code class="language-plaintext highlighter-rouge">object-detection</code> branch of our <a href="https://github.com/thibaudteil/OpNav_Tracking/">GitHub repository</a>.</p>
+
+<h2 id="background">Background</h2>
+
+<p>Ever since humans landed on the moon, it became clear than deep space travel is a possibility in the future. One of the biggest issues faced by satellites and probes that we have sent into space is that they do are unable to react to the presence of other astronomical objects real time. This means that they must rely on scientists back at Earth for navigation. Satellite images get sent back to Earth for scientists to study the situation. At the least, the time delay slows down the mission progress and causes overhead.</p>
+
+<p>In this article, we attempt to provide a method to track craters on astronomical objects. We will first identify potential craters on the astronomical object. Then we will start tracking these potential crates and calculate how far these craters have been displaced since the last image was taken. We can then feed these inputs into a navigation filter for thr actual navigation.</p>
+
+<h2 id="our-workflow">Our Workflow</h2>
+
+<p>This research area is very broad and involves three big topics – identification of craters, tracking of craters, and navigation. This article will mainly focus on the crater identification and will briefly touch upon tracking.</p>
+
+<p>Our workflow, for tackling the identification of features, is to design two different models that achieve the same results simultaneously. The first will use pure image processing techniques to identify craters. The second will be a mixture of image processing and machine learning techniques. Then we will either choose one of either models, or a combination of both, based on their robustness.</p>
+
+<p>For the second question, tracking craters, we discuss a preliminary algorithm we designed.</p>
+
+<h2 id="image-processing">Image Processing</h2>
+
+<p>We used off-the-shelf feature detection algorithms to test their robustness. OpenCV offers many feature detectors like Hough Circle Finding method and Harris Corner Detection. These feature detectors provided by OpenCV allow for decent crater findings, but need significant tuning. This leads to questions regarding robustness and automation, and this is where machine learning might lead to better results.</p>
+
+<p>Here is a sample result we got after a lot of fine tuning. As you can see, the results are decent, but not very precise.</p>
+
+<p><img src="/assets/images/feature-tracking/image_processing.jpg" height="300" /></p>
+
+<h2 id="deep-learning">Deep Learning</h2>
+
+<p>Instead of training a deep convolutional neural network from scratch, we decided to bootstrap a neural network using the TensorFlow Object Detection API and images from NASA. The base model we trained on was originally trained on the <a href="http://cocodataset.org">COCO dataset</a> with the architecture of award winning <a href="https://arxiv.org/abs/1512.03385">Microsoft’s 152 layer residual neural network</a>. We trained the model for nearly 10 hours and got these results at the end.</p>
+
+<p><img src="/assets/images/feature-tracking/pic1.png" height="300" />
+<img src="/assets/images/feature-tracking/pic2.png" height="300" />
+<img src="/assets/images/feature-tracking/pic3.png" height="300" />
+<img src="/assets/images/feature-tracking/pic4.png" height="300" /></p>
+
+<h2 id="tracking">Tracking</h2>
+<p><em>Note: This goes into more detail than the report</em></p>
+
+<p>Tracking craters presented a problem. We began by comparing the cropped images of craters against one another by computing the norm of the difference of pixels. But, we are not making using of another import result we are calculating. The rate at which a crater moves across the camera depends on the speed of the satellite. And under normal conditions, the motion of the crater can be seen as continuous. So, if the distance between the center of two craters across two consecutive frames is small, then it is likely that the two craters are the same.</p>
+
+<p>Thus, we have two different parameters - one that tries to say that two craters are different (the norm of difference), and another that tries to say that two craters are the same (the euclidean distance between the centers). With this, we can construct a new cost function as follows:</p>
+
+<p>\[Cost(X, Y)= \alpha\frac{\left\lVert {X − Y} \right\rVert}{\left\lVert {X^{0} − Y} \right\rVert} + \beta(\left\lVert {X_c − Y_c} \right\rVert - 0.5)\]</p>
+
+<p>Here \(\alpha\) is a hyperparameter that we can tune. We also normalize the norm of the difference to keep the errors within a small range. \(X^{0}\) is the first crater against which we compare \(Y\). So, the first term becomes just \(\alpha\) when we compare agains the first image \(X^{0}\). \(\beta\) is a parameter that depends on the rate at which craters move across the camera i.e., the speed of the satellite. In fact, we can easily see that \(\beta\) depends inversely on the speed. \(X_c\) and \(Y_c\) are the vectors representing the centers of the craters \(X\) and \(Y\) respectively.</p>
+
+<p>Now, we can generalize an say that two craters are different if their cost is greater than a threshold we set, say \(\lambda\). Otherwise, we assign the crater a new tag. Here are some results we got using our algorithm.</p>
+
+<p><img src="/assets/images/feature-tracking/tags2.png" height="300" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>On the whole, we can conclude that traditional image processing techniques are not consistent. They need lots of preprocessing and manual fine tuning to work, which is what we are trying to avoid. Neural networks yield much better results and are also efficient – takes ~0.4s for a single 600x400px image.</p>
+
+<p>Our preliminary tracking is sometimes lacking in robustness. Sometimes, we observed that the same crater gets different tags, and different craters get the same tag. We need to implement a third feature that penalizes the algorithm (increases the cost) if the crater has not been seen for a while. We could also try incorporating a simple Kalman filter that predicts the position of craters to assist our algorithm.</p>
+
+<h2 id="future-research">Future Research</h2>
+
+<ul>
+  <li>We need to be able to track craters consistently, reliably, and efficiently. We need to improve upon our preliminary algorithm and increase the accuracy of our algorithm.</li>
+  <li>We need to start modelling our algorithms under different lighting conditions and angles, which is more realistic.</li>
+  <li>We need to use our results as inputs to navigation filters such as the Kalman Filter.</li>
+</ul>
+
+<p>Clearly, we have a long way to go before this can be put to practice. But, this is a step in the right direction.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<ul>
+  <li>Thibaud Teil, my mentor for this research project</li>
+  <li><a href="http://hanspeterschaub.info/main.html">Dr. Hanspeter Schaub</a>, the director of <a href="http://hanspeterschaub.info/AVSlab.html">AVS Laboratory</a></li>
+  <li>Dr. Beth Myers and You’re@CU Program</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p>[1] Simonyan, Zisserman (2014) “<em>Very Deep Convolutional Neural Networks for Large-Scale Image Recognition</em>”</p>
+
+<p>[2] Szegedy, Liu et. al (2015) “<em>GoogLeNet</em>”</p>
+
+<p>[3] Girshick, Donahue, et. al. (2014) “<em>Rich feature hierarchies for accurate object detection and semantic segmentation</em>”</p>
+
+<p>[4] Urbach, Stepinski (2009) “<em>Automatic detection of sub-km craters in high resolution planetary images</em>”</p>
+
+<p>[5] Kalal, Mikolajczyk, Matas (2010) “<em>Tracking-Learning-Detection</em>”</p>
+
+<p>[6] Dor, Tsiotras “<em>Application of ORB-SLAM to Spacecraft Non-Cooperative Rendezvous</em>”</p>
+
+<p>[7] Mur-Artal, Tardos (2016) “<em>ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras</em>”</p>
+
+<p>[8] Ross Girshick (2015) “<em>Fast R-CNN</em>”</p>
+
+<p><strong>Datasets</strong></p>
+
+<p>[9] NASA Detecting Crater Impact Challenge - <a href="https://www.nasa.gov/feature/detecting-crater-impact-challenge">https://www.nasa.gov/feature/detecting-crater-impact-challenge</a></p>
+
+<p>[10] COCO Dataset - <a href="http://cocodataset.org">http://cocodataset.org</a></p>
+
+<p><strong>Tools</strong></p>
+
+<p>[11] TensorFlow Object Detection API - <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">https://github.com/tensorflow/models/tree/master/research/object_detection</a></p>
+
+<p>[12] OpenCV - <a href="https://opencv.org">https://opencv.org</a></p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>

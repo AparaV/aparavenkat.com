@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="The Cost of Privacy" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="What would happen if you were able to trade your personal information legally? This paper discusses the mathematics of such a world along with the ethical and philosophical issues that tag along." property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2018/03/16/what-is-the-cost-of-privacy/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      The Cost of Privacy &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">The Cost of Privacy</h1>
+  
+    <span class="post-date">16 Mar 2018</span>
+  
+  <h4><i></i></h4>
+  <p><strong>UPDATE 4/24/2018</strong> I am pleased to say that our paper was selected as a <em>Meritorious Winner</em> (one of the top 10%)!</p>
+
+<p>Every year, the <a href="http://www.comap.com/undergraduate/contests/" target="_blank">Consortium for Mathematics and its Applications (COMAP)</a> hosts an international contest for high school students and college undergraduates where the participants get to work in teams of upto 3 to analyze, and propose solutions to open ended problems. COMAP releases 6 problems (3 of which are mathematical, and the other 3 incorporate interdisciplinary ideas) at the beginning of the contest. The contest itself takes place over 4 days, and at the end, the teams submit a 20 page report on their work.
+<!--excerpt_ends--></p>
+
+<h2 id="background">Background</h2>
+
+<p>Our team chose to model the cost of privacy. This is a particulatly interesting problem because private information (PI) can reveal a person’s personality, ideas, interests, and identity. And, social media networks like Facebook and Google are already using our PI to make profits. However, there is no system in place for the owner to receive financial compensation.</p>
+
+<p>Modelling financial compensation for PI is no simple task. This is a senstive measure and highly dependant on risk and benefits associated with each person sharing their information. This not only varies from person to person, but also varies with what kind of information is being shared. We explored the value of PI and created a model that considers the trade of PI in a free market.</p>
+
+<p>After considering the subjective nature of the task at hand, we are still left with addressing the politicial, cultural and ethical implications of the free trade of PI.</p>
+
+<h2 id="problem-summary">Problem Summary</h2>
+
+<p>The problem can be conquered by dividing it into the following sub-problems:</p>
+<ol>
+  <li>Develop a price point for PI that takes into account the risks and benefits involved in sharing data with an unknown third party</li>
+  <li>With the help of the price point, create a pricing structure for PI</li>
+  <li>Using this pricing structure, develop a pricing system that treats PI as a commodity that could be traded</li>
+  <li>The model we develop should also take into account that human data is highly correlated i.e., the model should effectively capture the network effects of data sharing</li>
+  <li>We also need to consider the political, cultural and ethical implications of PI being available for sale</li>
+</ol>
+
+<h2 id="our-model">Our Model</h2>
+
+<p>Without going into the <a href="#full-report">details</a> of the model, we created a model with the following characteristics:</p>
+<ul>
+  <li>To create a price point for PI, we took a weighted average approach. We accounted for characteristics (such as education, age, etc.) that are most relevant to each specific facet of PI (social media, finance, general ID, etc.) and factored in the risk associated with people sharing their PI depending on the characteristics.</li>
+  <li>Using this price point, we developed a pricing structure that depends on the actual value of each PI record (name, birthday, bank information, etc.). With this pricing structure we turned PI into a commodity and brought in forces of supply and demand for PI under the assumptions of a free market.</li>
+  <li>To effectively capture the network effects of data sharing, we used network ranking algorithms (PageRank) to determine how much influence a person has in their society. We factored this into our pricing structure while also keeping in mind how connected the network is. Further, we also discussed the use of community detection algorithms (SpringRank) to get a better measure of how connected a person is.</li>
+</ul>
+
+<p>It turns out that our model works under the assumptions of a free market and obeys the laws of microeconomics. Therefore, our model can theoretically scale well to real markets with factors such as government regulation and international trade.</p>
+
+<h2 id="full-report">Full Report</h2>
+
+<p>The complete discussion of our model is beyond the scope of this blog post. For more details, such as the assumptions of our model; the mathematics of our model; the strengths and weaknesses of our model and; sensitivity analysis and; a closer look at the ethical issues surrounding the trade of PI, do read the actual paper <a href="/assets/pdf/cost-of-privacy.pdf" target="_blank">here</a></p>
+
+<h2 id="acknowledegements">Acknowledegements</h2>
+
+<p>Shout out to my awesome teammates, Johann and Brendan. <br />
+I also want to thank Anne Dougherty, the head of the Applied Math Department at CU Boulder. <br />
+And, of course, I also want to extend my thanks to the Engineering Honors Program for giving us the space and resources to work for 4 straight days on just math.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>
