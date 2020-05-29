@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="A lesson in speed and math abstraction" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="Abstract away the details. Reduce the noise. Let the equations settle down. Now, breathe to see a clearer picture." property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2019/11/27/lesson-from-abstracting-math/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      A lesson in speed and math abstraction &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">A lesson in speed and math abstraction</h1>
+  
+    <span class="post-date">27 Nov 2019</span>
+  
+  <h4><i></i></h4>
+  <p>When simulating a model, it is easier to take a teleological perspective. It is easier to approach the problem with the end in mind and work backwards, writing code how we would describe the model in words. This is definitely a good start. Sometimes though, as you may have guessed, this does not give the most efficient code.</p>
+
+<!--excerpt_ends-->
+
+<p>I encountered this problem when I was implementing a network SIR model. My original implementation took upwards of 3 hours to complete a single iteration. This is not very ideal, especially when running the model for different parameters to compare results.</p>
+
+<p>There were two bottlenecks in my implementation. To my surprise, when I tried to strip the details away from these bottlenecks, I was left with what resembled a textbook problem from an introductory probability course. And solving these problems in their raw and uncouth form, seeming to have no purpose without the application, I reduced the runtime of a single iteration to less than 2 seconds.</p>
+
+<h2 id="bottleneck-01-infecting-people">Bottleneck #01: Infecting people</h2>
+
+<p>In the traditional SIR model, there is an infection stage where already infected individuals try to infect the people they come in contact with. In our version of the network SIR model, <script type="math/tex">n</script> infected people travel to a different state and try to infect the <script type="math/tex">m</script> uninfected people at the destination with probability <script type="math/tex">p</script>.</p>
+
+<p>My initial thought was to infect every uninfected person with each of the infected <script type="math/tex">n</script> people. If at least one of them is successful, then this person becomes infected. So, I naively wrote the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>infected_possibility = np.random.binomial(n, p, m)
+infected_possibility[infected_possibility &gt; 0] = 1
+num_infected = np.sum(infected_possibility)
+</code></pre></div></div>
+
+<p>Basically, every element in the <code class="language-plaintext highlighter-rouge">infected_possibility</code> vector tells the number of successful infections inflicted upon that person (after <script type="math/tex">n</script> attempts, where each attempt is an independent Bernoulli trial). Then, I binarize the vector and sum it to get the total number of infected people. Clearly, this was super slow.</p>
+
+<h3 id="a-binomial-of-a-binomial">A binomial of a binomial</h3>
+
+<p>Taking a step back, all I care about is that there is at least one successful infection out of <script type="math/tex">n</script> attempts. So, if <script type="math/tex">X_i</script> is the total number of successful infections upon person <script type="math/tex">i</script>, then <script type="math/tex">X_i \sim Binomial(n, p)</script>. So,</p>
+
+<p>\[ P(X_i &gt; 0) = 1 - P(X_i = 0)	= 1 - (1-p)^n. \]</p>
+
+<p>This is the probability that there is at least one successful infection. Now, if I am treating each uninfected individual independently, then I essentially have another set of Bernoulli trials with probability <script type="math/tex">1 - (1-p)^n</script>. Together, this becomes another binomial. In the end, all I care about is the random variable <script type="math/tex">Y \sim Binomial(m, 1 - (1-p)^n)</script>.</p>
+
+<p>This interesting turn of events leads to the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prob = 1 - (1 - p)**n
+num_infected = np.random.binomial(m, prob)
+</code></pre></div></div>
+
+<p>Needless to say, this is extremely fast. For <script type="math/tex">n = 10, p = 0.1, m = 5000</script>, the naive version took <script type="math/tex">795 \mu s</script> while the mathematically intelligent version took only <script type="math/tex">9.69 \mu s</script>.</p>
+
+<h2 id="bottleneck-02-recovering-the-infected">Bottleneck #02: Recovering the infected</h2>
+
+<p>Another important step in the SIR model is the recovery step. There are different versions of this stage. In our version, and most other commonly used versions, each infected person can either recover, die, or stay infected with some probabilities <script type="math/tex">p_r, p_d, p_i</script> (that sum to 1).</p>
+
+<p>In my first implementation, I decided to use <code class="language-plaintext highlighter-rouge">numpy.random.choice</code> where my choices were 0 (recovered), 1 (stay infected), and 2 (dead). After randomly choosing from these options, I calculated their respective frequencies like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = np.random.choice([0, 1, 2], m, p=[p_r, p_i, p_d])
+recovered = len(x[x == 0])
+dead = len(x[x == 2])
+</code></pre></div></div>
+
+<p>While this doesn’t seem bad at first glance, numpy’s random choice generator can be slow. Besides, there is the masking operation after which I compute the size of the vectors. This made the code really slow. With <script type="math/tex">m = 5000</script>, it took <script type="math/tex">529 \mu s</script>.</p>
+
+<h3 id="uniformly-simulate-the-choices">Uniformly simulate the choices</h3>
+
+<p>My initial reaction to fix this problem was to manually simulate the choices with a <script type="math/tex">Uniform(0, 1)</script> distribution like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = np.random.uniform(0, 1, m)
+recovered = len(np.asarray(x &lt; p_r).nonzero()[0])
+dead = len(np.asarray(x &lt; p_d).nonzero()[0])
+</code></pre></div></div>
+
+<p>This improved the performance to <script type="math/tex">250 \mu s</script>. But this was still the bottleneck taking the simulation close to 1 hour to complete a single iteration.</p>
+
+<h3 id="a-multinomial">A multinomial?</h3>
+
+<p>Abstract away the details. Now, breathe. What am I trying to do?</p>
+
+<p>I have <script type="math/tex">m</script> objects. I want to assign each object to one of three groups. And I only care about the final counts in each group, not the assignment itself. This smells oddly so familiar. Can this be… a multinomial?</p>
+
+<p>Turns out it is as simple as a multinomial distribution, and I was just wasting my energy worrying about the details!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = np.random.multinomial(m, [p_r, p_i, p_d])
+recovered = x[0]
+dead = x[2]
+</code></pre></div></div>
+
+<p>This took an insane 3 hours to realize the connection and only <script type="math/tex">8.77 \mu s</script> to run.</p>
+
+<hr />
+
+<p>In the end, each iteration of this efficient simulation took less than 2 seconds to finish. With this, searching the parameter space and generating results should be very fast.</p>
+
+<p>If you are interested in running the results yourself, the <a href="https://gist.github.com/AparaV/11ea3e2b338876ad6fc1aae67fbebad3" target="_blank">test notebook</a> is available on <a href="https://gist.github.com/AparaV/11ea3e2b338876ad6fc1aae67fbebad3" target="_blank">GitHub</a>. The notebook also has some interesting failed alternate versions not discussed here. One version worth noting is realizing that Bottleneck #01 can also be re-imagined as a geometric distribution 😉</p>
+
+<h2 id="the-lesson">The Lesson</h2>
+
+<p>The lesson here is somewhat of a case for pure mathematics to applied mathematicians. As computer scientists and applied mathematicians, we often focus more on the applications. It becomes easy to get lost in the details of the system that we tend to miss the simplicity and beauty of the underlying mathematics. When we remove the details one by one and reduce the noise, the equations settle down leaving us with a simple, and maybe cute, textbook problem. And if it isn’t as simple as that, <em>then</em> you’ve got some work cut out for you!</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>

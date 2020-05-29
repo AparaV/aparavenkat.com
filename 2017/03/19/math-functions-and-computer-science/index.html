@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="Math-Functions and Computer Science" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="An insight into how and why I decided to write a math library in C++ for solving Project Euler." property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2017/03/19/math-functions-and-computer-science/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      Math-Functions and Computer Science &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Math-Functions and Computer Science</h1>
+  
+    <span class="post-date">19 Mar 2017</span>
+  
+  <h4><i></i></h4>
+  <p>Over the past few weeks, I’ve been <a href="https://github.com/AparaV/math-functions">compiling</a> some of the recurring procedures I had used to solve the first <a href="https://github.com/AparaV/project-euler">50 problems</a> of <a href="https://projecteuler.net/">Project Euler</a>.
+While solving these math problems, I needed to find the most efficient method to get the solution.
+The underlying idea to solve most these are the same and it is pretty simple.
+But as you proceed, the simple method you had used earlier will take a really long time to produce an answer.
+<!--excerpt_ends-->
+So you need to improve upon these methods to make them run faster.
+Sometimes, you’ll have pushed the simple idea to the extreme and it still won’t work.
+In that case, you need to come up with a better algorithm or implementation.</p>
+
+<p>In this post, I’ll try to work my way through one of the most commonly used procedure - finding a prime number; checking whether a number is prime; or counting the primes - and how I improved it over the course of solving the first 50 problems.
+During the discussion, I’ll also attempt to give my most efficient implementation (so far).</p>
+
+<h2 id="primality-test">Primality test</h2>
+<p>Perhaps the most simple way to check whether a number is a prime is the trial division taught in elementary school.
+And it is still very effective. In fact, it is the only method guaranteed to give correct result (a consequence of the definition of prime numbers.
+It’s true that there are other probabilistic and heuristic tests, but none of them are proved even though they work for numbers larger as \(10^{10}\) .</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">isPrime</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="n">upper</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">upper</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+    <span class="n">isPrime</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">isPrime</span><span class="p">;</span></code></pre></figure>
+
+<p>This is what I’ve implemented in my library. But, we can clearly do better than this brute force.
+So I will also bring to light a probabilistic method to solve this. This <a href="https://en.wikipedia.org/wiki/Fermat_primality_test">test</a> was proposed by Fermat.
+This works for most cases. And in base \(2\), for numbers up till \(2.5 * 10^{10}\), only \(21853\) numbers fail.
+So once can easily store these values in a hash table and if the test passes, searching for this number will reveal whether it is a prime or not.</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">probablePrime</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+  <span class="n">probablePrime</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">probablePrime</span><span class="p">;</span></code></pre></figure>
+
+<h2 id="storing-primes">Storing primes</h2>
+<p>Other common problems were finding the n<sup>th</sup> prime and creating the sieve.</p>
+
+<p>Finding the n<sup>th</sup> is a very rote approach where I check  every number whether it is a prime or not.
+An improvement to this is to check only the odd numbers. An even better improvement would be to cache all the prime numbers found earlier.
+Then check the next number only against these prime numbers. This is the final implementation I chose.
+Another approach would be to use the sieve. But, we need to create a sieve of size larger than position of the n<sup>th</sup> prime.
+While there are asymptotic functions that produce such upper bounds, they are not accurate for smaller sizes and this worsens the memory usage.</p>
+
+<p>Now, moving onto the sieve, the problems I came across were relatively of smaller range and a simple <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a> served well.
+However I had to refine it and improve the implementation to hit a decent runtime.</p>
+
+<p>Here is my final implementation of it:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">bool</span><span class="o">*</span> <span class="n">prime</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">bool</span><span class="p">[</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+<span class="n">memset</span><span class="p">(</span><span class="n">prime</span><span class="p">,</span> <span class="nb">true</span><span class="p">,</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">prime</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="n">prime</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int64_t</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">p</span><span class="o">*</span><span class="n">p</span> <span class="o">&lt;=</span> <span class="n">size</span><span class="p">;</span> <span class="n">p</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">prime</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">prime</span><span class="p">;</span></code></pre></figure>
+
+<p>There are a couple of things that I’d like to draw to attention here.
+The first thing to notice is that I abandoned the use of <code class="language-plaintext highlighter-rouge">vector</code>.
+This is plain because, <code class="language-plaintext highlighter-rouge">vector</code> is a secondary data structure and they increase the runtime of the program.
+With a <code class="language-plaintext highlighter-rouge">bool</code> array, the program ran in under a minute.
+The second modification I made was abandoning the <code class="language-plaintext highlighter-rouge">for</code> loop.
+Earlier, I had used a <code class="language-plaintext highlighter-rouge">for</code> loop to initialize the values of the array to <code class="language-plaintext highlighter-rouge">true</code>.
+I did away with this using <code class="language-plaintext highlighter-rouge">memset</code>. With <code class="language-plaintext highlighter-rouge">memset</code>, the compiler can assign values in any order (fastest order).
+However, in a <code class="language-plaintext highlighter-rouge">for</code> loop, you are forcing the compiler to go in one direction.</p>
+
+<p>Here is a chart comparing the runtimes. The code can be found <a href="https://gist.github.com/AparaV/9cff8ec826fc5465f44bfb5825f5a826">here</a>
+<img src="https://www.aparavenkat.com/assets/images/sieve-runtime-comparison.png" alt="runtime-comparison" /></p>
+
+<p>Thus, I finalized on this procedure, and it works really well so far.
+The only caveat is that you do need to remember to deallocate any memory to prevent memory leaks.</p>
+
+<h2 id="final-remarks">Final remarks</h2>
+<p>There are two takeaways from solving these problems:</p>
+
+<ol>
+  <li>Grab a piece of paper and work out the problem by drawing graphs or writing equations. In most cases, you will realize something that you didn’t catch and find that the problem isn’t really that hard. Then, instead of starting by coding a brute force solution, you already have an algorithm to work with. This can save so much time when optimizing brute force.</li>
+  <li>Sometimes, writing it out won’t work. You won’t see patterns. Recursion won’t help. In fact, it will only get worse. Then you should quickly implement a dirty brute force. Work your way from there and see how you can optimize it. Skip through loops. Cache items. And if there is an alternative to recursion, almost always choose the alternative because, recursion on large items can cause the stack to overflow (which you don’t want!).</li>
+</ol>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>

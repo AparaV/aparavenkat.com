@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Meta tags for sharing -->
+  <meta content="Aparajithan Venkateswaran" property="og:site_name" />
+  
+    <meta content="Regression on House Prices" property="og:title" />
+  
+  
+    <meta content="article" property="og:type" />
+  
+  
+    <meta content="Linear regression is perhaps the heart of machine learning. At least where it all started. This is perhaps the equivalent of the "Hello World" exercise. This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the Ames housing dataset
+" property="og:description" />
+  
+  
+    <meta content="https://www.aparavenkat.com/2017/07/31/regression-on-housing-data/" property="og:url" />
+  
+  <meta content="https://www.aparavenkat.com/public/favicon-200.png" property="og:image" />
+
+  <title>
+    
+      Regression on House Prices &middot; Aparajithan Venkateswaran
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/poole.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/syntax.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/hyde.css">
+  <link rel="stylesheet" href="https://www.aparavenkat.com/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.aparavenkat.com/public/apple-touch-icon-144.png">
+                                 <link rel="shortcut icon" href="https://www.aparavenkat.com/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- JS -->
+  <script type="text/javascript" async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://use.fontawesome.com/45b1e65bc9.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- Please change this if you are using the same website -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90125911-3"></script>
+  <script>
+    // Disable Google Analytics when testing locally
+    var host = window.location.hostname;
+    if(host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-90125911-3');
+    }
+  </script>
+
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2>
+          Aparajithan Venkateswaran
+      </h2>
+      <p class="lead" style="font-family:monospace;">/home/apara/</p>
+    </div>
+
+    <a class="sidebar-icon" href="https://www.aparavenkat.com/atom.xml" target="_blank">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+    </a>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://www.aparavenkat.com">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/bio/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/philosophy/">Philosophy of Education</a>
+          
+        
+      
+        
+      
+        
+          
+              <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Regression on House Prices</h1>
+  
+    <span class="post-date">31 Jul 2017</span>
+  
+  <h4><i></i></h4>
+  <p>Linear regression is perhaps the heart of machine learning. At least where it all started.
+And predicting the price of houses is the equivalent of the “Hello World” exercise in starting with linear regression.
+This article gives an overview of applying linear regression techniques (and neural networks) to predict house prices using the <a href="https://ww2.amstat.org/publications/jse/v19n3/decock.pdf" target="blank">Ames housing dataset</a>.
+<!--excerpt_ends-->
+This is a very simple (and perhaps naive) attempt at one of the beginner level Kaggle competition.
+Nevertheless, it is highly effective and demonstrates the power of linear regression.</p>
+
+<p><strong>All of the code used here is available in the form of a <a href="https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb" target="blank">Jupyter Notebook</a> which you can run on your machine.</strong></p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>This article assumes the reader to be fluent in Python to understand the code snippets.
+At least a strong background in other programming languages should be necessary.
+We will build our models using Tensorflow.
+So basic knowledge Tensorflow would be helpful, but is not a necessity.
+The tutorial also assumes the reader is familiar with how Kaggle competitions work.</p>
+
+<h2 id="the-raw-data">The Raw Data</h2>
+
+<p>First off, we will need the data. The dataset we will be using is the Ames Housing dataset and can be downloaded from <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data" target="blank">here</a>.
+Opening up the <code class="language-plaintext highlighter-rouge">train.csv</code>, you will notice nearly 52 features of 1460 houses.
+What each of these features represent is described in <code class="language-plaintext highlighter-rouge">data_description.txt</code>.
+The file <code class="language-plaintext highlighter-rouge">test.csv</code> differs from <code class="language-plaintext highlighter-rouge">train.csv</code> in that there are fewer houses and the prices for each of the houses is not present.
+We will use the <code class="language-plaintext highlighter-rouge">train.csv</code> file to train and build our model.
+Then, using that model, we will predict the prices for each of the houses in <code class="language-plaintext highlighter-rouge">test.csv</code>.</p>
+
+<p>You might want to spend some time studying this data by graphing charts, etc. to gain a better understanding of the data.
+This will definitely be helpful, but we will not do that here.</p>
+
+<h2 id="cleaning-data">Cleaning Data</h2>
+
+<p>The cleaning of data refers to many operations. Here we will be performing feature engineering (creating new features),
+filling in missing values, feature scaling, and feature encoding.</p>
+
+<script src="https://gist.github.com/AparaV/f47e8054f44547f812788a6aa41233aa.js"></script>
+
+<p>52 features is a bit overwhelming.
+And if you have spent time studying what each of these features represent,
+you’d probably say that many of the features are redundant to some extent i.e., they play a very small role in the price of a house.
+So the first thing we will do is remove these features and make life simpler.
+The code snippet describes the features we want to get rid off.
+But, before we remove them forever, notice that the total porch area and total number of bathrooms is split into 2 columns.
+Again, to make life simpler, we will combine them into a single total porch area and a single total number of bathrooms.
+Now, we can go ahead and get rid off all these unwanted features.</p>
+
+<p>The next thing we want to do is handle missing values. There are various ways to tackle this problem.
+An aggressive approach is to remove that entire training example.
+This can be bad if there are lots of missing values because you will lose too much data.
+But then, why would you train a model if you think you don’t have enough data?
+A simple and effective approach is to replace the missing value with mode (the most frequent value taken by that feature).
+A more sophisticated (and maybe better) technique is to study the other features and determine the missing value using probability and statistics.
+You might have guessed it - we are going to deal with missing values be replacing it with the mode.</p>
+
+<p>The next thing we want to do is scale down the features.
+The motivation behind this is that some of our features have a large range of values.
+And this makes it difficult for our optimizer to converge. But, more on that later.
+We will use the following method for rescaling.</p>
+
+<p>\[ x’_i = \frac{x_i - min(X)}{max(X) - min(X)}\]</p>
+
+<p>Here, \(x_i\) is the \(i^{th}\) example of the feature \(X\) and, \(min(X)\) and \(max(X)\) refer to the minimum and maximum values the feature \(X\) takes respectively.
+An important thing to note is that you do not want to scale the output i.e., the Sale Price.
+This can lead to large errors in output and leave you clueless for a long time.</p>
+
+<p>In machine learning, we almost always deal with numbers.
+But many of the features have letters for values where each letter (or sequence of letters) refer to a particular category.
+This is true for many datasets. And it also makes life difficult for us. And we do not like it when life becomes difficult.
+So, we will encode each of these features i.e., we will map a one-to-one correspondence from each of these categories to a number.
+The code snippet demonstrates how we achieve this.</p>
+
+<p>The data we have now is almost ready for training.</p>
+
+<h2 id="splitting-dataset">Splitting Dataset</h2>
+
+<p>A standard practice is to split the data into 3 parts - training, validation and test datasets.
+We will use the training dataset alone to actually train the model.
+Then we will use the errors the model gives on the validation dataset to tune our hyperparamters.
+But now, the model we trained has “seen” the validation dataset.
+This means that if we were to report the error the model produced using either the training or validation datasets, our real error would be biased because this model has been exposed and modified to minimize the error on these datasets.
+This is where the test dataset comes into play.
+Its purpose is to serve as an unbiased judge and report the error on the model.</p>
+
+<p>Usually, the dataset is divided as 60% training, 20% validation and 20% testing. And we will follow that fashion.
+We will also shuffle the dataset to make sure data is equally distributed across the 3 datasets.</p>
+
+<p>So far we have been dealing with <code class="language-plaintext highlighter-rouge">pandas</code> dataframes. Alas! Tensorflow likes <code class="language-plaintext highlighter-rouge">numpy</code> arrays better.
+So, we will have to fix that by converting the dataframes into matrices.
+While doing so, we also need to separate the inputs, \(X\), and outputs, \(y\).</p>
+
+<script src="https://gist.github.com/AparaV/902692e441c06604703dbc7ffd2d3680.js"></script>
+
+<h2 id="linear-regression">Linear Regression</h2>
+
+<h3 id="the-algorithm">The Algorithm</h3>
+
+<p>As I mentioned earlier, linear regression is perhaps the heart of machine learning.
+And the algorithm is the equivalent of the “Hello World” exercise.
+The algorithm is a very simple linear expression.</p>
+
+<p>\[Y = WX + b\]</p>
+
+<p>Here, \(Y\) is the output values for \(X\), the input values.
+\(W\) is referred to as the weights and \(b\) is referred to as the biases.
+Note that \(Y\) and \(b\) are vectors and \(W\) and \(X\) are matrices.
+This is, in many ways, analogous to the line equation in \(2\) dimensions you might be familiar with.</p>
+
+<p>\[y = mx + c\]</p>
+
+<p>The only difference is that we are extending and generalizing this relation to \(n\) dimensions.
+Just like being able to find a line equation between two points i.e., calculation \(m\) and \(c\),
+we are going to find the weights \(W\) and biases \(b\).</p>
+
+<p>In this way, we are going to map a <em>linear</em> relation between the sale prices and the features.
+It is important to stress on the fact that this is only a linear relationship.
+In reality, very few events are linearly correlated.</p>
+
+<p>Naturally the question we have is figuring out the weights and biases.
+To do this we will first randomly initialize the weights, and initialize the biases to \(0\).
+Then we will calculate the right hand side of the equation and compare it with the left hand side.
+We will define the error between them as the \(Cost\) or, the more commonly used term in neural networks, \(loss\).</p>
+
+<p>\[loss = \frac{1}{2}\sum\limits_{i = 0}^n{((Y) - (WX + b))^2}\]</p>
+
+<p>Then, this becomes an optimization problem where we are trying to find \(W\) and \(b\) to minimize the loss.
+There are various methods to optimize this.
+As usual we will stick with the simpler one - Gradient Descent Optimizer.
+Understanding this optimizer is perhaps beyond the scope of this article.
+But imagine optimizing a function in one variable using derivatives and
+generalizing that method to a function \(n\) variables.
+That is the core of gradient descent.</p>
+
+<p>Now, let’s jump into the code.</p>
+
+<h3 id="the-implementation">The Implementation</h3>
+
+<script src="https://gist.github.com/AparaV/687220208a52f97ee907cfff091d4eee.js"></script>
+
+<p>In Tensorflow, we first define and implement the algorithm in a structure called <code class="language-plaintext highlighter-rouge">graph</code>.
+The <code class="language-plaintext highlighter-rouge">graph</code> contains our input, output, weights, biases, and the optimizer.
+We will also define the loss function here. Then, we run the <code class="language-plaintext highlighter-rouge">graph</code> in a <code class="language-plaintext highlighter-rouge">session</code>.
+During each iteration, the optimizer will update the weights and biases based on the loss function.</p>
+
+<p>In our graph, we first define the train dataset values and labels (output), the validation and testing datasets.
+Note that we are defining them as <code class="language-plaintext highlighter-rouge">tf.constant</code>. This means that these “variables” will not and can not be modified when the <code class="language-plaintext highlighter-rouge">graph</code> is running.
+Next, we initialize the weights and biases. We treat these as <code class="language-plaintext highlighter-rouge">tf.Variable</code>.
+Pay attention to the dimensions of these matrices. You will run into compilation errors if you get them wrong.
+This means that these “variables” have the capacity to be updated and modified during the course of our <code class="language-plaintext highlighter-rouge">session</code>.</p>
+
+<p>Now, we predict the \(Y\) values using the weights and biases using the <code class="language-plaintext highlighter-rouge">tf.matmul()</code> function.
+This is nothing but matrix multiplication. Then we add that to <code class="language-plaintext highlighter-rouge">biases</code>.
+But if you go back to the definition, <code class="language-plaintext highlighter-rouge">biases</code> is a single number while <code class="language-plaintext highlighter-rouge">tf.matmul(tf_train_dataset, weights)</code> is a vector.
+This might be confusing because you can only add a vector to another vector.
+But Tensorflow is quite clever. It understands that we mean to add the same scalar <code class="language-plaintext highlighter-rouge">biases</code> to each element of the vector.
+Think about this as converting the single number into a vector (or matrix) of same dimensions as the other vector,
+and then adding those together. This is called broadcasting.</p>
+
+<p>Then we calculate the <code class="language-plaintext highlighter-rouge">loss</code> as we defined previously. We can safely ignore <code class="language-plaintext highlighter-rouge">cost</code> for now.
+It’s only purpose is to report the error we get.
+When using the gradient descent optimizer, we need a parameter (one of the hyperparamters) called learning rate.
+The term is self explanatory - it refers to how fast we want to minimize the <code class="language-plaintext highlighter-rouge">loss</code>.
+If it’s too big, we will only keep increasing the <code class="language-plaintext highlighter-rouge">loss</code>. If it’s too small, and the algorithm will converge very slowly.
+Here, we define <code class="language-plaintext highlighter-rouge">alpha</code> as the learning rate. After much experimentation, I’ve decided to use <code class="language-plaintext highlighter-rouge">0.01</code> as the learning rate.
+It might be beneficial to vary this value and test for yourself.</p>
+
+<p>Next, we define the <code class="language-plaintext highlighter-rouge">optimizer</code>. As mentioned earlier, we are using gradient descent with a learning rate <code class="language-plaintext highlighter-rouge">alpha</code>
+and trying to minimize <code class="language-plaintext highlighter-rouge">loss</code>. This will update the <code class="language-plaintext highlighter-rouge">tf.Variable</code> elements involved in the calculation of <code class="language-plaintext highlighter-rouge">loss</code>.</p>
+
+<p>After that, we are predicting the outputs on the validation and testing datasets using the new <code class="language-plaintext highlighter-rouge">weights</code> and <code class="language-plaintext highlighter-rouge">biases</code>.
+Finally, notice the <code class="language-plaintext highlighter-rouge">saver</code>. What this does is it saves the <code class="language-plaintext highlighter-rouge">weights</code>, <code class="language-plaintext highlighter-rouge">biases</code>, and all other <code class="language-plaintext highlighter-rouge">tf.Variable</code> into a checkpoint file.
+We can use these at a later stage to make our predictions.</p>
+
+<p>That is how our <code class="language-plaintext highlighter-rouge">graph</code> is constructed. Now, we can run the <code class="language-plaintext highlighter-rouge">graph</code> in our <code class="language-plaintext highlighter-rouge">session</code>.</p>
+
+<p>We start our <code class="language-plaintext highlighter-rouge">session</code> by initializing the global variables. This means initializing all <code class="language-plaintext highlighter-rouge">tf.Variable</code>.
+Then we use the <code class="language-plaintext highlighter-rouge">.run()</code> function to run the <code class="language-plaintext highlighter-rouge">session</code> for <code class="language-plaintext highlighter-rouge">100000</code> steps.
+Generally, the more number of steps, the better your results.
+But <code class="language-plaintext highlighter-rouge">100000</code> can seem like a large number and will take a long time if you can’t make use of GPU.
+If that is your case, you can either install <code class="language-plaintext highlighter-rouge">tensorflow-gpu</code> or just reduce <code class="language-plaintext highlighter-rouge">num_steps</code> to <code class="language-plaintext highlighter-rouge">10000</code>.
+After each run, we are storing the <code class="language-plaintext highlighter-rouge">cost</code> and <code class="language-plaintext highlighter-rouge">train_predictions</code> locally outside the graph.
+And after every <code class="language-plaintext highlighter-rouge">5000</code> steps, we are calculating the cost of out model on the validation dataset.
+At the end of the run, we save the <code class="language-plaintext highlighter-rouge">session</code> using the <code class="language-plaintext highlighter-rouge">saver</code> we created in the graph.</p>
+
+<p>These are my results after <code class="language-plaintext highlighter-rouge">100000</code> iterations. The blue line is the actual value and the orange line is the predicted value.
+It’s quite impressive that such a simple idea can yield really good results.
+There is still lots of room for improvement though. I will touch upon some of those ideas at the end.</p>
+
+<p><img src="/assets/images/regression_housing_linear.png" alt="linear_regression_comparison" /></p>
+
+<h3 id="the-prediction">The Prediction</h3>
+
+<p>Finally, we are ready to predict the prices of houses whose features are described in <code class="language-plaintext highlighter-rouge">test.csv</code>.
+First, we initialize a new <code class="language-plaintext highlighter-rouge">session</code>. Then we restore the variables from the <code class="language-plaintext highlighter-rouge">saver</code>.
+And using these restored <code class="language-plaintext highlighter-rouge">weights</code> and <code class="language-plaintext highlighter-rouge">biases</code>, we predict the output on the new dataset.
+You can save that into a <code class="language-plaintext highlighter-rouge">.csv</code> file and make a submission.
+You should get a score of <code class="language-plaintext highlighter-rouge">2.5804</code>. And you should be placed in the top 2000 ranks (as of 31 Jul 2017).</p>
+
+<h2 id="improvements-to-linear-regression">Improvements to Linear Regression</h2>
+
+<p>As I mentioned earlier (and as you might have guessed) there is certainly room for improving this naive model.
+Here are a few ideas to think about:</p>
+
+<ol>
+  <li>
+    <p><strong>Regularization</strong> - This concept is very very important to make sure your model doesn’t overfit the training data.
+This might lead to larger errors on the training set. But, your model is bound to generalize better outside your training set.
+This means that your model is more likely to be applicable in the real world if you use regularization.</p>
+  </li>
+  <li>
+    <p><strong>Creating bins</strong> - Remember how each of the numerical features (like area) are such varying numbers.
+To prevent overfitting, you can create bins for these features.
+For instance, all houses with area between 1000 and 1500 sq. ft would be assigned a value of 1 (say).
+I have seen this idea work really well for classification problems.</p>
+  </li>
+  <li>
+    <p><strong>More features</strong> - I dropped a lot of features reasoning out that they wouldn’t cause the house price to be affected.
+In reality, I have no basis for that “fact”. Actually, there is a good chance they there is at least a correlation (if not a causation) between them.
+And any correlation, no matter how small, will help your model. So don’t drop them. Keep them around and test.
+You can even try your hand at engineering new features that you think might be helpful.</p>
+  </li>
+  <li>
+    <p><strong>A new cost function</strong> - Did you notice the range of house prices? The cost function we used did not take this into consideration.
+Think about it this way - we penalized the model for predicting a $5000 house to be $0 (i.e., a difference of $5000) by the same amount
+if it predicted a $200,000 house to be $150,000 (i.e., a difference of $5000). We know that this is wrong.
+Instead, you can define a new function that computes the square difference of \(log\).
+This will fix the problem of the large range of output values.</p>
+  </li>
+  <li>
+    <p><strong>Non-linearities</strong> - Our assumption was that the output was linearly related to these features.
+This is rarely the case. One way to fix that is randomly try creating new features \(X’\) from \(X\) where \(X’ = X^n\)
+(\(n\) is another random number) and testing it out. This is clearly impossible and infeasible.
+One of the reasons why neural networks are amazing is that they automagically identify and map these non-linearities.</p>
+  </li>
+</ol>
+
+<h2 id="next-steps">Next Steps…</h2>
+
+<p>This post is already longer than I intended it to be. And at the same time, I feel that making this shorter would make it less adequate.
+So, the next article will continue on our discussion of the Ames housing data.
+And in the <a href="/2017/08/12/neural-networks-on-housing-data/">next article</a>, we will be using neural networks and see why it can be a better approach.
+Meanwhile, the code for the neural network is already out there.
+So you are welcome to continue using the <a href="https://github.com/AparaV/kaggle-competitions/blob/master/getting-started-house-prices/house_price_predictor.ipynb" target="blank">Jupyter Notebook</a> to try out neural networks.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//aparajithan-venkateswaran.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<!--div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/05/19/hackcu-over-the-years/">
+            HackCU Over the Years
+            <small>19 May 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/03/01/thoughts-on-research/">
+            Thoughts on research opportunities
+            <small>01 Mar 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/01/04/looking-back-2019/">
+            Looking Behind and Looking Ahead: 2019 and 2020
+            <small>04 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div-->
+
+    </div>
+
+    <!-- txtpen highlighter -->
+    <!--<script src="https://txtpen.com/embed.js?site=personal_website"></script>-->
+
+  </body>
+</html>
