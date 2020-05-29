@@ -1,17 +1,17 @@
 - description: Website gets a make-over. You are looking at it right now.
   date: 2020-05-24
 
-- description: I wrote an article about my experience at HackCU.
+- description: I wrote an article about my <a href="/2020/05/19/hackcu-over-the-years">experience at HackCU</a>. 📝
   date: 2020-05-19
 
-- description: I started my summer internship at Microsoft in the Mixed Reality Team.
+- description: I started my summer internship at Microsoft in the Mixed Reality Team. 🤖
   date: 2020-05-18
 
-- description: I received my B.S. in Computer Science and Applied Mathematics from CU Boulder!
+- description: I received my B.S. in Computer Science and Applied Mathematics from CU Boulder! 🎓
   date: 2020-05-16
 
 - description: I successfully defended my undergraduate thesis!
   date: 2020-04-24
 
-- description: I received <i>Outstanding Undergraduate for Academic Achievement Award</i>!
+- description: I received <i>Outstanding Undergraduate for Academic Achievement Award</i>! 🥇
   date: 2020-04-02

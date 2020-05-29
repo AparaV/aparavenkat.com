@@ -3,21 +3,26 @@ layout: default
 title: Home
 ---
 
-<h2>About Me</h2>
 
-<p>Hi, I am Apara. I am an incoming Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.</p>
+<div class="container box">
+  <h2>About Me</h2>
 
-<p>Read more <a href="/bio">here</a>. Sometimes I write. You can find my writings <a href="/blog">here</a>.</p>
+  <p>Hi, I am Apara. I am an incoming Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.</p>
+
+  <p>Read more <a href="/bio">here</a>. Sometimes I write. You can find my writings <a href="/blog">here</a>.</p>
+</div>
 
 <hr>
 
-<h2>News</h2>
-<ul>
-  {% assign events = site.data.news | sort: 'date' | reverse %}
-  {% for event in events limit: 25%}
-  <li>
-    <b>{{ event.date | date_to_string }} - </b> {{ event.description }}
-  </li>
-  {% endfor %}
-</ul>
-<p>You can find a list of all news events <a href="/archive#news-archive">here</a>.</p>
+<div class="container box overflow-auto">
+  <h2>News</h2>
+  <ul>
+    {% assign events = site.data.news | sort: 'date' | reverse %}
+    {% for event in events limit: 25%}
+    <li>
+      <b>{{ event.date | date_to_string }} - </b> {{ event.description }}
+    </li>
+    {% endfor %}
+  </ul>
+  <p>You can find a list of all news events <a href="/archive#news-archive">here</a>.</p>
+</div>
