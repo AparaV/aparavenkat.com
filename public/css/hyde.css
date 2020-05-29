@@ -90,6 +90,15 @@ html {
   font-weight: normal;
 }
 
+.sidebar-about h2 {
+  color: #fff;
+  margin-top: 0;
+  font-family: "Abril Fatface", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+
 a.sidebar-icon {
     color: rgba(255,255,255,.5);
 }

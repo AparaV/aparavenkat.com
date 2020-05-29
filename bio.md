@@ -16,7 +16,7 @@ Non-academically, I am interested in music -- both listening and playing. I also
 
 ## Contact
 
-If you find my works interesting, want to connect with me, or just want to chat about anything from CS to Tolkien:
+If you find my works interesting, want to connect with me, or just want to chat about anything from Math to Tolkien:
 
 * You can find more of my works at [github.com/AparaV](http://github.com/AparaV){:target="_blank"}
 * You can connect with me at [twitter.com/apara_v](http://twitter.com/apara_v){:target="_blank"}
