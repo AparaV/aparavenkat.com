@@ -34,7 +34,8 @@ excerpt_separator: <!--excerpt_ends-->
 
 #Plugins
 whitelist:        []
-plugins:             [jekyll-paginate-v2]
+plugins:
+  - jekyll-paginate-v2
 
 # Custom vars
 version:          2.1.0
@@ -46,5 +47,3 @@ github:
 collections:
     supplements:
         output: true
-    posts:
-        output: false
