@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reflecting on Fouriers at CU"
-description: "My experience being a part of HackCU for four years."
+description: ""
 subtitle: 
 published: true
 comments: true
