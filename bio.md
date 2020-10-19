@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-I am Apara. I am an incoming Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.
+I am Apara. I am a first year Ph.D. student in the Statistics Department at the University of Washington. I received my B.S. in Computer Science and Applied Mathematics at the University of Colorado at Boulder.
 
 My research interests broadly include stochastic modeling, networks, optimization and machine learning. But really, I am more interested in developing new methods in these areas and applying them to real world problems in fields such as computer science, physics, social science and epidemiology.
 
