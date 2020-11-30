@@ -8,9 +8,7 @@ I am Apara. I am a first year Ph.D. student in the Statistics Department at the 
 My research interests broadly include stochastic modeling, networks, optimization and machine learning. But really, I am more interested in developing new methods in these areas and applying them to real world problems in fields such as computer science, physics, social science and epidemiology.
 
 My undergraduate thesis, advised by [Dan Larremore](https://larremorelab.github.io/dan/){:target="_blank"}, concerned identifying effects of node covariates in ranking.
-Previously, I worked in the [Larremore Lab](https://larremorelab.github.io/){:target="_blank"} creating statistical models to automatically discover and parse the structure of academic resumes.
-
-In the Summer of 2020, I am interning at Microsoft in the Mixed Reality Team. I previously interned at Microsoft in Summer 2019 in the Edge Experimentation Team. In the past, I have served as a TA for [Chaotic Dynamics (CSCI 4446)](https://www.cs.colorado.edu/~lizb/chaos-course.html){:target="_blank"} taught by Liz Bradley, and [Discrete Structures (CSCI 2824)](https://github.com/chrisketelsen/CSCI2824-Discrete-Structures){:target="_blank"} taught by Tony Wong.
+Previously, I worked with Dan on automatically discovering and parsing the structure of academic resumes. During my time at CU, I served as a TA for [Chaotic Dynamics (CSCI 4446)](https://www.cs.colorado.edu/~lizb/chaos-course.html){:target="_blank"} and [Discrete Structures (CSCI 2824)](https://github.com/chrisketelsen/CSCI2824-Discrete-Structures){:target="_blank"}. I also interned twice at Microsoft.
 
 Non-academically, I am interested in music -- both listening and playing. I also read a variety of books and enjoy playing a good video game once in a while. My most recent favorite video game is _The Witcher 3: Wild Hunt_ -- yes, I know I'm late to the party! My most recent favorite fiction is _The Once and Future King_ by T.H. White -- for a children's novel (though I disagree with that), it had me thinking a long time after I finished reading it.
 
