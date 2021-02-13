@@ -1,6 +1,7 @@
 ---
 layout: page
 order: 1
+skip_title: true
 pagination:
   enabled: true
   trail:
@@ -10,7 +11,6 @@ title: Blog
 ---
 
 <div class="posts">
-  <hr>
   {% for post in paginator.posts %}
   <div class="post">
     <span class="post-date">{{ post.date | date_to_string }}</span>
