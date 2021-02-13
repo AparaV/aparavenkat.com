@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Philosophy of Education
+order: 3
+title: Philosophy
 ---
 
 > _What do I want from university education? How do I want to approach it? What is its purpose in my life?_
