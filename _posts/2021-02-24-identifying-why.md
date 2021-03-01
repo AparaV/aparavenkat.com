@@ -33,7 +33,9 @@ Think of the value system as the basis for the multidimensional vector space. Ea
 
 Each of these factors represent a force field that pulls us in some direction within the value space. If life were simple, we would be pulled only in one direction and we would not have to actively decide anything -- just go with the flow. However, life is not that simple. These force fields attempt to pull us in different directions.
 
-When we find ourselves in a position that's opposite to the force fields (that goes against our values), we do not necessarily enjoy the experience. Therefore, as good physicists, our goal is find the equilibrium location --  the state where the forces best align with our values. This is the state that energy due to these various forces is also minimized. This equilibrium corresponds to a position that maximizes our happiness or contentness. 
+When we find ourselves in a position that's opposite to the force fields (that goes against our values), we do not necessarily enjoy the experience. Therefore, as good physicists, our goal is find the equilibrium location --  the state where the forces best align with our values. This is the state that energy due to these various forces is also minimized. This equilibrium corresponds to a position that maximizes our contentedness and fulfillment.
+
+**A note on fulfillment:** In my mind, _fulfillment_ involves the right combination of satisfaction and dissatisfaction. It involves a healthy amount of pain and discomfort that allows (and motivatues) us to grow without bringing us down. Everything is just enough and we are not yearning for more of any one single thing. This fulfillment does mean that we are happy, but not solely seeking happiness all the time. Life consists of all experiences, happy and sad, and seeking just happiness often backfires. After all, emotions are relative -- we can't appreciate the highs without the lows.
 
 ## Back to _why_ land
 
