@@ -43,7 +43,7 @@ I'm assuming you are familiar with calculus, linear algebra, and probability.
 
 ### Life
 * _**The Enchiridion**_ by Epictetus
-* _**Meditations**_ by Seneca
+* _**Meditations**_ by Marcus Aurelius
 
 <hr>
 
