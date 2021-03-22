@@ -9,6 +9,7 @@ I haven't really _taught_ a class yet.
 ### University of Washington
 
 #### Teaching Assistant
+- STAT 435 (Introduction to Statistical Machine Learning) - Spring 2021
 - STAT 311 (Elements of Statistical Methods) - Winter 2021
 - STAT 220 (Statistical Reasoning) - Autumn 2020
 
