@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/public/css/webweb/style.css">
+
+<div id='webweb-visualization' style='width: 100%'></div>
+<script type="text/javascript">
+    var wwdata = {{include.webweb_json | jsonify }};
+    wwdata.display.attachWebwebToElementWithId = "webweb-visualization";
+    wwdata.display.g = .4
+
+    {% if include.responsive == true %}
+    wwdata.display.w = undefined;
+    wwdata.display.h = undefined;
+    {% endif %}
+
+    {% if include.fix_width == false %}
+    wwdata.display.w = 250;
+    {% endif %}
+    {% if include.fix_height == false %}
+    wwdata.display.h = 250;
+    {% endif %}
+</script>
+<br>
+<script type="text/javascript" src="/public/js/webweb/webweb.bundle.js?{{site.time | date: '%s%N'}}"></script> 
