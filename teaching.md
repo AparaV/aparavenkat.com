@@ -14,7 +14,8 @@ I haven't really _taught_ a class yet.
 - STAT 220 (Statistical Reasoning) - Autumn 2020
 
 #### Mentorship
-- Directed Reading Program
+- [Directed Reading Program](https://spa-drp.github.io/past-projects.html){:target="_blank"}
+    - Spring 2021. Networks and Choice Models. Mentee: Andrey Risukhin
     - Winter 2021. Networks and Choice Models. Mentee: Xuling Yang
 
 <hr/>
