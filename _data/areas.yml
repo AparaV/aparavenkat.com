@@ -1,0 +1,82 @@
+topics:
+  - area: Networks
+    kind: Methods
+    related:
+      - Complex Systems
+      # - Probability
+  # - area: Measure Theory
+  #   kind: Theory
+  #   related:
+  #     - Real Analysis
+  #     - Probability
+  # - area: Probability
+  #   kind: Methods
+  #   related:
+  #     - Complex Systems
+  #     - Time Series
+  #     - Machine Learning
+  #     - Optimization
+  #     - Causal Inference
+  - area: Complex Systems
+    kind: Methods
+    related:
+      # - Chaos
+      # - Time Series
+      - Networks
+      - Causal Inference
+      # - Probability
+  # - area: Chaos
+  #   kind: Methods
+  #   related:
+  #     - Time Series
+  #     - Complex Systems
+  # - area: Real Analysis
+  #   kind: Theory
+  #   related:
+  #     - Measure Theory
+  # - area: Time Series
+  #   kind: Methods
+  #   related:
+  #     - Chaos
+  #     - Complex Systems
+  #     - Probability
+  - area: Epidemiology
+    kind: Methods
+    related:
+      - Complex Systems
+      - Networks
+  # - area: Computational Social Science
+  #   kind: Application
+  #   related:
+  #     - Complex Systems
+  #     - Causal Inference
+  #     - Machine Learning
+  - area: Natural Language Processing
+    kind: Methods
+    related:
+      # - Probability
+      # - Optimization
+      - Machine Learning
+  - area: Causal Inference
+    kind: Methods
+    related:
+      # - Probability
+      - Complex Systems
+      # - Computational Social Science
+  - area: Machine Learning
+    kind: Methods
+    related:
+      # - Optimization
+      # - Probability
+      # - Computational Social Science
+  # - area: Optimization
+  #   kind: Methods
+  #   related:
+  #     - Probability
+  #     - Machine Learning
+  # - area: Spatial Statistics
+  #   kind: Methods
+  #   related:
+  #     - Probability
+  #     - Complex Systems
+  #     - Epidemiology

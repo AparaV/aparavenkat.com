@@ -8,13 +8,15 @@ from pathlib import Path
 import yaml
 
 DATA_PATH = Path(__file__).parent.joinpath('_data')
-INTERESTS_PATH = DATA_PATH.joinpath("academic_interests.yml")
+AREAS_PATH = DATA_PATH.joinpath("areas.yml")
+PROJECTS_PATH = DATA_PATH.joinpath("projects.yml")
 WEBWEB_JSON_PATH = DATA_PATH.joinpath('knowledge.json')
 
 KIND_TO_COLOR_MAP = {
-    'Theory': '#78C81F',
-    'Application': '#1C7BE0',
-    'Methods': '#E01E7B',
+    'Project': '#78C81F',
+    'Methods': '#1C7BE0',
+    'Application': '#E01E7B',
+    'Theory': '#1E1E1E',
 }
 
 
@@ -27,15 +29,28 @@ def make_network(data):
     edges = []
     
     all_edges = []
-    interests = data["interests"]["topics"]
+    interests = data["areas"]["topics"]
+    projects = data["projects"]["projects"]
+    project_areas = set()
+    for project in projects:
+        name = project["name"]
+        nodes[name] = {
+            "name": name,
+            "kind": "Project"
+        }
+        for area in project["areas"]:
+            all_edges.append([name, area])
+            project_areas.add(area)
     for interest in interests:
         area = interest["area"]
+        # if area not in project_areas:
+        #     continue
         nodes[area] = {
             "name": area,
             "kind": interest["kind"]
         }
-    for interest in interests:
-        area = interest["area"]
+        if not interest["related"]:
+            continue
         for related in interest["related"]:
             all_edges.append([area, related])
 
@@ -75,12 +90,13 @@ def make_network(data):
     }
 
     WEBWEB_JSON_PATH.write_text(web.json)
-    #web.show()
+    web.show()
 
 
 if __name__ == '__main__':
     data = {
-        "interests": load_yaml(INTERESTS_PATH)
+        "areas": load_yaml(AREAS_PATH),
+        "projects": load_yaml(PROJECTS_PATH)
     }
 
     make_network(data)

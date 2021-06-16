@@ -1,0 +1,18 @@
+projects:
+  - name: SpringRank
+    areas:
+      - Networks
+      - Complex Systems
+  - name: Contact Tracing
+    areas:
+      - Networks
+      - Epidemiology
+  - name: CV Parser
+    areas:
+      - Machine Learning
+      - Natural Language Processing
+      - Complex Systems
+  - name: Causal Recommender
+    areas:
+      - Machine Learning
+      - Causal Inference
